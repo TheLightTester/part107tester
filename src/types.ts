@@ -64,6 +64,8 @@ export interface Progress {
   lessonsRead: Set<string>
   quizScores: Record<string, number>
   lastLessonId: string | null
+  streakDays: number
+  lastStudiedDate: string | null  // ISO date string 'YYYY-MM-DD'
 }
 
 export interface QuizState {

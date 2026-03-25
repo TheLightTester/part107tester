@@ -4,7 +4,7 @@ import type { IconName } from './Icon'
 
 describe('Icon', () => {
   it('renders an svg for known icon names', () => {
-    const names: IconName[] = ['check', 'x', 'arrow', 'back', 'book', 'quiz', 'star', 'alert', 'plane', 'trophy']
+    const names: IconName[] = ['check', 'x', 'arrow', 'back', 'book', 'quiz', 'star', 'alert', 'plane', 'trophy', 'flame']
     names.forEach(name => {
       const { container } = render(<Icon name={name} />)
       expect(container.querySelector('svg')).not.toBeNull()

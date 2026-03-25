@@ -57,4 +57,87 @@ describe('useProgress', () => {
     const { result } = renderHook(() => useProgress())
     expect(result.current.progress.lessonsRead.size).toBe(0)
   })
+
+  it('markLessonRead sets lastLessonId to the lesson just read', () => {
+    const { result } = renderHook(() => useProgress())
+    act(() => result.current.markLessonRead('V-L3'))
+    expect(result.current.progress.lastLessonId).toBe('V-L3')
+  })
+
+  it('markLessonRead overwrites lastLessonId on subsequent calls', () => {
+    const { result } = renderHook(() => useProgress())
+    act(() => result.current.markLessonRead('I-L1'))
+    act(() => result.current.markLessonRead('II-L1'))
+    expect(result.current.progress.lastLessonId).toBe('II-L1')
+  })
+})
+
+describe('streak tracking', () => {
+  beforeEach(() => {
+    vi.useFakeTimers()
+    vi.setSystemTime(new Date('2026-03-25T10:00:00Z'))
+    localStorage.clear()
+  })
+
+  afterEach(() => {
+    vi.useRealTimers()
+  })
+
+  it('initializes streakDays to 0 with no prior data', () => {
+    const { result } = renderHook(() => useProgress())
+    expect(result.current.progress.streakDays).toBe(0)
+    expect(result.current.progress.lastStudiedDate).toBeNull()
+  })
+
+  it('markLessonRead starts streak at 1 on first activity', () => {
+    const { result } = renderHook(() => useProgress())
+    act(() => result.current.markLessonRead('I-L1'))
+    expect(result.current.progress.streakDays).toBe(1)
+    expect(result.current.progress.lastStudiedDate).toBe('2026-03-25')
+  })
+
+  it('studying the same day a second time does not change streak count', () => {
+    const { result } = renderHook(() => useProgress())
+    act(() => result.current.markLessonRead('I-L1'))
+    act(() => result.current.markLessonRead('I-L2'))
+    expect(result.current.progress.streakDays).toBe(1)
+  })
+
+  it('studying on consecutive days increments the streak', () => {
+    vi.setSystemTime(new Date('2026-03-24T10:00:00Z'))
+    const { result } = renderHook(() => useProgress())
+    act(() => result.current.markLessonRead('I-L1'))
+    expect(result.current.progress.streakDays).toBe(1)
+
+    vi.setSystemTime(new Date('2026-03-25T10:00:00Z'))
+    act(() => result.current.markLessonRead('I-L2'))
+    expect(result.current.progress.streakDays).toBe(2)
+    expect(result.current.progress.lastStudiedDate).toBe('2026-03-25')
+  })
+
+  it('gap of 2+ days resets streak to 1', () => {
+    vi.setSystemTime(new Date('2026-03-20T10:00:00Z'))
+    const { result } = renderHook(() => useProgress())
+    act(() => result.current.markLessonRead('I-L1'))
+    expect(result.current.progress.streakDays).toBe(1)
+
+    vi.setSystemTime(new Date('2026-03-25T10:00:00Z'))
+    act(() => result.current.markLessonRead('I-L2'))
+    expect(result.current.progress.streakDays).toBe(1)
+  })
+
+  it('saveScore also updates the streak', () => {
+    const { result } = renderHook(() => useProgress())
+    act(() => result.current.saveScore('I', 90))
+    expect(result.current.progress.streakDays).toBe(1)
+    expect(result.current.progress.lastStudiedDate).toBe('2026-03-25')
+  })
+
+  it('streak persists to localStorage', () => {
+    const { result } = renderHook(() => useProgress())
+    act(() => result.current.markLessonRead('I-L1'))
+    const stored = JSON.parse(localStorage.getItem('part107_progress') ?? '{}') as { streakDays: number; lastStudiedDate: string }
+    expect(stored.streakDays).toBe(1)
+    expect(stored.lastStudiedDate).toBe('2026-03-25')
+  })
 })

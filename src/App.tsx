@@ -171,8 +171,6 @@ export default function App() {
           onStartLesson={startLesson}
           onStartQuiz={startQuiz}
           onStartFinalExam={startFinalExam}
-          activeModule={activeModule}
-          onSetModule={setActiveModule}
         />
       )}
 

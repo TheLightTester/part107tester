@@ -49,6 +49,12 @@ describe('Results', () => {
     expect(onHome).toHaveBeenCalled()
   })
 
+  it('does not show weak area report when quizMode is lesson', () => {
+    const answers: Record<string, AnswerKey> = { 'I-001': 'A', 'I-002': 'B', 'V-001': 'A' }
+    render(<Results questions={questions} answers={answers} quizMode="lesson" onRetry={vi.fn()} onHome={vi.fn()} />)
+    expect(screen.queryByText('Weak Area Report')).toBeNull()
+  })
+
   it('clicking Retry quiz calls onRetry', () => {
     const onRetry = vi.fn()
     const answers: Record<string, AnswerKey> = { 'I-001': 'B', 'I-002': 'B', 'V-001': 'B' }
