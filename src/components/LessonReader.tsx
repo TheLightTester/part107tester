@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { styles } from '../styles'
 import Icon from './ui/Icon'
 import type { Lesson, ModuleId, Progress } from '../types'
@@ -12,6 +13,21 @@ interface LessonReaderProps {
 }
 
 export default function LessonReader({ lesson, progress, moduleColor, onBack, onMarkComplete, onStartQuiz }: LessonReaderProps) {
+  const [barVisible, setBarVisible] = useState(false)
+
+  useEffect(() => {
+    setBarVisible(false)
+    const handleScroll = () => {
+      const scrolled = window.scrollY
+      const total = document.documentElement.scrollHeight - window.innerHeight
+      if (total > 0 && scrolled / total >= 0.8) {
+        setBarVisible(true)
+      }
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [lesson?.id])
+
   if (!lesson) return null
   const color = moduleColor(lesson.module)
   const done = progress.lessonsRead.has(lesson.id)
@@ -107,7 +123,7 @@ export default function LessonReader({ lesson, progress, moduleColor, onBack, on
       )}
 
       {/* ACTIONS */}
-      <div style={styles.lessonActions}>
+      <div style={{ ...styles.lessonActions, marginBottom: 80 }}>
         {!done ? (
           <button style={styles.btnPrimary(color)} onClick={() => onMarkComplete(lesson.id)}>
             <Icon name="check" size={14}/> Mark Complete
@@ -121,6 +137,19 @@ export default function LessonReader({ lesson, progress, moduleColor, onBack, on
           <button style={styles.btnSecondary} onClick={() => onStartQuiz(lesson.module, lesson.id)}>
             <Icon name="quiz" size={14}/>
             Practice {lesson.relatedQuestions.length} questions
+          </button>
+        )}
+      </div>
+
+      {/* STICKY COMPLETION BAR */}
+      <div style={styles.stickyCompletionBar(barVisible && !done)}>
+        <span style={{ fontSize: 13, color: '#94a3b8' }}>You've reached the end —</span>
+        <button style={styles.btnPrimary(color)} onClick={() => { onMarkComplete(lesson.id); setBarVisible(false) }}>
+          <Icon name="check" size={14}/> Mark Complete
+        </button>
+        {lesson.relatedQuestions && lesson.relatedQuestions.length > 0 && (
+          <button style={styles.btnSecondary} onClick={() => onStartQuiz(lesson.module, lesson.id)}>
+            <Icon name="quiz" size={14}/> Practice Questions →
           </button>
         )}
       </div>

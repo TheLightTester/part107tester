@@ -214,18 +214,29 @@ describe('Home — exam readiness score', () => {
   })
 
   it('computes readiness from lessons (40%) and quiz scores (60%)', () => {
-    // 3/3 lessons (100%) + one quiz score of 80% → (1.0*0.4)+(0.80*0.6) = 0.4+0.48 = 88%
+    // 3/3 lessons (100%) + one quiz score of 80% out of 8 total slots (5 modules + 3 lessons)
+    // effectiveQuizScore = 80 / (8*100) = 0.1 → (1.0*0.4)+(0.1*0.6) = 0.4+0.06 = 46%
     renderHome({ lessonsRead: new Set(['I-L1', 'I-L2', 'II-L1']), quizScores: { I: 80 } })
-    expect(screen.getByText('88%')).toBeInTheDocument()
+    expect(screen.getByText('46%')).toBeInTheDocument()
   })
 
   it('shows exam-ready message when readiness reaches 70%', () => {
-    renderHome({ lessonsRead: new Set(['I-L1', 'I-L2', 'II-L1']), quizScores: { I: 80 } })
+    // All 8 quiz slots at 80%: effectiveQuizScore = 640/800 = 0.8 → (1.0*0.4)+(0.8*0.6) = 88%
+    renderHome({
+      lessonsRead: new Set(['I-L1', 'I-L2', 'II-L1']),
+      quizScores: { I: 80, II: 80, III: 80, IV: 80, V: 80, 'I-L1': 80, 'I-L2': 80, 'II-L1': 80 },
+    })
     expect(screen.getByText(/exam-ready/i)).toBeInTheDocument()
   })
 
   it('shows pass threshold message when readiness is below 70%', () => {
     renderHome({ lessonsRead: new Set(['I-L1']), quizScores: {} })
     expect(screen.getByText(/Pass threshold: 70%/i)).toBeInTheDocument()
+  })
+
+  it('shows completed quiz count out of total quiz slots', () => {
+    // 2 non-exam quiz scores out of 8 total slots (5 modules + 3 lessons in test fixture)
+    renderHome({ quizScores: { I: 80, 'I-L1': 70 } })
+    expect(screen.getByText('2/8')).toBeInTheDocument()
   })
 })

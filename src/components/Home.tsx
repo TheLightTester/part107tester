@@ -38,7 +38,11 @@ export default function Home({ progress, modules, lessons, questionCount, onStar
   const lessonsReadPct = lessons.length > 0 ? progress.lessonsRead.size / lessons.length : 0
   const quizValues = Object.values(progress.quizScores)
   const avgQuizScore = quizValues.length > 0 ? quizValues.reduce((a, b) => a + b, 0) / quizValues.length / 100 : 0
-  const readiness = Math.round((lessonsReadPct * 0.4 + avgQuizScore * 0.6) * 100)
+  // Effective score treats untaken quizzes as 0 — prevents false positives from a single high score
+  const nonExamScores = Object.entries(progress.quizScores).filter(([k]) => k !== 'exam').map(([, v]) => v)
+  const totalQuizSlots = modules.length + lessons.length
+  const effectiveQuizScore = nonExamScores.reduce((a, b) => a + b, 0) / (totalQuizSlots * 100)
+  const readiness = Math.round((lessonsReadPct * 0.4 + effectiveQuizScore * 0.6) * 100)
   const readinessColor = readiness >= 70 ? '#5DB87A' : readiness >= 50 ? '#E8A838' : '#E86B4A'
 
   return (
@@ -159,6 +163,10 @@ export default function Home({ progress, modules, lessons, questionCount, onStar
           <div style={{ textAlign: 'center' }}>
             <div style={{ fontSize: 14, fontWeight: 700, color: '#e2e8f0' }}>{Math.round(avgQuizScore * 100)}%</div>
             <div style={{ fontSize: 10, color: '#4a5568', textTransform: 'uppercase', letterSpacing: '0.06em', marginTop: 2 }}>Avg Quiz</div>
+          </div>
+          <div style={{ textAlign: 'center' }}>
+            <div style={{ fontSize: 14, fontWeight: 700, color: '#e2e8f0' }}>{nonExamScores.length}/{totalQuizSlots}</div>
+            <div style={{ fontSize: 10, color: '#4a5568', textTransform: 'uppercase', letterSpacing: '0.06em', marginTop: 2 }}>Quizzes</div>
           </div>
         </div>
       </div>

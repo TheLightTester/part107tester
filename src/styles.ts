@@ -230,4 +230,20 @@ export const styles = {
   resultsStat: { background: '#0d1117', borderRadius: 8, padding: '16px' } satisfies StyleObj,
   resultsStatNum: { fontSize: 28, fontWeight: 800, marginBottom: 4 } satisfies StyleObj,
   resultsStatLabel: { fontSize: 11, color: '#4a5568', textTransform: 'uppercase', letterSpacing: '0.08em' } satisfies StyleObj,
+  reviewBtn: {
+    display: 'inline-flex', alignItems: 'center', gap: 4,
+    padding: '3px 10px', borderRadius: 5,
+    background: 'transparent', color: '#E8A838',
+    fontSize: 11, fontWeight: 700, cursor: 'pointer',
+    border: '1px solid #E8A83850', transition: 'all 0.15s',
+    whiteSpace: 'nowrap', flexShrink: 0,
+  } satisfies StyleObj,
+  stickyCompletionBar: (visible: boolean): StyleObj => ({
+    position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 200,
+    background: '#111827', borderTop: '2px solid #E8A838',
+    padding: '14px 24px',
+    display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12,
+    transform: visible ? 'translateY(0)' : 'translateY(100%)',
+    transition: 'transform 0.3s ease',
+  }),
 }
