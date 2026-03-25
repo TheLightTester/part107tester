@@ -1,0 +1,423 @@
+{
+  "metadata": {
+    "title": "Part 107 Course — Gap Closure: Link Patches + 4 New Lessons",
+    "version": "1.0",
+    "description": "Two parts: (1) Patched related_question_ids for existing lessons missing links. (2) Four new lessons covering VLOS/VO/Scanning, Operations Over People & Vehicles, Airport Operations & Traffic Patterns, and Remote ID/Inspection/Multiple UAS.",
+    "audit_date": "2026-03-21",
+    "orphaned_questions_resolved": 23,
+    "new_lessons_added": 4
+  },
+
+  "link_patches": {
+    "description": "For each lesson_id listed, replace related_question_ids with the corrected full array. These add the 11 questions that existed in the bank but were missing from lesson references.",
+    "patches": [
+      {
+        "lesson_id": "I-L1",
+        "field": "related_question_ids",
+        "corrected_value": ["I-001", "I-002", "I-007", "I-014", "I-016"]
+      },
+      {
+        "lesson_id": "I-L3",
+        "field": "related_question_ids",
+        "corrected_value": ["I-008", "I-009", "I-010", "I-011", "I-012", "I-017", "I-018", "I-020", "I-021", "I-022", "V-001", "V-002", "V-003", "V-004", "V-036"]
+      },
+      {
+        "lesson_id": "II-L3",
+        "field": "related_question_ids",
+        "corrected_value": ["II-013", "II-016", "II-017", "II-018", "II-019", "II-020", "II-021", "II-022", "II-023", "II-024"]
+      },
+      {
+        "lesson_id": "III-L3",
+        "field": "related_question_ids",
+        "corrected_value": ["III-005", "III-006", "III-007", "III-008", "III-009", "III-010", "III-011", "III-012", "III-013", "III-018", "III-019", "III-020", "III-021", "III-022"]
+      },
+      {
+        "lesson_id": "V-L2",
+        "field": "related_question_ids",
+        "corrected_value": ["V-013", "V-018", "V-019", "V-020", "V-021", "V-022", "V-038", "V-039"]
+      },
+      {
+        "lesson_id": "V-L3",
+        "field": "related_question_ids",
+        "corrected_value": ["V-008", "V-014", "V-015", "V-029", "V-030", "V-031", "V-033", "V-037", "V-040"]
+      }
+    ]
+  },
+
+  "new_lessons": [
+
+    {
+      "id": "V-L4",
+      "module": "V",
+      "module_name": "Operations",
+      "lesson_number": 4,
+      "title": "Visual Line of Sight, Visual Observers & Traffic Scanning",
+      "acs_codes": ["UA.I.B.K10", "UA.I.B.K11", "UA.V.E.K6"],
+      "exam_importance": "critical",
+      "intro": "VLOS is the cornerstone safety requirement of Part 107. Every operational restriction — altitude, airspace, right of way — is built on the assumption that you can see your aircraft. This lesson covers exactly what VLOS requires, when a Visual Observer can help, and how to scan the sky effectively to spot conflicting traffic.",
+      "sections": [
+        {
+          "heading": "What VLOS Requires (§107.31)",
+          "body": "Visual Line of Sight means the remote pilot or visual observer must be able to see the unmanned aircraft throughout the entire flight, using vision that is unaided by any device other than corrective lenses (glasses or contacts). Three things are explicit in this rule: (1) the aircraft must be visible at all times — not just most of the time; (2) only corrective lenses are allowed — binoculars, FPV goggles, zoom cameras, and spotting scopes do NOT satisfy VLOS; (3) the obligation rests on either the remote PIC or a visual observer — if you are using a VO, you can shift that visual monitoring responsibility to them.",
+          "key_facts": [
+            "Must see the UA throughout the ENTIRE flight — not just most of the time",
+            "Only corrective lenses (glasses/contacts) are permitted as vision aids",
+            "Binoculars, FPV goggles, spotting scopes do NOT satisfy VLOS",
+            "VLOS can be maintained by the remote PIC OR a designated visual observer",
+            "No specific distance limit — the requirement is actual visual contact"
+          ],
+          "example": "You are flying FPV racing drones using a head-mounted display. The display gives you a first-person view from the drone's camera, but you cannot see the actual aircraft in the sky. This does NOT satisfy VLOS. A visual observer watching the physical drone would be required for a legal Part 107 operation.",
+          "memory_aid": "VLOS = eyes on the drone, not eyes through the drone."
+        },
+        {
+          "heading": "What VLOS Does NOT Require",
+          "body": "VLOS does not require you to maintain visual contact with the ground below the drone, other aircraft in the area, or the control station. The sole requirement is unaided visual contact with the UA itself. However, maintaining awareness of conflicting traffic and hazards is a separate requirement under see-and-avoid (§107.37). You must be able to do both simultaneously — see your UA AND scan for conflicting aircraft.",
+          "key_facts": [
+            "VLOS only requires seeing the UA — not the ground beneath it",
+            "See-and-avoid is a separate but concurrent requirement",
+            "Must simultaneously maintain VLOS AND scan for other aircraft"
+          ]
+        },
+        {
+          "heading": "The Visual Observer (VO) — Role and Rules (§107.33)",
+          "body": "A visual observer is a person designated by the remote PIC to assist in seeing and avoiding other air traffic, objects aloft, or hazards on the ground. Key rules: (1) A VO is optional — Part 107 does not require one unless your operational setup demands it. (2) The VO, the remote PIC, and the person manipulating the flight controls must maintain effective communication at all times. (3) The VO cannot simultaneously act as the person manipulating the controls. (4) The VO must meet the same fitness standards as the remote PIC — including the 8-hour alcohol rule and drug prohibition. (5) The remote PIC remains responsible for the safe operation of the flight regardless of whether a VO is present.",
+          "key_facts": [
+            "VO is OPTIONAL — not required by default",
+            "VO assists in see-and-avoid of other traffic and hazards",
+            "VO, remote PIC, and person on controls must communicate effectively at all times",
+            "VO cannot simultaneously manipulate the flight controls",
+            "VO must meet same alcohol/drug fitness standards as the remote PIC",
+            "Remote PIC retains full responsibility even when a VO is used"
+          ],
+          "memory_aid": "VO = extra eyes. Optional, but if you use one, they must communicate and they cannot also fly."
+        },
+        {
+          "heading": "When to Use a Visual Observer",
+          "body": "A VO is particularly valuable in operations where the remote PIC's attention must be divided — monitoring a screen, operating equipment, reading data, or managing a complex mission. Common scenarios: mapping operations where the PIC is watching a flight planning app; inspection work where the PIC is reviewing live video; FPV racing under a waiver; or any operation where a single person cannot simultaneously look at the aircraft and manage the mission. The VO allows the PIC to focus on mission tasks while the VO maintains VLOS and scans for traffic.",
+          "key_facts": [
+            "Use a VO when PIC attention is split between mission and aircraft observation",
+            "Common: mapping, inspection, FPV-with-waiver operations",
+            "VO must be able to see the UA at all times — same VLOS standard applies to them"
+          ]
+        },
+        {
+          "heading": "Traffic Scanning Technique",
+          "body": "Effective traffic scanning requires a systematic, deliberate technique — not a casual glance around. The FAA method: scan from right to left or left to right, starting at the greatest distance visible (top of the scan area) and moving toward the aircraft's position (bottom). Each stop should cover approximately 30° of sky. Each stop should last no more than 2–3 seconds — enough to detect movement, not so long that you miss the periphery. When moving from one sector to the next, overlap the previous field of view by 10°. This approach ensures the entire visible sky is covered in a structured pattern rather than leaving blind spots.",
+          "key_facts": [
+            "Scan systematically — short stops across segments of sky",
+            "Each stop: ~30° wide, 2–3 seconds maximum",
+            "Overlap adjacent sectors by 10° when moving between them",
+            "Scan from greatest visible distance down toward aircraft position",
+            "Do NOT continuously sweep in one direction — eyes need brief focus time to detect objects"
+          ],
+          "example": "An aircraft on a direct collision course with no lateral or vertical movement will appear as a dot that grows larger — it shows no apparent motion. Continuous sweeping misses this because the eye never pauses long enough to detect size change. The sector-scan technique's brief pauses allow detection of this most dangerous scenario.",
+          "memory_aid": "Stop, focus, overlap. 30° wide. 2–3 seconds. Systematic — not casual."
+        },
+        {
+          "heading": "Day vs. Night Scanning",
+          "body": "During the day, on-center (foveal) viewing is most effective — look directly at the area you want to scan since the center of the retina has the highest density of color-sensitive cone cells. At night, off-center (peripheral/eccentric) viewing is more effective for detecting objects because the rod cells — which are more sensitive in low light — are concentrated away from the center of the retina. This is why looking slightly to the side of where you expect to see something at night can reveal it more clearly than looking directly at it.",
+          "key_facts": [
+            "Daytime: on-center (foveal) viewing — look directly at the scan area",
+            "Nighttime: off-center viewing — look slightly to the side of where you expect the object",
+            "Rod cells (night-sensitive) dominate the peripheral retina",
+            "Cone cells (color, detail) dominate the fovea/center of vision"
+          ],
+          "memory_aid": "Night: look slightly off to the side to see better."
+        }
+      ],
+      "summary_table": [
+        { "item": "VLOS definition", "value": "Unaided visual contact with UA throughout entire flight (corrective lenses OK)" },
+        { "item": "FPV goggles satisfy VLOS?", "value": "No" },
+        { "item": "Binoculars satisfy VLOS?", "value": "No" },
+        { "item": "Visual observer required?", "value": "Optional — not required by default" },
+        { "item": "VO communication requirement", "value": "Effective communication with remote PIC and person on controls at all times" },
+        { "item": "VO can also fly?", "value": "No — cannot simultaneously manipulate controls" },
+        { "item": "VO alcohol/drug rule", "value": "Same as remote PIC — 8-hour rule, 0.04% BAC limit" },
+        { "item": "Scanning technique", "value": "Systematic sector stops, ~30° wide, 2–3 sec each, 10° overlap" },
+        { "item": "Day scanning method", "value": "On-center (foveal) viewing" },
+        { "item": "Night scanning method", "value": "Off-center (peripheral) viewing" }
+      ],
+      "common_mistakes": [
+        "Thinking FPV goggles satisfy VLOS because the pilot 'sees' through the drone — VLOS requires unaided eyes on the physical aircraft",
+        "Confusing VO as mandatory — a VO is optional unless your operation requires one",
+        "Thinking the VO can also be the person flying — not allowed simultaneously",
+        "Continuously sweeping the sky rather than using the structured sector-scan technique"
+      ],
+      "related_question_ids": ["V-005", "V-006", "V-007"]
+    },
+
+    {
+      "id": "V-L5",
+      "module": "V",
+      "module_name": "Operations",
+      "lesson_number": 5,
+      "title": "Operations Over People & Moving Vehicles",
+      "acs_codes": ["UA.I.E.K3", "UA.V.A.K6", "UA.V.A.K8"],
+      "exam_importance": "high",
+      "intro": "Flying over people and moving vehicles is one of the most consequential decisions a Part 107 pilot makes. The risk of injury from a falling drone is real, and the FAA created a four-category framework in Subpart D to define exactly when and how such operations are permitted without a waiver.",
+      "sections": [
+        {
+          "heading": "The Default Rule — No Operations Over People (§107.39)",
+          "body": "The default under Part 107 is that you may NOT operate a small UAS over any human being who is not directly participating in the operation, not under a covered structure, and not inside a stationary vehicle that can provide reasonable protection. A 'participant' means someone on your crew (VO, person manipulating controls) — not bystanders, passersby, or event crowds. This prohibition exists because a falling drone poses a real ballistic threat to anyone below it.",
+          "key_facts": [
+            "Default: cannot fly over non-participating humans",
+            "Exceptions: people under covered structures, inside stationary protective vehicles, or your direct crew",
+            "Non-participant = anyone not actively part of your operation",
+            "Operations over non-participants require one of the four categories below or a waiver"
+          ]
+        },
+        {
+          "heading": "Category 1 — Lightest Aircraft, Least Restrictive (§107.110)",
+          "body": "Category 1 allows operations over any person — participating or not — without a waiver, provided the aircraft: (1) weighs 0.55 pounds or less at takeoff, including everything on board, AND (2) has no exposed rotating parts that would lacerate human skin on contact. No FAA authorization is needed, no declaration of compliance is required. The theory: a sub-0.55 lb drone striking a person is unlikely to cause serious injury.",
+          "key_facts": [
+            "Weight: ≤0.55 lbs (250 g) at takeoff including everything on board",
+            "No exposed rotating parts that could lacerate skin",
+            "No FAA authorization required",
+            "No declaration of compliance required",
+            "Most restrictive constraint: the weight limit"
+          ],
+          "memory_aid": "Category 1 = tiny drone, no sharp edges, no paperwork."
+        },
+        {
+          "heading": "Category 2 — FAA-Accepted Means of Compliance (§107.115–107.120)",
+          "body": "Category 2 allows operations over people with an aircraft that has received an FAA-accepted declaration of compliance. The aircraft must: (1) not cause injury to a human being that is at or above the severity of a laceration that would require hospitalization if the drone were to impact a person, (2) not have any exposed rotating parts that would lacerate human skin, and (3) have the remote PIC label the aircraft with its category. The manufacturer or operator submits a means of compliance to the FAA showing the aircraft meets the injury threshold. The remote PIC may NOT operate over moving vehicles or in sustained flight over open-air assemblies under Category 2.",
+          "key_facts": [
+            "Requires FAA-accepted declaration of compliance from manufacturer/operator",
+            "Injury threshold: impact must not cause injury requiring hospitalization",
+            "No exposed rotating parts that lacerate skin",
+            "Aircraft must be labeled with Category 2",
+            "Cannot be used over moving vehicles or sustained flight over open-air assemblies"
+          ]
+        },
+        {
+          "heading": "Category 3 — Restricted Site Operations (§107.125–107.130)",
+          "body": "Category 3 allows operations over people in more conditions than Category 2 but with site restrictions. Requirements: (1) FAA-accepted declaration of compliance, (2) aircraft labeled with Category 3, (3) operation must occur in a restricted-access location where non-participants are not present OR with all non-participants under covered structures or in stationary vehicles. Category 3 also prohibits sustained flight over open-air assemblies of people.",
+          "key_facts": [
+            "Requires FAA-accepted declaration of compliance",
+            "Aircraft must be labeled with Category 3",
+            "Must operate in restricted-access site OR all non-participants protected",
+            "Cannot fly sustained over open-air assemblies of people"
+          ]
+        },
+        {
+          "heading": "Category 4 — FAA Airworthiness Certificate (§107.140)",
+          "body": "Category 4 is the most demanding. The aircraft must have a current FAA airworthiness certificate (issued under 14 CFR Part 21) — the same type of certification required for manned aircraft. The aircraft must be operated in accordance with the conditions specified in its FAA-approved flight manual or operating instructions. The remote PIC must also hold a remote pilot certificate. This category is aimed at larger, professionally-manufactured UAS that can demonstrate airworthiness through the traditional FAA certification process.",
+          "key_facts": [
+            "Requires current FAA airworthiness certificate (14 CFR Part 21)",
+            "Must be operated per FAA-approved flight manual/operating instructions",
+            "Remote PIC must hold a remote pilot certificate",
+            "Most burdensome — equivalent to manned aircraft airworthiness standards",
+            "The ONLY category that requires an FAA airworthiness certificate"
+          ],
+          "memory_aid": "Category 4 = treated like a real airplane — needs an airworthiness certificate."
+        },
+        {
+          "heading": "Operations Over Moving Vehicles (§107.145)",
+          "body": "The default prohibition on flying over moving vehicles can be overcome in two ways. First, without any waiver: the operation may take place within or over a controlled or restricted-access site where access is prohibited or restricted and no non-participants are present. Second, with a waiver: §107.145 can be waived for operations that do not meet the controlled-site criteria. Note that flying over a moving vehicle in a public area — a highway, parking lot, or city street — requires either a controlled site or an explicit waiver.",
+          "key_facts": [
+            "Default: cannot fly over moving vehicles with non-participants present",
+            "Exception without waiver: controlled or restricted-access site with no non-participants",
+            "Exception with waiver: FAA may waive §107.145 for qualifying operations",
+            "Public roads, parking lots, and city streets are NOT controlled-access sites"
+          ],
+          "example": "You are hired to film a car commercial on a closed private test track. The track is fenced, access is controlled, and only production crew are present. You may fly over the moving vehicles without a waiver because it is a restricted-access site with no non-participants."
+        }
+      ],
+      "summary_table": [
+        { "item": "Default rule", "value": "No operations over non-participating people" },
+        { "item": "Category 1 weight limit", "value": "≤0.55 lbs — no authorization needed" },
+        { "item": "Category 2 requirement", "value": "FAA-accepted declaration of compliance + injury threshold + label" },
+        { "item": "Category 3 requirement", "value": "FAA-accepted declaration of compliance + restricted-access site or protection" },
+        { "item": "Category 4 requirement", "value": "Current FAA airworthiness certificate (Part 21)" },
+        { "item": "Airworthiness certificate required by", "value": "Category 4 only" },
+        { "item": "Moving vehicles — no waiver needed when", "value": "Controlled/restricted-access site with no non-participants" }
+      ],
+      "common_mistakes": [
+        "Thinking Category 1 requires any FAA paperwork — it does not if weight ≤0.55 lbs and no sharp rotating parts",
+        "Confusing Category 2 and 3 — both need a declaration of compliance, but Category 3 has site restrictions",
+        "Thinking any category allows sustained flight over open-air assemblies — none do without a waiver",
+        "Assuming a closed parking lot qualifies as a controlled-access site — it needs to actively restrict/prohibit non-participant access"
+      ],
+      "related_question_ids": ["V-016", "V-017", "V-032"]
+    },
+
+    {
+      "id": "V-L6",
+      "module": "V",
+      "module_name": "Operations",
+      "lesson_number": 6,
+      "title": "Airport Operations & Traffic Pattern Awareness",
+      "acs_codes": ["UA.V.A.K2", "UA.V.A.K3", "UA.V.A.K5"],
+      "exam_importance": "high",
+      "intro": "Airports are among the most dynamic and hazardous environments for UAS operations. Manned aircraft are operating at low altitudes on precise paths, radio communications may or may not be made, and a collision with a drone can be fatal. This lesson covers what you need to know about operating near airports and how to interpret manned aircraft traffic patterns.",
+      "sections": [
+        {
+          "heading": "The Requirement — Operations in the Vicinity of Airports (§107.43)",
+          "body": "Part 107 does not categorically prohibit UAS operations near airports — but it does require the remote PIC to avoid creating a hazard to aircraft operations. In controlled airspace (Class B, C, D, surface Class E), ATC authorization is required before flying (§107.41). In Class G airspace near a non-towered airport, no authorization is required, but the pilot must still avoid creating a hazard. Best practice: monitor the CTAF frequency, stay clear of traffic patterns and approach/departure paths, and maintain continuous visual scan for aircraft.",
+          "key_facts": [
+            "Controlled airspace near airports: prior ATC authorization required (§107.41)",
+            "Class G near a non-towered airport: no authorization required, but must not create hazard",
+            "Monitor CTAF/UNICOM frequency even when not legally required",
+            "Stay clear of traffic patterns, final approach paths, and departure paths",
+            "Manned aircraft radio calls at non-towered airports are good practice but NOT mandatory by regulation"
+          ],
+          "memory_aid": "Near any airport: authorization if controlled, caution always, ears on the radio."
+        },
+        {
+          "heading": "The Traffic Pattern — Shape and Legs",
+          "body": "The standard airport traffic pattern is a rectangular path flown by aircraft arriving to land. The standard pattern is left-hand (all turns made to the left), which means aircraft fly counterclockwise when viewed from above. The pattern has five named legs: (1) Upwind — the path along the runway centerline after departure, into the wind; (2) Crosswind — 90° turn after departure, perpendicular to the runway; (3) Downwind — parallel to the runway but in the opposite direction from landing; (4) Base — 90° turn toward the runway, perpendicular to final; (5) Final — aligned with the runway, descending to land.",
+          "key_facts": [
+            "Standard pattern: left-hand (counterclockwise from above)",
+            "Upwind: along runway centerline, departing, into wind",
+            "Crosswind: perpendicular to runway after departure",
+            "Downwind: parallel to runway, opposite landing direction",
+            "Base: perpendicular to runway, turning toward final",
+            "Final: aligned with runway, descending to land",
+            "Non-standard (right-hand) patterns: indicated by RP on sectional chart or ATC instruction"
+          ],
+          "memory_aid": "U, C, D, B, F — Upwind, Crosswind, Downwind, Base, Final. Left turns by default."
+        },
+        {
+          "heading": "Decoding Traffic Pattern Positions from Radio Calls",
+          "body": "The exam tests whether you can interpret a manned aircraft's position from its radio call. To solve these: (1) identify the runway number to find its magnetic heading; (2) the standard pattern is left-hand; (3) determine which leg the aircraft is on; (4) figure out where that leg places the aircraft geographically relative to the runway. Example: 'midfield left downwind for Runway 27.' Runway 27 = heading 270° (due west). Standard left pattern = counterclockwise. Left downwind = aircraft flying east, parallel to the runway but on the north side (for a west-facing runway). The aircraft is NORTH of the runway, flying EAST.",
+          "key_facts": [
+            "Runway number × 10 = magnetic heading of the runway",
+            "Standard pattern is LEFT — turns left, counterclockwise",
+            "Downwind = flying opposite the landing direction, parallel to runway",
+            "Left downwind for a west-facing runway (Rwy 27) = aircraft is NORTH, flying EAST",
+            "Left downwind for a north-facing runway (Rwy 36) = aircraft is WEST, flying SOUTH"
+          ],
+          "example": "Radio call: 'Cooperstown traffic, Cessna 456, midfield left downwind, Runway 13.' Runway 13 = 130° magnetic (southeast). Standard left pattern. Left downwind of a southeast runway = aircraft is flying northwest, on the northeast side of the runway. The aircraft is to the EAST/NORTHEAST.",
+          "memory_aid": "Runway number × 10 = heading. Left pattern = counterclockwise. Downwind = opposite direction of landing."
+        },
+        {
+          "heading": "Why This Matters for UAS — Collision Avoidance",
+          "body": "Understanding traffic patterns tells you exactly where manned aircraft will be at low altitude near an airport. Manned aircraft on final approach — descending toward the runway — may be below 400 feet AGL within 2–3 miles of the runway. Aircraft on downwind and base are also at pattern altitude (typically 1,000 feet AGL above the airport, but lower on short final). A UAS at 400 feet AGL on final approach path of an airport is in the exact path of landing aircraft. Even in Class G airspace, operating on or near approach/departure paths is extremely dangerous.",
+          "key_facts": [
+            "Final approach: aircraft may be below 400 ft AGL within 2–3 miles of runway threshold",
+            "Pattern altitude: typically 1,000 ft AGL — but aircraft are lower on base and final",
+            "Avoid final approach paths, departure paths, and pattern legs regardless of airspace class",
+            "A radio is extra safety — but remember manned aircraft calls are NOT mandatory at non-towered airports"
+          ]
+        },
+        {
+          "heading": "Airport Data Sources",
+          "body": "Before operating near any airport, review current data. Sources: Chart Supplements U.S. (the most comprehensive — covers frequencies, runway data, special procedures, NOTAMs, services), sectional charts (airspace, frequencies), NOTAMs (runway closures, construction, temporary conditions), and ATIS (current weather, active runways, ATC notes) for towered airports. The Chart Supplements U.S. (formerly Airport/Facility Directory) is the single most comprehensive source for a specific airport.",
+          "key_facts": [
+            "Most comprehensive single source: Chart Supplements U.S. (formerly Airport/Facility Directory)",
+            "ATIS: current conditions at towered airports — updated hourly, identified by phonetic letter code",
+            "NOTAMs: check for runway closures, construction, temporary flight restrictions near the airport",
+            "Sectional chart: airspace boundaries, frequencies, traffic pattern indicators"
+          ]
+        }
+      ],
+      "summary_table": [
+        { "item": "Controlled airspace near airport", "value": "Prior ATC authorization required (LAANC or DroneZone)" },
+        { "item": "Class G near non-towered airport", "value": "No authorization required — but no hazard to operations" },
+        { "item": "Manned aircraft radio calls", "value": "Good practice but NOT mandatory at non-towered airports" },
+        { "item": "Standard pattern direction", "value": "Left-hand (counterclockwise from above)" },
+        { "item": "Non-standard pattern indicated by", "value": "RP symbol on sectional or ATC instruction" },
+        { "item": "Traffic pattern legs", "value": "Upwind → Crosswind → Downwind → Base → Final" },
+        { "item": "Runway 27 direction", "value": "270° magnetic (due west)" },
+        { "item": "Most comprehensive airport data source", "value": "Chart Supplements U.S." },
+        { "item": "ATIS update frequency", "value": "Approximately every hour; code letter advances (Alpha → Bravo → Charlie…)" }
+      ],
+      "common_mistakes": [
+        "Assuming because you're in Class G you can fly freely near an airport — you still must not create a hazard",
+        "Forgetting that manned aircraft radio calls at non-towered airports are NOT mandatory — always look, don't just listen",
+        "Misreading downwind — aircraft on left downwind are flying parallel to the runway but in the opposite direction of landing",
+        "Confusing runway heading (magnetic) with chart orientation (true) when figuring out pattern position"
+      ],
+      "related_question_ids": ["V-027", "V-028", "II-013"]
+    },
+
+    {
+      "id": "I-L5",
+      "module": "I",
+      "module_name": "Regulations",
+      "lesson_number": 5,
+      "title": "Remote ID, FAA Inspection Rights & Multiple UAS Operations",
+      "acs_codes": ["UA.I.F.K1", "UA.I.A.K3", "UA.I.B.K34", "UA.I.B.K35"],
+      "exam_importance": "high",
+      "intro": "Three regulations that appear on the exam but don't fit neatly elsewhere: Remote ID (the digital license plate for drones), the FAA's right to inspect your aircraft and certificate, and the rule governing simultaneous operation of more than one UAS.",
+      "sections": [
+        {
+          "heading": "Remote Identification — What It Is (14 CFR Part 89)",
+          "body": "Remote Identification (Remote ID) is a requirement that a UAS broadcast identification and location information during flight so that FAA, national security agencies, and law enforcement can identify and locate UAS in the airspace. Think of it as a digital license plate that transmits in real time. Remote ID became a regulatory requirement under 14 CFR Part 89. Most drones sold today are required to have built-in Standard Remote ID capability.",
+          "key_facts": [
+            "Remote ID = digital license plate broadcasting identification and location during flight",
+            "Governed by 14 CFR Part 89",
+            "Required for most UAS operated in U.S. airspace",
+            "Broadcasts: UAS ID, location, altitude, velocity, control station location, timestamp",
+            "Two compliance methods: Standard Remote ID (built-in broadcast module) or Remote ID broadcast module add-on"
+          ],
+          "memory_aid": "Remote ID = digital license plate. Always on, always broadcasting."
+        },
+        {
+          "heading": "What Happens If Standard Remote ID Fails During Flight?",
+          "body": "If the standard remote identification system fails during a flight, the person manipulating the controls must land the aircraft as soon as practicable. There is no option to continue the flight once Remote ID has failed. Activating navigation lights or notifying ATC are not correct responses — the aircraft must be landed.",
+          "key_facts": [
+            "Remote ID fails in flight: land as soon as practicable",
+            "Do NOT continue the flight after Remote ID failure",
+            "Correct action: land — not notify ATC, not activate lights"
+          ],
+          "memory_aid": "Remote ID fails = land now. No exceptions."
+        },
+        {
+          "heading": "FAA Inspection Rights (§107.7)",
+          "body": "Upon request of the FAA Administrator or an authorized representative (including the NTSB), a remote pilot must: (1) present their Remote Pilot Certificate, and (2) make the small UAS available for inspection or testing. There is no right to delay or refuse this inspection — refusal is itself a regulatory violation and can result in certificate suspension or revocation. The inspection right applies during or after any operation, not just if something went wrong.",
+          "key_facts": [
+            "Must present Remote Pilot Certificate upon FAA request",
+            "Must make UAS available for inspection or testing upon FAA request",
+            "No right to refuse or delay — refusal is a violation",
+            "Applies during or after any operation",
+            "Authority: FAA Administrator and authorized representatives (including NTSB)"
+          ],
+          "memory_aid": "FAA asks = you comply. Certificate and aircraft — both, immediately."
+        },
+        {
+          "heading": "Operating Multiple Small UAS Simultaneously (§107.35)",
+          "body": "Part 107 prohibits a single person from acting as remote pilot in command or manipulating the controls of more than one small UAS at the same time, unless the FAA has issued a waiver. This means one certificated pilot = one aircraft at a time, by default. To operate multiple UAS simultaneously (for example, a swarm operation or simultaneous mapping flights), the pilot must obtain a waiver through FAA DroneZone. This is one of the regulations listed in §107.205 as waivable.",
+          "key_facts": [
+            "Default: one pilot = one UAS at a time",
+            "Simultaneous operation of multiple UAS requires a waiver (§107.35)",
+            "Waiver obtained through FAA DroneZone",
+            "§107.35 is listed in §107.205 as waivable",
+            "Having a VO does not change the rule — the remote PIC cannot manage two aircraft"
+          ],
+          "example": "A mapping company wants two drones flying adjacent grid patterns simultaneously with one certificated pilot overseeing both. This requires a §107.35 waiver before starting. Without a waiver, a second certificated remote pilot must be present for the second aircraft.",
+          "memory_aid": "One pilot, one drone — unless you have a waiver."
+        },
+        {
+          "heading": "Inspection by FAA vs. Accident Reporting — Keeping Them Separate",
+          "body": "Students frequently confuse three distinct regulatory obligations involving the FAA: (1) §107.7 FAA Inspection — present your certificate and aircraft when asked, any time, no incident required; (2) §107.9 Accident Report — file within 10 calendar days if serious injury, loss of consciousness, or property damage over $500 occurs; (3) §107.21 Emergency Deviation Report — send a written report only if the FAA Administrator specifically requests one after you deviated from Part 107 rules during an emergency. Each has a different trigger, a different deadline, and a different format.",
+          "key_facts": [
+            "§107.7 Inspection: present certificate + aircraft on request, any time — no incident required",
+            "§107.9 Accident report: within 10 calendar days, triggered by injury/damage",
+            "§107.21 Emergency deviation report: only if FAA requests it after an emergency",
+            "These are three separate obligations — each has its own trigger and deadline"
+          ]
+        }
+      ],
+      "summary_table": [
+        { "item": "Remote ID regulation", "value": "14 CFR Part 89" },
+        { "item": "Remote ID failure response", "value": "Land as soon as practicable" },
+        { "item": "FAA inspection — what to present", "value": "Remote Pilot Certificate + UAS available for inspection" },
+        { "item": "Can you refuse FAA inspection?", "value": "No — refusal is a violation" },
+        { "item": "Multiple UAS default", "value": "One pilot per UAS — simultaneous operation prohibited" },
+        { "item": "Multiple UAS waiver source", "value": "FAA DroneZone (§107.35 waiver)" },
+        { "item": "§107.7 trigger", "value": "FAA request — any time, no incident needed" },
+        { "item": "§107.9 trigger", "value": "Serious injury, loss of consciousness, or property damage >$500" },
+        { "item": "§107.21 trigger", "value": "Emergency deviation + FAA specifically requests report" }
+      ],
+      "common_mistakes": [
+        "Thinking Remote ID failure allows continuation of flight — you must land as soon as practicable",
+        "Thinking you can delay or negotiate a FAA inspection request — you cannot, refusal is a violation",
+        "Confusing §107.7 (inspection), §107.9 (accident), and §107.21 (emergency deviation) — three separate rules with separate triggers",
+        "Thinking a VO counts as a second pilot allowing simultaneous multi-UAS operation — it does not"
+      ],
+      "related_question_ids": ["I-015", "I-023", "I-024"]
+    }
+
+  ]
+}

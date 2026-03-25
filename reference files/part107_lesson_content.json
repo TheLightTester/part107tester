@@ -1,0 +1,1173 @@
+{
+  "metadata": {
+    "title": "Part 107 Course — Lesson Content Data",
+    "version": "1.0",
+    "depth": "medium",
+    "modules_included": ["I", "II", "III", "V"],
+    "sources": [
+      "14 CFR Part 107",
+      "FAA Remote Pilot Small UAS Study Guide",
+      "Rupprecht Law Part 107 Study Guide v2.2",
+      "DPA Part 107 Cheat Sheet v5",
+      "AC 107-2A"
+    ],
+    "content_schema": {
+      "lesson": {
+        "id": "string",
+        "module": "string",
+        "module_name": "string",
+        "lesson_number": "integer",
+        "title": "string",
+        "acs_codes": ["string"],
+        "exam_importance": "low | medium | high | critical",
+        "intro": "string",
+        "sections": [
+          {
+            "heading": "string",
+            "body": "string",
+            "key_facts": ["string"],
+            "example": "string (optional)",
+            "memory_aid": "string (optional)"
+          }
+        ],
+        "summary_table": [{ "item": "string", "value": "string" }],
+        "common_mistakes": ["string"],
+        "related_question_ids": ["string"]
+      }
+    }
+  },
+
+  "modules": [
+
+    {
+      "id": "I",
+      "name": "Regulations",
+      "exam_weight": "15-25%",
+      "description": "Covers the legal framework governing Part 107 operations — who can fly, how to register, what you can and cannot do, and what happens when things go wrong.",
+      "lessons": [
+
+        {
+          "id": "I-L1",
+          "module": "I",
+          "module_name": "Regulations",
+          "lesson_number": 1,
+          "title": "Eligibility & the Remote Pilot Certificate",
+          "acs_codes": ["UA.I.C.K1", "UA.I.C.K2"],
+          "exam_importance": "high",
+          "intro": "Before you can legally fly a drone commercially under Part 107, you need a Remote Pilot Certificate with a Small UAS Rating. This lesson covers who qualifies, how to get the certificate, and how to keep it current.",
+          "sections": [
+            {
+              "heading": "Who Is Eligible",
+              "body": "To be eligible for a Remote Pilot Certificate under §107.61, you must: (1) be at least 16 years old, (2) be able to read, speak, write, and understand English, (3) not know of any physical or mental condition that would make you unable to safely operate a small UAS. There is no requirement for an FAA medical certificate — you self-certify your fitness before every flight.",
+              "key_facts": [
+                "Minimum age: 16 years old",
+                "English proficiency required (reading, speaking, writing, understanding)",
+                "No FAA medical certificate required — pilot self-certifies fitness",
+                "Must be in a proper physical and mental state to operate safely"
+              ],
+              "example": "A 17-year-old who speaks English and passes the knowledge test can legally obtain and exercise a Remote Pilot Certificate."
+            },
+            {
+              "heading": "How to Get Certified",
+              "body": "To obtain the certificate you must pass the FAA Aeronautical Knowledge Test (AKT) at an FAA-approved testing center. The test is 60 questions, you have 2 hours, and the passing score is 70% (42 of 60 correct). After passing, you apply through the FAA's IACRA system at iacra.faa.gov. You will need your FAA Tracking Number (FTN) — obtain this from IACRA before your test date.",
+              "key_facts": [
+                "60 questions, 2-hour time limit",
+                "Minimum passing score: 70% (42/60 correct)",
+                "Testing at FAA-approved testing centers",
+                "Apply via IACRA at iacra.faa.gov after passing",
+                "Bring your FTN (FAA Tracking Number) to the test"
+              ],
+              "memory_aid": "70% to fly — 42 right out of 60."
+            },
+            {
+              "heading": "Keeping Your Certificate Current — Recency",
+              "body": "Your Remote Pilot Certificate does not expire, but your aeronautical knowledge recency does. Under §107.65, you must pass a recurrent knowledge test every 24 calendar months to remain current. If your knowledge currency lapses, you cannot legally act as remote PIC until you retake and pass the test. The recurrent test covers the same material as the initial test.",
+              "key_facts": [
+                "Certificate does not expire",
+                "Knowledge recency expires every 24 calendar months",
+                "Must pass recurrent test to continue acting as remote PIC",
+                "Recurrent test covers same ACS topic areas as initial test"
+              ],
+              "example": "You pass the initial test on March 15, 2024. Your knowledge is current until March 31, 2026 (end of that calendar month, 24 months later). After that date you must retake the test before flying.",
+              "memory_aid": "Certificate lasts forever. Knowledge lasts 24 months."
+            },
+            {
+              "heading": "Supervising Non-Certificated Pilots",
+              "body": "A certificated remote PIC may allow another person — someone who does NOT hold a certificate — to physically manipulate the flight controls of the UAS, as long as the certificated remote PIC is present and maintains direct supervisory control. The certificated PIC retains full legal responsibility for the safe operation of the aircraft at all times. The non-certificated person does not need any certificate or rating to manipulate controls under this arrangement.",
+              "key_facts": [
+                "Certificated remote PIC may supervise a non-certificated person manipulating the controls",
+                "Certificated PIC must be present and in direct supervisory control",
+                "Certificated PIC bears full legal responsibility",
+                "Non-certificated operator does not need their own certificate"
+              ]
+            }
+          ],
+          "summary_table": [
+            { "item": "Minimum age", "value": "16 years old" },
+            { "item": "Test length", "value": "60 questions, 2 hours" },
+            { "item": "Passing score", "value": "70% (42/60)" },
+            { "item": "Medical certificate required", "value": "No" },
+            { "item": "Knowledge recency", "value": "Every 24 calendar months" }
+          ],
+          "common_mistakes": [
+            "Confusing the 24-month knowledge recency with the certificate expiration (the certificate never expires)",
+            "Thinking you need an FAA medical certificate — you do not under Part 107",
+            "Forgetting to get your FTN from IACRA before the test day"
+          ],
+          "related_question_ids": ["I-001", "I-002", "I-007", "I-016"]
+        },
+
+        {
+          "id": "I-L2",
+          "module": "I",
+          "module_name": "Regulations",
+          "lesson_number": 2,
+          "title": "UAS Registration",
+          "acs_codes": ["UA.I.B.K1"],
+          "exam_importance": "high",
+          "intro": "Most drones must be registered with the FAA before flight. This lesson covers when registration is required, how to register, and how to display your registration number.",
+          "sections": [
+            {
+              "heading": "When Registration Is Required",
+              "body": "Under 14 CFR Part 48, all civilian small UAS weighing 0.55 pounds (250 grams) or more at takeoff — including everything onboard or attached — must be registered with the FAA before operation. This applies regardless of whether the flight is recreational or commercial. Aircraft under 0.55 lbs are exempt from Part 48 registration.",
+              "key_facts": [
+                "Registration required at or above 0.55 lbs (250 grams) takeoff weight",
+                "Weight includes everything onboard or attached at takeoff",
+                "Applies to both recreational and commercial operations",
+                "Aircraft under 0.55 lbs are exempt",
+                "Part 107 aircraft over 55 lbs require Part 47 (paper-based) registration instead"
+              ],
+              "example": "A DJI Mini 3 weighs 249 grams — under 0.55 lbs — so it is exempt from Part 48 registration. A DJI Mavic 3 weighs approximately 895 grams, so it must be registered.",
+              "memory_aid": "0.55 to 55 lbs = Part 48 (online). 55 lbs and over = Part 47 (paper). Under 0.55 = no registration needed."
+            },
+            {
+              "heading": "How to Display Your Registration Number",
+              "body": "Your registration number must be displayed on the aircraft in a location that is visible and accessible. The number must be legible and cannot be hidden inside a battery compartment that requires tools to open. You do not need to have your physical registration certificate with you during flight, but the number must be on the aircraft.",
+              "key_facts": [
+                "Registration number must be visible and accessible on the aircraft",
+                "Must be legible",
+                "Cannot be hidden inside a tool-required compartment",
+                "One registration number can cover multiple aircraft owned by the same person (under Part 48)"
+              ]
+            }
+          ],
+          "summary_table": [
+            { "item": "Registration threshold", "value": "0.55 lbs (250 g) or more" },
+            { "item": "Applies to", "value": "Recreational and commercial flights" },
+            { "item": "Registration system", "value": "Part 48 (FAA DroneZone), online" },
+            { "item": "Display requirement", "value": "Visible and accessible on the aircraft" }
+          ],
+          "common_mistakes": [
+            "Assuming only commercial flights require registration — recreational flights above 0.55 lbs also require it",
+            "Hiding the registration number inside the battery bay"
+          ],
+          "related_question_ids": ["I-003", "I-004"]
+        },
+
+        {
+          "id": "I-L3",
+          "module": "I",
+          "module_name": "Regulations",
+          "lesson_number": 3,
+          "title": "Operating Rules — Limitations & Prohibited Acts",
+          "acs_codes": ["UA.I.B.K7", "UA.I.B.K9", "UA.I.B.K14", "UA.I.B.K18", "UA.I.B.K19"],
+          "exam_importance": "critical",
+          "intro": "Part 107's operating rules define what you can and cannot do in the air. These rules exist to protect other people in the sky and on the ground. Violations carry serious civil and criminal penalties.",
+          "sections": [
+            {
+              "heading": "The Hard Numbers — Operating Limits (§107.51)",
+              "body": "Every Part 107 pilot must know these four limits cold. They define the legal operational envelope for any flight without a waiver.",
+              "key_facts": [
+                "Maximum altitude: 400 feet AGL (exception: within 400 ft horizontally of a structure, you may fly up to 400 ft above the structure's top)",
+                "Maximum groundspeed: 87 knots (100 mph)",
+                "Minimum flight visibility from control station: 3 statute miles",
+                "Cloud clearances: at least 500 feet below clouds AND 2,000 feet horizontally from clouds"
+              ],
+              "example": "You are hired to inspect a 600-foot communications tower. You may fly up to 1,000 feet AGL (600 ft tower + 400 ft) as long as you stay within 400 feet horizontally of the structure. No waiver needed.",
+              "memory_aid": "400 feet up. 100 mph forward. 3 miles to see. 500 below / 2,000 beside the clouds."
+            },
+            {
+              "heading": "Daylight and Civil Twilight (§107.29)",
+              "body": "Standard Part 107 operations are restricted to daylight hours. Civil twilight — 30 minutes before official sunrise and 30 minutes after official sunset — is permitted but requires anti-collision lighting visible for at least 3 statute miles with a sufficient flash rate. True night operations (outside civil twilight) require a waiver. Alaska uses the definition of civil twilight from the Air Almanac, which differs from the lower-48 definition.",
+              "key_facts": [
+                "Daylight operations: no special equipment required beyond standard kit",
+                "Civil twilight (30 min before sunrise / 30 min after sunset): anti-collision lighting required, visible 3 SM",
+                "Night operations (outside civil twilight): FAA waiver required",
+                "Lighting flash rate must be sufficient to avoid collision"
+              ],
+              "memory_aid": "Civil twilight = 30 minutes either side of the sun. Lights on, visible 3 miles."
+            },
+            {
+              "heading": "Right of Way (§107.37)",
+              "body": "A small UAS must yield the right of way to ALL other aircraft — manned or unmanned, large or small. This includes airplanes, helicopters, hot air balloons, gliders, and any other airborne vehicle. Yielding means the UAS must give way and may not pass over, under, or ahead of the other aircraft unless well clear. There are no exceptions. The UAS is always at the bottom of the right-of-way hierarchy.",
+              "key_facts": [
+                "UAS must yield to ALL aircraft and airborne vehicles — no exceptions",
+                "Yielding means: give way AND do not pass over, under, or ahead unless well clear",
+                "This includes manned aircraft, other UAS, and launch/reentry vehicles"
+              ],
+              "example": "You see a crop duster working in your area. You must maneuver your UAS to remain well clear and not interfere with its operations — even if you were there first."
+            },
+            {
+              "heading": "Alcohol, Drugs, and Medical Fitness (§107.17, §107.27)",
+              "body": "No person may act as remote PIC, person manipulating the controls, or visual observer if they: (1) consumed any alcoholic beverage within the preceding 8 hours, (2) are under the influence of alcohol, (3) have a blood alcohol concentration of 0.04% or greater, or (4) are using a drug that affects their mental or physical capabilities. For medical conditions, pilots must self-assess — do not fly if you know of a condition that could interfere with safe operation.",
+              "key_facts": [
+                "8-hour 'bottle to throttle' rule — no alcohol within 8 hours",
+                "BAC limit: below 0.04%",
+                "Drug prohibition: anything affecting mental or physical capability",
+                "Applies to remote PIC, person manipulating controls, AND visual observer",
+                "No FAA medical required but pilot must self-assess fitness"
+              ],
+              "memory_aid": "8 hours, 0.04 BAC. Applies to the whole crew — not just the PIC."
+            },
+            {
+              "heading": "Prohibited Acts",
+              "body": "The following are absolute prohibitions — no waiver exists for these: (1) Carrying hazardous material (§107.36). (2) Operating in a careless or reckless manner (§107.23). (3) Falsifying documents or applications (§107.5) — can result in certificate revocation. The prohibition on hazardous material is complete; it does not appear in the list of waivable rules in §107.205.",
+              "key_facts": [
+                "Hazardous material carriage: NEVER permitted under Part 107",
+                "Reckless/careless operation: prohibited — can endanger life or property",
+                "Falsification: results in denial or revocation of any certificate held"
+              ]
+            }
+          ],
+          "summary_table": [
+            { "item": "Max altitude (standard)", "value": "400 ft AGL" },
+            { "item": "Max altitude (near structure)", "value": "400 ft above structure top, within 400 ft horizontally" },
+            { "item": "Max groundspeed", "value": "87 knots (100 mph)" },
+            { "item": "Min visibility", "value": "3 statute miles" },
+            { "item": "Cloud clearances", "value": "500 ft below / 2,000 ft horizontal" },
+            { "item": "Civil twilight", "value": "30 min before sunrise to 30 min after sunset" },
+            { "item": "Night ops", "value": "Waiver required" },
+            { "item": "Bottle to throttle", "value": "8 hours" },
+            { "item": "BAC limit", "value": "Below 0.04%" }
+          ],
+          "common_mistakes": [
+            "Thinking 400 ft AGL is always the maximum — the structure exception allows higher",
+            "Confusing civil twilight (no waiver needed, just lights) with night ops (waiver required)",
+            "Thinking the alcohol/drug rules only apply to the pilot manipulating the controls"
+          ],
+          "related_question_ids": ["I-008", "I-009", "I-011", "I-012", "I-017", "I-018", "V-001", "V-002", "V-003", "V-004", "V-036"]
+        },
+
+        {
+          "id": "I-L4",
+          "module": "I",
+          "module_name": "Regulations",
+          "lesson_number": 4,
+          "title": "Accident Reporting, Emergency Deviations & Waivers",
+          "acs_codes": ["UA.I.A.K4", "UA.I.B.K21", "UA.I.E.K1"],
+          "exam_importance": "high",
+          "intro": "Knowing when to report, what to report, and who to report to is tested on every exam. This lesson also covers the in-flight emergency deviation rule and the waiver system.",
+          "sections": [
+            {
+              "heading": "FAA Accident Reporting (§107.9)",
+              "body": "The remote PIC must report to the FAA within 10 calendar days if an operation results in: (a) serious injury to any person or any loss of consciousness, OR (b) damage to any property other than the small UA, unless the cost of repair is $500 or less AND the fair market value of the property is $500 or less in the event of total loss. The report is made to the FAA — not the NTSB (unless separate NTSB criteria apply under 49 CFR Part 830).",
+              "key_facts": [
+                "Report within 10 calendar days",
+                "Triggers: serious injury, loss of consciousness, or property damage over $500",
+                "No report required if property damage repair cost ≤ $500 AND fair market value ≤ $500",
+                "Report goes to the FAA",
+                "Separate NTSB reporting rules exist under 49 CFR Part 830"
+              ],
+              "example": "Your drone clips a fence post and damages it. Repair cost is $350. No FAA report required. But if you hit a car and cause $1,200 in damage, you must report within 10 days.",
+              "memory_aid": "10 days. $500 threshold. Injury or serious damage = always report."
+            },
+            {
+              "heading": "In-Flight Emergency Deviation (§107.21)",
+              "body": "During an in-flight emergency, a remote PIC may deviate from ANY rule in Part 107 to the extent necessary to respond to the emergency. If a deviation occurs, the pilot must send a written report to the FAA only if asked to do so by the Administrator. This deviation authority is narrow — it is for genuine emergencies, not convenience. It is separate from the accident reporting requirement.",
+              "key_facts": [
+                "May deviate from ANY Part 107 rule during a genuine emergency",
+                "Written report required ONLY if FAA Administrator requests it",
+                "This is NOT the same as the accident report — different trigger, different process",
+                "Must actually be an emergency — not a workaround for inconvenient rules"
+              ],
+              "example": "Your drone has a battery fire mid-flight. You climb above 400 feet AGL to maneuver away from people. This is a legal deviation. You only need to report it if the FAA later asks you to."
+            },
+            {
+              "heading": "The Waiver System (§107.200, §107.205)",
+              "body": "Some Part 107 restrictions can be waived by the FAA if the applicant can demonstrate the operation can be conducted safely. Waivers are obtained through the FAA DroneZone (formerly the FAA UAS portal). The regulations that CAN be waived include: daylight operations, VLOS, visual observer, multiple aircraft, right-of-way (§107.37a), over people, airspace authorization, and operating limits. Rules that CANNOT be waived include: the requirement for a remote pilot certificate, the prohibition on hazardous material, and the prohibition on falsification.",
+              "key_facts": [
+                "Waivers obtained through FAA DroneZone",
+                "Can waive: night ops, VLOS, over people, multiple aircraft, airspace, and more",
+                "Cannot waive: pilot certificate requirement, hazardous material prohibition, falsification rules",
+                "Applicant must demonstrate the operation can be conducted safely"
+              ],
+              "memory_aid": "You can waive most operational rules. You can NEVER waive the certificate requirement or hazmat prohibition."
+            }
+          ],
+          "summary_table": [
+            { "item": "Accident report deadline", "value": "10 calendar days" },
+            { "item": "Report trigger — injury", "value": "Any serious injury or loss of consciousness" },
+            { "item": "Report trigger — property", "value": "Damage repair cost or FMV over $500" },
+            { "item": "Emergency deviation report", "value": "Only if FAA requests it" },
+            { "item": "Waiver source", "value": "FAA DroneZone" },
+            { "item": "Non-waivable", "value": "Pilot certificate, hazmat, falsification" }
+          ],
+          "common_mistakes": [
+            "Confusing the 10-day accident report (§107.9) with the emergency deviation report (§107.21)",
+            "Thinking any deviation from Part 107 triggers a mandatory report — only accidents do (or emergency deviations when FAA requests it)",
+            "Thinking all Part 107 rules can be waived — hazmat and certificate requirements cannot"
+          ],
+          "related_question_ids": ["I-005", "I-006", "I-013", "I-019", "I-025", "V-012", "V-035"]
+        }
+      ]
+    },
+
+
+    {
+      "id": "II",
+      "name": "Airspace & Charts",
+      "exam_weight": "15-25%",
+      "description": "Covers the structure of U.S. airspace, how to read sectional charts, and how to identify what kind of authorization — if any — is needed to fly in a given location.",
+      "lessons": [
+
+        {
+          "id": "II-L1",
+          "module": "II",
+          "module_name": "Airspace & Charts",
+          "lesson_number": 1,
+          "title": "Controlled Airspace — Classes B, C, D, and E",
+          "acs_codes": ["UA.II.A.K1"],
+          "exam_importance": "critical",
+          "intro": "The U.S. airspace system is divided into classes — each with different rules and authorization requirements. As a remote pilot, you need to know which class you're operating in before every flight, because flying in controlled airspace without authorization is a federal violation.",
+          "sections": [
+            {
+              "heading": "The Big Picture — Controlled vs. Uncontrolled",
+              "body": "There are two main categories: controlled (Classes A through E) and uncontrolled (Class G). In controlled airspace, ATC provides some level of service and often requires authorization. In Class G, ATC has no jurisdiction and no authorization is needed. For UAS pilots, the key rule is §107.41: you need prior ATC authorization before flying in Class B, C, D, or Class E designated to the surface at an airport.",
+              "key_facts": [
+                "Controlled: Classes A, B, C, D, E — ATC provides service",
+                "Uncontrolled: Class G — ATC has no jurisdiction",
+                "§107.41 requires prior ATC authorization for B, C, D, and surface-level E",
+                "Authorization obtained via LAANC or FAA DroneZone"
+              ],
+              "memory_aid": "B, C, D, and E-at-surface = need authorization. Class G = go freely."
+            },
+            {
+              "heading": "Class B — Busiest Airports",
+              "body": "Class B surrounds the nation's busiest airports, from the surface to approximately 10,000 feet MSL. The shape resembles an upside-down wedding cake — multiple layers of different radii. ATC authorization is required before entering. On sectional charts, Class B is depicted with solid blue lines.",
+              "key_facts": [
+                "Surrounds busiest airports (major hubs)",
+                "Surface to approximately 10,000 ft MSL",
+                "Shape: upside-down wedding cake (layered rings)",
+                "Chart depiction: solid blue lines",
+                "Authorization required: yes (LAANC/DroneZone)"
+              ],
+              "memory_aid": "B = Big, Blue, Busy. Solid blue lines on the chart."
+            },
+            {
+              "heading": "Class C — Major Airports",
+              "body": "Class C surrounds airports with an operational control tower, radar approach control, and significant traffic. It typically has a 5 NM surface area (surface to 4,000 ft AGL above airport elevation) and a 10 NM outer shelf (1,200 to 4,000 ft AGL). ATC authorization required. Depicted on charts with solid magenta lines.",
+              "key_facts": [
+                "Around airports with tower, radar approach, and significant operations",
+                "Surface to 4,000 ft AGL (charted MSL)",
+                "Inner ring: 5 NM radius; outer shelf: 10 NM radius",
+                "Chart depiction: solid magenta lines",
+                "Authorization required: yes"
+              ],
+              "memory_aid": "C = Congested. Solid Magenta. 5 and 10 NM rings."
+            },
+            {
+              "heading": "Class D — Towered Airports",
+              "body": "Class D surrounds airports with an operational control tower. It extends from the surface to 2,500 feet above airport elevation. The configuration is individually tailored. ATC authorization required. Depicted on charts with dashed blue lines.",
+              "key_facts": [
+                "Surrounds airports with operating control tower only",
+                "Surface to approximately 2,500 ft above airport elevation (charted MSL)",
+                "Chart depiction: dashed blue lines",
+                "Authorization required: yes"
+              ],
+              "memory_aid": "D = Dainty dashed blue. Smallest controlled ring."
+            },
+            {
+              "heading": "Class E — The 'Everywhere Else' Controlled Airspace",
+              "body": "Class E is controlled airspace that isn't A, B, C, or D. It exists at multiple altitudes and is depicted differently depending on its floor. When Class E goes to the surface at an airport, ATC authorization is required for UAS — just like B, C, and D. When Class E starts at 700 ft or 1,200 ft AGL, no authorization is typically needed for UAS flying below that floor in Class G. Class E also covers all controlled airspace from 14,500 ft MSL to 18,000 ft MSL.",
+              "key_facts": [
+                "Class E at the SURFACE: depicted with dashed magenta lines — authorization required",
+                "Class E starting at 700 ft AGL: depicted with magenta vignette/halo — no auth needed below 700 ft (you're in G)",
+                "Class E starting at 1,200 ft AGL: depicted with blue vignette/halo — no auth needed below 1,200 ft",
+                "Class E from 14,500 ft MSL to 18,000 ft MSL: exists everywhere else"
+              ],
+              "example": "A rural airport has Class E airspace designated to the surface (dashed magenta circle). Even though there's no tower, you need LAANC authorization to fly your drone there. Five miles away with no surface designation, you're in Class G — no authorization needed.",
+              "memory_aid": "E is Everywhere. Solid line = surface level = authorization needed. Halo/vignette = starts above ground = may be free below it."
+            }
+          ],
+          "summary_table": [
+            { "item": "Class B", "value": "Solid blue | Surface to ~10,000 MSL | Auth required" },
+            { "item": "Class C", "value": "Solid magenta | Surface to 4,000 AGL | Auth required" },
+            { "item": "Class D", "value": "Dashed blue | Surface to ~2,500 AGL | Auth required" },
+            { "item": "Class E (surface)", "value": "Dashed magenta | Surface up | Auth required" },
+            { "item": "Class E (700 ft)", "value": "Magenta vignette | 700 ft AGL up | No auth below 700 ft" },
+            { "item": "Class E (1,200 ft)", "value": "Blue vignette | 1,200 ft AGL up | No auth below 1,200 ft" },
+            { "item": "Class G", "value": "No depiction | Below Class E | No auth required" }
+          ],
+          "common_mistakes": [
+            "Confusing dashed blue (Class D) with dashed magenta (Class E surface)",
+            "Assuming Class E starting at 700 ft means you need authorization below 700 ft — below 700 ft is Class G",
+            "Not realizing Class E can go to the surface at smaller airports that have no tower"
+          ],
+          "related_question_ids": ["II-001", "II-002", "II-003", "II-004", "II-009", "II-010", "II-014"]
+        },
+
+        {
+          "id": "II-L2",
+          "module": "II",
+          "module_name": "Airspace & Charts",
+          "lesson_number": 2,
+          "title": "Special Use Airspace & Other Airspace Areas",
+          "acs_codes": ["UA.II.A.K2"],
+          "exam_importance": "high",
+          "intro": "Beyond the lettered classes, there is a category called Special Use Airspace (SUA) — areas where operations are restricted or hazardous. Remote pilots must recognize SUA on sectional charts and understand the rules for each type.",
+          "sections": [
+            {
+              "heading": "Prohibited Areas (P)",
+              "body": "Prohibited areas contain airspace where ALL aircraft flight is prohibited — no exceptions, no waivers. They are established for national security or national interest. Depicted on charts with a blue boundary and labeled P followed by a number (e.g., P-40 around Camp David).",
+              "key_facts": [
+                "Flight of all aircraft PROHIBITED — no exceptions",
+                "Established for security or national interest",
+                "Chart label: P-### (e.g., P-40, P-56)",
+                "Examples: Camp David (P-40), National Mall in Washington D.C."
+              ]
+            },
+            {
+              "heading": "Restricted Areas (R)",
+              "body": "Restricted areas contain activities hazardous to non-participating aircraft (artillery firing, missile testing, aerial gunnery). Flight is NOT wholly prohibited but IS subject to restrictions. Entry without authorization from the using or controlling agency may be extremely hazardous. Depicted on charts labeled R followed by a number.",
+              "key_facts": [
+                "Hazardous activities present — flight restricted but not fully prohibited",
+                "Must get authorization from the using or controlling agency",
+                "Chart label: R-### (e.g., R-4401)",
+                "Examples: military test ranges, artillery ranges"
+              ]
+            },
+            {
+              "heading": "Warning Areas (W)",
+              "body": "Warning areas are similar to restricted areas but are located over international waters (3+ NM from the U.S. coast). The FAA cannot prohibit foreign aircraft from flying in international waters, so these areas carry a 'warning' rather than a 'restriction.' Depicted with W followed by a number.",
+              "key_facts": [
+                "Similar to restricted areas but over international waters",
+                "Cannot be legally restricted — only warned",
+                "Chart label: W-###"
+              ]
+            },
+            {
+              "heading": "Military Operations Areas (MOAs)",
+              "body": "MOAs separate military training from IFR traffic. VFR pilots (including UAS operators) may fly through MOAs but should exercise extreme caution — high-speed military aircraft may be present. Before flying through an MOA, check whether it is active. Depicted on charts with magenta boundaries and a label like 'VANCE 2 MOA.'",
+              "key_facts": [
+                "Separates military training from IFR traffic",
+                "VFR/UAS flights permitted but exercise extreme caution",
+                "Check if active before flying through",
+                "High-speed military aircraft may be present below 10,000 ft MSL"
+              ]
+            },
+            {
+              "heading": "Alert Areas (A)",
+              "body": "Alert areas inform non-participating pilots of areas with high volumes of pilot training or unusual aerial activity. No restriction applies — you can fly through, but both participating and transiting pilots share equal responsibility for collision avoidance. Depicted on charts labeled A followed by a number (e.g., A-211).",
+              "key_facts": [
+                "High volume pilot training or unusual activity — awareness only",
+                "No prohibition or restriction",
+                "Equal collision avoidance responsibility for all pilots",
+                "Chart label: A-###"
+              ]
+            },
+            {
+              "heading": "Controlled Firing Areas (CFAs)",
+              "body": "CFAs contain hazardous activities, but the key difference from restricted areas is that ALL activity is suspended when a spotter detects an approaching aircraft. Because CFAs do not cause non-participating aircraft to change course, they are NOT charted on sectional charts.",
+              "key_facts": [
+                "Activities suspended when approaching aircraft is detected",
+                "Non-participating aircraft do not need to deviate",
+                "NOT charted on sectional charts — this is a key distinguishing fact"
+              ],
+              "memory_aid": "CFAs are not on the chart because they always yield to you."
+            },
+            {
+              "heading": "Military Training Routes (MTRs)",
+              "body": "MTRs are routes used by military aircraft for low-altitude, high-speed training, typically below 10,000 ft MSL at speeds over 250 knots. They are identified on sectional charts as IR (IFR) or VR (VFR) followed by a number. CRITICAL: A four-digit route number (e.g., VR1667) means ALL segments are at or below 1,500 ft AGL — military aircraft could be flying at drone altitudes on these routes. A three-digit route number (e.g., VR207) means at least one segment is above 1,500 ft AGL.",
+              "key_facts": [
+                "IR routes: conducted under IFR regardless of weather",
+                "VR routes: conducted under VFR",
+                "FOUR digit number (e.g., VR1207): ALL segments at or below 1,500 ft AGL",
+                "THREE digit number (e.g., VR207): at least one segment above 1,500 ft AGL",
+                "Military aircraft may exceed 250 knots"
+              ],
+              "memory_aid": "4 digits = all segments BELOW 1,500 ft. Your drone at 400 ft is in their backyard."
+            },
+            {
+              "heading": "Temporary Flight Restrictions (TFRs)",
+              "body": "TFRs temporarily restrict aircraft from operating in a defined area. They are issued as Flight Data Center (FDC) NOTAMs. Reasons include: disaster/hazard areas, firefighting operations, VIP movement (President, Vice President), national disasters, space operations, and major public events. Check tfr.faa.gov before every flight. Violating a TFR is a serious federal offense with major penalties.",
+              "key_facts": [
+                "Issued as FDC NOTAMs",
+                "Check tfr.faa.gov before every flight",
+                "No altitude exemption — a TFR usually starts at the surface",
+                "Drone operators have grounded firefighting aircraft — a serious safety hazard",
+                "Violations result in certificate suspension, fines, and possible criminal prosecution"
+              ],
+              "memory_aid": "TFR = Total Flight Restriction. No altitude workaround. Check tfr.faa.gov every time."
+            }
+          ],
+          "summary_table": [
+            { "item": "Prohibited (P)", "value": "No flight at all — no exceptions" },
+            { "item": "Restricted (R)", "value": "Restricted — need authorization from controlling agency" },
+            { "item": "Warning (W)", "value": "Over international waters — caution advised" },
+            { "item": "MOA", "value": "Military training — VFR/UAS may enter but exercise caution" },
+            { "item": "Alert (A)", "value": "High traffic area — no restriction, shared responsibility" },
+            { "item": "CFA", "value": "Self-suspending hazard — NOT on charts" },
+            { "item": "MTR (4 digit)", "value": "All segments ≤1,500 ft AGL — military at drone altitudes" },
+            { "item": "MTR (3 digit)", "value": "Some segments >1,500 ft AGL" },
+            { "item": "TFR", "value": "Temporary restriction — check tfr.faa.gov, no-fly surface up" }
+          ],
+          "common_mistakes": [
+            "Confusing Alert Areas (you can fly through) with Restricted Areas (you cannot without authorization)",
+            "Not checking for TFRs before flight — TFRs are not shown on sectional charts permanently, they change daily",
+            "Not knowing that 4-digit MTR routes have ALL segments at or below 1,500 ft AGL — the most dangerous for UAS"
+          ],
+          "related_question_ids": ["II-005", "II-006", "II-007", "II-008", "II-011", "II-012", "II-015", "II-025", "V-035"]
+        },
+
+        {
+          "id": "II-L3",
+          "module": "II",
+          "module_name": "Airspace & Charts",
+          "lesson_number": 3,
+          "title": "Reading Sectional Charts",
+          "acs_codes": ["UA.II.A.K3"],
+          "exam_importance": "critical",
+          "intro": "Sectional charts are the primary navigation and airspace reference for VFR pilots. The Part 107 exam includes chart-based questions where you must interpret symbols, locate airspace boundaries, and read obstacle heights. This lesson walks through the most tested symbols.",
+          "sections": [
+            {
+              "heading": "The Basics",
+              "body": "Sectional charts are published at a scale of 1:500,000 (1 inch = approximately 6.86 nautical miles or 8 statute miles). They are updated semiannually. The FAA Airman Knowledge Supplement (the booklet given to you at the testing center) contains sectional chart excerpts and a legend you can reference during the test. Use the legend — many chart questions can be answered directly from it.",
+              "key_facts": [
+                "Scale: 1:500,000 (1 inch ≈ 6.86 NM or 8 SM)",
+                "Updated semiannually for contiguous U.S.",
+                "You receive a chart supplement booklet at the test — use it",
+                "Always refer to the legend for symbols you don't recognize"
+              ]
+            },
+            {
+              "heading": "Obstacle Heights — MSL vs. AGL",
+              "body": "Obstacles on sectional charts (towers, antennas, wind turbines) display two numbers. The TOP number is the obstacle's height in feet MSL (Mean Sea Level). The BOTTOM number in parentheses is the height in feet AGL (Above Ground Level). The MSL number is always higher because it adds the ground elevation below. A UAS pilot needs to know the AGL height to avoid the obstacle since the 400 ft rule is AGL.",
+              "key_facts": [
+                "Top number = MSL height",
+                "Bottom number (in parentheses) = AGL height",
+                "MSL is always the larger number",
+                "A lighted obstacle will have a lightning bolt symbol on the chart"
+              ],
+              "example": "Chart shows: 1,549 / (312). The obstacle top is 1,549 ft MSL and 312 ft AGL. Since you're limited to 400 ft AGL, this obstacle is no conflict. If it showed 1,549 / (412), you'd have a problem.",
+              "memory_aid": "Top = MSL (the bigger number). Bottom = AGL (the one that matters for your 400 ft limit)."
+            },
+            {
+              "heading": "Airport Symbols",
+              "body": "Airports appear on sectional charts with different symbols based on type. A solid circle or elongated shape with runway depiction = public-use airport. An 'R' in a circle = private (restricted use) airport. Airports with control towers are depicted in blue; airports without towers are in magenta. The numbers near each airport give the field elevation in feet MSL and the traffic pattern altitude.",
+              "key_facts": [
+                "Blue airport = has operating control tower",
+                "Magenta airport = no operating control tower",
+                "R in a circle = private airport",
+                "Numbers near airport = field elevation (MSL) and traffic pattern info",
+                "Runway lengths and available services also depicted"
+              ]
+            },
+            {
+              "heading": "VFR Reporting Points, CTAF, and Frequencies",
+              "body": "A small magenta flag on a chart is a VFR waypoint/reporting point — manned aircraft use these to report position to ATC, indicating higher traffic volume in that area. To find the CTAF for a non-towered airport, locate the airport on the chart and find the 'C' symbol — the frequency listed is the CTAF. Most non-towered airports use UNICOM on 122.8 MHz, but always verify on the chart.",
+              "key_facts": [
+                "Magenta flag = VFR reporting point = expect higher manned traffic",
+                "CTAF found on chart near the airport — look for the 'C' symbol",
+                "Default UNICOM: 122.8 MHz (always verify on chart)",
+                "MULTICOM (no UNICOM available): 122.9 MHz"
+              ]
+            },
+            {
+              "heading": "Latitude, Longitude, and Navigating the Chart",
+              "body": "Latitude lines (parallels) run east-west and measure north-south position from the equator (0° to 90° N or S). Longitude lines (meridians) run north-south and measure east-west from the Prime Meridian through Greenwich, England (0° to 180° E or W). On sectional charts, each degree is divided into 60 minutes. One minute of latitude = 1 nautical mile.",
+              "key_facts": [
+                "Latitude = north-south position, measured from equator",
+                "Longitude = east-west position, measured from Prime Meridian",
+                "1 minute of latitude = 1 nautical mile",
+                "60 minutes = 1 degree",
+                "U.S. contiguous states: approx. 25°-49° N lat, 67°-125° W lon"
+              ],
+              "memory_aid": "Latitude = ladder rungs (horizontal lines climbing up). Longitude = long lines running pole to pole."
+            },
+            {
+              "heading": "True vs. Magnetic North",
+              "body": "Sectional charts are oriented to TRUE north. However, runway headings, VOR compass roses, and PIREP bearings reference MAGNETIC north. The rule of thumb: 'If it is in print on a chart, it is true. If it is heard (ATC, radio), it is magnetic.' Isogonic lines on charts are broken magenta lines showing points of equal magnetic variation from true north.",
+              "key_facts": [
+                "Chart is oriented to true north",
+                "Runway numbers are magnetic (rounded to nearest 10°, last digit dropped)",
+                "METAR wind direction = TRUE",
+                "ATC wind advisories = MAGNETIC",
+                "Isogonic lines = equal magnetic variation (broken magenta lines)"
+              ],
+              "memory_aid": "In print = true. Heard = magnetic. Runway 27 = 270° magnetic heading."
+            }
+          ],
+          "summary_table": [
+            { "item": "Chart scale", "value": "1:500,000" },
+            { "item": "Chart update cycle", "value": "Semiannually" },
+            { "item": "Obstacle top number", "value": "MSL height" },
+            { "item": "Obstacle bottom number", "value": "AGL height (in parentheses)" },
+            { "item": "Blue airport", "value": "Has control tower" },
+            { "item": "Magenta airport", "value": "No control tower" },
+            { "item": "R in circle", "value": "Private airport" },
+            { "item": "Magenta flag", "value": "VFR reporting point — high manned traffic" },
+            { "item": "CTAF default", "value": "122.8 MHz UNICOM (verify on chart)" },
+            { "item": "METAR wind direction", "value": "True north" },
+            { "item": "Runway heading", "value": "Magnetic north" }
+          ],
+          "common_mistakes": [
+            "Confusing MSL (top, larger number) with AGL (bottom, smaller number) on obstacle depictions",
+            "Forgetting that runway headings are magnetic but METAR winds are true",
+            "Not using the chart supplement legend during the test — it's available to you"
+          ],
+          "related_question_ids": ["II-016", "II-017", "II-018", "II-019", "II-020", "II-021", "II-022", "II-023", "II-024"]
+        }
+      ]
+    },
+
+
+    {
+      "id": "III",
+      "name": "Weather",
+      "exam_weight": "11-16%",
+      "description": "Covers how to read weather reports, interpret forecasts, and understand how atmospheric conditions affect UAS performance and safety.",
+      "lessons": [
+
+        {
+          "id": "III-L1",
+          "module": "III",
+          "module_name": "Weather",
+          "lesson_number": 1,
+          "title": "METARs — Reading Current Weather",
+          "acs_codes": ["UA.III.A.K2"],
+          "exam_importance": "critical",
+          "intro": "The METAR (Meteorological Aerodrome Report) is the primary report of current surface weather conditions at an airport. The exam reliably includes questions where you must decode a METAR. This lesson walks through each element in sequence.",
+          "sections": [
+            {
+              "heading": "METAR Format — Element by Element",
+              "body": "Every routine METAR follows the same fixed sequence. Learn the order and you can decode any METAR. The elements are: Type → Station ID → Date/Time → Modifier → Wind → Visibility → Weather → Sky Condition → Temperature/Dew Point → Altimeter → Remarks.",
+              "key_facts": [
+                "METAR = routine observation. SPECI = special (conditions changed rapidly)",
+                "Station ID: 4-letter ICAO code. In the contiguous U.S., begins with K (e.g., KGGG, KMDW)",
+                "Date/Time: 6 digits — first 2 = day of month, last 4 = UTC time with Z suffix",
+                "AUTO modifier: automated station (no human observer)"
+              ],
+              "example": "METAR KGGG 161753Z AUTO — Routine METAR for Gregg County Airport on the 16th at 1753 Zulu, automated station."
+            },
+            {
+              "heading": "Wind",
+              "body": "Wind is reported in the format DDDSSKT where DDD is the direction the wind is coming FROM in degrees TRUE, SS is the speed in knots, and KT ends the group. If gusting, the format adds G and peak gust (e.g., 14021G26KT = from 140° true at 21 knots gusting to 26 knots). Variable winds are reported as VRB.",
+              "key_facts": [
+                "Direction is where the wind is coming FROM",
+                "Direction in TRUE degrees (not magnetic)",
+                "G followed by a number = gust speed",
+                "VRB = variable direction"
+              ],
+              "example": "14021G26KT = wind from 140° true at 21 knots, gusting to 26 knots.",
+              "memory_aid": "In print, it must be true. METAR wind = true north."
+            },
+            {
+              "heading": "Visibility",
+              "body": "Visibility is reported in statute miles (SM). It may include fractions (e.g., 1 1/2SM). The part 107 minimum is 3 SM from the control station. If visibility is greater than 6 SM, METARs for many automated stations simply report P6SM (plus 6 statute miles).",
+              "key_facts": [
+                "Reported in statute miles (SM)",
+                "Part 107 minimum visibility: 3 SM",
+                "P6SM = greater than 6 statute miles"
+              ]
+            },
+            {
+              "heading": "Weather Phenomena",
+              "body": "Weather phenomena use a two-part code: intensity qualifier (+, –, or none for moderate) + descriptor + phenomenon. Common examples: RA = rain, SN = snow, TS = thunderstorm, BR = mist, FG = fog, HZ = haze. Intensity: – = light, no prefix = moderate, + = heavy. VC = in the vicinity (5–10 miles from airport).",
+              "key_facts": [
+                "- (minus) = light intensity",
+                "No prefix = moderate",
+                "+ (plus) = heavy",
+                "TS = thunderstorm, RA = rain, SN = snow, FG = fog, BR = mist, HZ = haze",
+                "+TSRA = heavy thunderstorm with rain — a no-fly condition"
+              ],
+              "memory_aid": "Plus is heavy. Minus is light. TS = thunderstorm."
+            },
+            {
+              "heading": "Sky Condition",
+              "body": "Sky condition reports cloud coverage and height. Coverage is in eighths: FEW (1/8–2/8), SCT/Scattered (3/8–4/8), BKN/Broken (5/8–7/8), OVC/Overcast (8/8), SKC/Clear (0). Height follows as a 3-digit number representing hundreds of feet AGL — add two zeros. A ceiling is the lowest layer reported as BKN or OVC. CB = cumulonimbus (most dangerous cloud type).",
+              "key_facts": [
+                "FEW = 1/8–2/8 sky coverage",
+                "SCT (Scattered) = 3/8–4/8",
+                "BKN (Broken) = 5/8–7/8 — constitutes a ceiling",
+                "OVC (Overcast) = 8/8 — constitutes a ceiling",
+                "Cloud height: 3-digit number × 100 = feet AGL (BKN008 = broken at 800 ft AGL)",
+                "CB = cumulonimbus — always note these"
+              ],
+              "example": "OVC007 = overcast at 700 feet AGL. BKN008 OVC012CB = broken at 800 ft, overcast at 1,200 ft with cumulonimbus. The ceiling is at 800 ft.",
+              "memory_aid": "Three digits, add two zeros. BKN and OVC are ceilings. Higher number = higher altitude."
+            },
+            {
+              "heading": "Temperature, Dew Point, and Altimeter",
+              "body": "Temperature and dew point are in degrees Celsius, separated by a slash (18/17 = 18°C temp, 17°C dew point). A small spread between temperature and dew point means high humidity and fog is possible. Temperatures below 0°C are prefixed with M (e.g., M05 = -5°C). Altimeter setting follows, preceded by A (e.g., A2970 = 29.70 in Hg).",
+              "key_facts": [
+                "Temperature/dew point in degrees Celsius",
+                "M prefix = minus (below freezing)",
+                "Small temp-dew point spread = high relative humidity, fog possible",
+                "Altimeter prefixed by A, in inches of mercury (in Hg)",
+                "Rising pressure = fair weather. PRESFR in remarks = falling rapidly (watch out)"
+              ]
+            }
+          ],
+          "summary_table": [
+            { "item": "METAR wind direction", "value": "True north, direction wind is FROM" },
+            { "item": "Visibility unit", "value": "Statute miles (SM)" },
+            { "item": "Heavy intensity prefix", "value": "+" },
+            { "item": "Light intensity prefix", "value": "-" },
+            { "item": "FEW coverage", "value": "1/8 to 2/8" },
+            { "item": "SCT coverage", "value": "3/8 to 4/8" },
+            { "item": "BKN coverage", "value": "5/8 to 7/8 — ceiling" },
+            { "item": "OVC coverage", "value": "8/8 — ceiling" },
+            { "item": "Cloud height decode", "value": "3-digit number × 100 = feet AGL" },
+            { "item": "Below-zero temp prefix", "value": "M (e.g., M05 = -5°C)" }
+          ],
+          "common_mistakes": [
+            "Reading BKN008 as 8,000 feet — it is 800 feet AGL",
+            "Thinking METAR winds are magnetic — they are true",
+            "Confusing the ceiling (BKN or OVC) with any cloud layer"
+          ],
+          "related_question_ids": ["III-001", "III-002", "III-016", "III-017", "III-023"]
+        },
+
+        {
+          "id": "III-L2",
+          "module": "III",
+          "module_name": "Weather",
+          "lesson_number": 2,
+          "title": "TAFs and Other Weather Products",
+          "acs_codes": ["UA.III.A.K3", "UA.III.A.K4"],
+          "exam_importance": "high",
+          "intro": "While a METAR tells you what the weather IS right now, a TAF (Terminal Aerodrome Forecast) tells you what it is EXPECTED to be. Knowing how to read TAFs and other forecast products is essential for preflight planning.",
+          "sections": [
+            {
+              "heading": "Terminal Aerodrome Forecast (TAF)",
+              "body": "A TAF is a forecast for conditions within a 5 statute mile radius around an airport. It is valid for 24 or 30 hours and updated four times daily at 0000Z, 0600Z, 1200Z, and 1800Z. TAFs use the same abbreviations as METARs but include change groups to show how conditions will evolve.",
+              "key_facts": [
+                "Forecast for 5 SM radius around the airport",
+                "Valid 24 or 30 hours",
+                "Updated 4 times daily (0000Z, 0600Z, 1200Z, 1800Z)",
+                "Uses same abbreviations as METAR"
+              ]
+            },
+            {
+              "heading": "TAF Change Groups",
+              "body": "TAFs use specific codes to indicate expected changes. FM (From) = rapid, significant change expected within approximately one hour, followed by time in UTC. TEMPO = temporary fluctuations expected to last less than 1 hour and occur less than half the time period. BECMG (Becoming) = gradual change expected over a 2-hour period. PROB30 = 30% probability of conditions occurring — not used in the first 6 hours of a forecast.",
+              "key_facts": [
+                "FM = From (rapid change): FM1500 = new conditions from 1500Z",
+                "TEMPO = temporary (<1 hour fluctuation)",
+                "BECMG = gradual change over ~2 hours",
+                "PROB30 = 30% probability — not in first 6 forecast hours"
+              ],
+              "memory_aid": "FM = fast change. TEMPO = temporary. BECMG = gradual becoming."
+            },
+            {
+              "heading": "Convective SIGMETs (WST)",
+              "body": "Convective SIGMETs are issued for severe or extreme convective weather hazards. They are triggered by: severe thunderstorms with surface winds over 50 knots, hail at the surface ≥ 3/4 inch diameter, or tornadoes. Also issued for embedded thunderstorms, lines of thunderstorms, and heavy precipitation affecting 40%+ of a 3,000 sq mile area. Any active Convective SIGMET in your operating area is a hard stop — do not fly.",
+              "key_facts": [
+                "WST = Convective SIGMET",
+                "Issued for: surface winds >50 kts, hail ≥3/4 inch, tornadoes, embedded/line thunderstorms",
+                "Any active WST in your area = do not fly"
+              ]
+            },
+            {
+              "heading": "Weather Briefing Sources",
+              "body": "Before every flight, obtain a weather briefing. The FAA-designated source is 1800wxbrief.com or by calling 1-800-WX-BRIEF. A standard briefing covers METARs, TAFs, PIREPs, AIRMETs, SIGMETs, winds aloft, and NOTAMs. Additional resources include aviation.weather.gov, DUATS, and apps like ForeFlight. Always check tfr.faa.gov separately for TFRs.",
+              "key_facts": [
+                "Primary briefing source: 1800wxbrief.com or 1-800-WX-BRIEF",
+                "Standard briefing covers: METARs, TAFs, PIREPs, AIRMETs, SIGMETs, winds aloft, NOTAMs",
+                "Check tfr.faa.gov separately for TFRs",
+                "DUATS also available for pilots with medical certificates"
+              ]
+            }
+          ],
+          "summary_table": [
+            { "item": "TAF coverage area", "value": "5 SM radius around airport" },
+            { "item": "TAF validity", "value": "24 or 30 hours" },
+            { "item": "TAF update frequency", "value": "4 times daily (0000Z, 0600Z, 1200Z, 1800Z)" },
+            { "item": "FM", "value": "Rapid change from specified time" },
+            { "item": "TEMPO", "value": "Temporary conditions (<1 hour)" },
+            { "item": "BECMG", "value": "Gradual change over ~2 hours" },
+            { "item": "PROB30", "value": "30% probability (not in first 6 hours)" },
+            { "item": "Convective SIGMET (WST)", "value": "Severe thunderstorms, hail ≥3/4 in., tornadoes" },
+            { "item": "Primary briefing source", "value": "1800wxbrief.com" }
+          ],
+          "common_mistakes": [
+            "Confusing TEMPO (temporary, less than 1 hour) with BECMG (gradual, permanent change)",
+            "Forgetting that PROB30 is not used in the first 6 hours of a TAF",
+            "Checking weather but not checking TFRs separately — they are different products"
+          ],
+          "related_question_ids": ["III-003", "III-004", "III-014", "III-015"]
+        },
+
+        {
+          "id": "III-L3",
+          "module": "III",
+          "module_name": "Weather",
+          "lesson_number": 3,
+          "title": "Atmospheric Stability, Air Masses & Weather Hazards",
+          "acs_codes": ["UA.III.B.K1a", "UA.III.B.K1c", "UA.III.B.K1d", "UA.III.B.K1e", "UA.III.B.K1f", "UA.III.B.K1g"],
+          "exam_importance": "high",
+          "intro": "Understanding how the atmosphere behaves helps you predict weather hazards. This lesson covers the most tested weather theory topics: stability, fronts, thunderstorms, structural icing, and density altitude.",
+          "sections": [
+            {
+              "heading": "Stable vs. Unstable Air",
+              "body": "Air stability determines what kind of weather forms. Stable air resists vertical movement, producing stratiform (layered) clouds, smooth air, continuous precipitation, and poor visibility in haze or smoke. Unstable air encourages vertical movement, producing cumuliform (tall, puffy) clouds, turbulence, showery precipitation, and generally good visibility (except in blowing obstructions).",
+              "key_facts": [
+                "STABLE: stratiform clouds, smooth air, continuous precipitation, poor visibility in haze",
+                "UNSTABLE: cumuliform clouds, turbulence, showery precipitation, good visibility",
+                "Cool + Dry = Stable",
+                "Hot + Humid = Unstable"
+              ],
+              "memory_aid": "Stable = Smooth, Stratiform, Steady precipitation, Smoky haze. Unstable = Ugly cumulus, turbUlence."
+            },
+            {
+              "heading": "Thunderstorm Life Cycle",
+              "body": "A thunderstorm cell progresses through three distinct stages. (1) Cumulus stage: characterized by strong updrafts from the surface to the cloud top — no precipitation yet. (2) Mature stage: most hazardous — both updrafts (up to 3,000 fpm) and downdrafts (up to 6,000 fpm in microbursts), heavy precipitation, lightning, hail. (3) Dissipating stage: updrafts weaken, downdrafts dominate, precipitation tapers off. Transitions between stages are gradual and difficult to detect visually.",
+              "key_facts": [
+                "Stage 1 (Cumulus): updrafts only, no precipitation yet",
+                "Stage 2 (Mature): MOST DANGEROUS — updrafts AND downdrafts, lightning, hail",
+                "Stage 3 (Dissipating): downdrafts dominate, storm weakens",
+                "Updrafts inside a thunderstorm can exceed 3,000 fpm",
+                "Microbursts can produce 6,000 fpm downdrafts"
+              ],
+              "memory_aid": "Cumulus → Mature → Dissipating. The mature stage will destroy your drone."
+            },
+            {
+              "heading": "Structural Icing",
+              "body": "Two conditions must exist simultaneously for structural icing to occur: (1) the aircraft must be flying through visible moisture (rain, cloud droplets), AND (2) the temperature at the point of contact must be at or below 0°C. Note: aerodynamic cooling can lower the airfoil surface temperature to 0°C even when ambient air is a few degrees above freezing. If your drone flies into freezing rain or visible clouds in cold conditions, icing is a real threat.",
+              "key_facts": [
+                "Condition 1: Visible moisture (rain or cloud droplets present)",
+                "Condition 2: Temperature at impact point ≤ 0°C",
+                "BOTH conditions must exist simultaneously",
+                "Aerodynamic cooling can cause icing even if ambient temp is slightly above 0°C"
+              ]
+            },
+            {
+              "heading": "Low-Level Wind Shear",
+              "body": "Wind shear is a sudden, drastic change in wind speed or direction over a very small area. Low-level wind shear is especially hazardous because it occurs close to the ground where recovery options are limited. It is commonly associated with: passing frontal systems, thunderstorms, temperature inversions, and strong upper-level winds greater than 25 knots.",
+              "key_facts": [
+                "Sudden, drastic wind change over a small area",
+                "Associated with: fronts, thunderstorms, temperature inversions, upper winds >25 kts",
+                "Causes violent updrafts, downdrafts, and abrupt directional changes",
+                "Especially dangerous near the surface"
+              ]
+            },
+            {
+              "heading": "Density Altitude and Performance",
+              "body": "Density altitude is a measure of air density expressed as an equivalent altitude. High density altitude means thin air — fewer air molecules — which reduces propeller efficiency and overall UAS performance. The four factors that increase density altitude (and reduce performance) are: High elevation, High temperature, High humidity, and Heavy weight of the aircraft. Standard atmosphere (for reference): 29.92 in Hg, 59°F (15°C) at sea level.",
+              "key_facts": [
+                "High density altitude = thin air = degraded performance",
+                "The 4 H's: Heavy, Hot, High altitude, Humid",
+                "Humid air is LESS dense than dry air (water vapor is lighter than N2/O2)",
+                "Standard atmosphere: 29.92 in Hg, 59°F (15°C), sea level",
+                "Microbursts: 1-2 mile diameter, downdrafts to 6,000 fpm, last 5-15 minutes"
+              ],
+              "memory_aid": "The 4 H's kill performance: Heavy, Hot, High, Humid."
+            }
+          ],
+          "summary_table": [
+            { "item": "Stable air clouds", "value": "Stratiform (layered)" },
+            { "item": "Unstable air clouds", "value": "Cumuliform (vertical, puffy)" },
+            { "item": "Thunderstorm stages", "value": "Cumulus → Mature (worst) → Dissipating" },
+            { "item": "Max thunderstorm updraft", "value": ">3,000 fpm" },
+            { "item": "Microburst downdraft", "value": "Up to 6,000 fpm" },
+            { "item": "Microburst diameter", "value": "1-2 miles" },
+            { "item": "Microburst duration", "value": "5-15 minutes" },
+            { "item": "Icing condition 1", "value": "Visible moisture present" },
+            { "item": "Icing condition 2", "value": "Surface temp ≤ 0°C" },
+            { "item": "Standard pressure", "value": "29.92 in Hg" },
+            { "item": "Standard temperature", "value": "59°F (15°C) at sea level" }
+          ],
+          "common_mistakes": [
+            "Thinking that good visibility always means stable air — good visibility is actually a sign of UNSTABLE air",
+            "Forgetting that BOTH icing conditions must exist at the same time",
+            "Thinking humidity improves performance — humid air is actually less dense than dry air"
+          ],
+          "related_question_ids": ["III-005", "III-006", "III-007", "III-008", "III-009", "III-010", "III-011", "III-012", "III-018", "III-019", "III-020", "III-021"]
+        }
+      ]
+    },
+
+
+    {
+      "id": "V",
+      "name": "Operations",
+      "exam_weight": "35-45%",
+      "description": "The heaviest section of the exam. Covers everything that happens during an actual operation — decision-making, crew coordination, physiological fitness, risk management, and safe procedures.",
+      "lessons": [
+
+        {
+          "id": "V-L1",
+          "module": "V",
+          "module_name": "Operations",
+          "lesson_number": 1,
+          "title": "Aeronautical Decision Making (ADM) & Risk Management",
+          "acs_codes": ["UA.V.D.K1", "UA.V.D.K2", "UA.V.D.K3", "UA.V.D.K4", "UA.V.D.K5"],
+          "exam_importance": "critical",
+          "intro": "Human error causes the majority of aviation accidents. ADM is the FAA's systematic approach to making safer decisions in the air. This is one of the most consistently tested topic areas across all exam versions.",
+          "sections": [
+            {
+              "heading": "The 3P Model — Perceive, Process, Perform",
+              "body": "The 3P model is the FAA's primary ADM framework for UAS pilots. It is a simple loop applied during all phases of flight: Perceive — gather the current set of circumstances (weather, airspace, equipment, crew fitness). Process — evaluate how those circumstances affect flight safety. Perform — choose and execute the best course of action. The loop repeats continuously throughout the operation.",
+              "key_facts": [
+                "Perceive: gather situational data",
+                "Process: evaluate safety impact",
+                "Perform: execute best course of action",
+                "Applied continuously — before, during, and after flight"
+              ]
+            },
+            {
+              "heading": "PAVE Checklist — Risk Categories",
+              "body": "PAVE divides flight risk into four categories to ensure nothing is overlooked during preflight planning. P = Pilot-in-Command (use IMSAFE to assess personal fitness). A = Aircraft (is it airworthy? right tool for the job?). V = enVironment (weather, airspace, terrain, TFRs). E = External pressures (deadline, client expectations, desire to impress — the most dangerous category). External pressure management is the single most important key to risk management because it is the one factor that can cause a pilot to ignore all others.",
+              "key_facts": [
+                "P = Pilot (IMSAFE self-assessment)",
+                "A = Aircraft (airworthy? suitable for mission?)",
+                "V = enVironment (weather, airspace, terrain, TFRs)",
+                "E = External pressures — most dangerous, can override all others",
+                "External pressure: deadline, desire to impress, pride, goal-completion"
+              ],
+              "memory_aid": "PAVE the way before you fly. External pressure = the silent killer."
+            },
+            {
+              "heading": "IMSAFE — Personal Fitness Checklist",
+              "body": "Before every flight, every crew member (PIC, person manipulating controls, visual observer) should run through IMSAFE. I = Illness. M = Medication. S = Stress. A = Alcohol (8 hours, 0.04 BAC). F = Fatigue. E = Emotion. If any answer is concerning, do not fly. Unlike manned aviation, there is no FAA medical certificate to catch problems — it's entirely on the pilot to self-certify.",
+              "key_facts": [
+                "I = Illness — am I sick?",
+                "M = Medication — does it affect judgment or cause drowsiness?",
+                "S = Stress — is it affecting concentration?",
+                "A = Alcohol — within 8 hours? BAC ≥ 0.04%?",
+                "F = Fatigue — adequately rested?",
+                "E = Emotion — upset or distracted?",
+                "For new medications: wait 48 hours after first dose before flying"
+              ],
+              "memory_aid": "I'M SAFE to fly — or I'm not."
+            },
+            {
+              "heading": "The 5 Hazardous Attitudes and Their Antidotes",
+              "body": "Studies identified five specific mental attitudes that lead to poor decisions. Each has a recognized antidote that pilots should memorize and use to counter the thought when it appears.",
+              "key_facts": [
+                "Anti-authority: 'Don't tell me what to do.' Antidote: 'Follow the rules — they are usually right.'",
+                "Impulsivity: 'Do something quickly!' Antidote: 'Not so fast — think first.'",
+                "Invulnerability: 'It won't happen to me.' Antidote: 'It could happen to me.'",
+                "Macho: 'I can do it — watch me.' Antidote: 'Taking chances is foolish.'",
+                "Resignation: 'What's the use?' Antidote: 'I'm not helpless — I can make a difference.'"
+              ],
+              "memory_aid": "AIMMR: Anti-authority, Impulsivity, Macho, invulnerability (spelled with a i), Resignation."
+            },
+            {
+              "heading": "Crew Resource Management (CRM)",
+              "body": "CRM is the effective use of all available resources — human, hardware, and information — to make safe decisions and complete operations successfully. For UAS, CRM applies to all phases: preflight (who checks weather and NOTAMs? who charges batteries? who briefs the crew?), in-flight (who monitors airspace? who tracks battery life?), and post-flight (logging, debrief, maintenance). CRM is not just for multi-person crews — it applies to single-pilot operations as well (called Single-Pilot Resource Management or SRM).",
+              "key_facts": [
+                "CRM = effective use of human resources, hardware, and information",
+                "Applies to ALL phases: preflight, in-flight, post-flight",
+                "Includes remote PIC, person manipulating controls, visual observers, and support crew",
+                "SRM = CRM principles applied to single-pilot operations"
+              ]
+            },
+            {
+              "heading": "Situational Awareness",
+              "body": "Situational awareness is the accurate perception and understanding of all factors affecting safety. Fatigue, stress, and workload can erode it. When a pilot fixates on one issue and loses awareness of the broader picture, accidents happen. The key is to stay ahead of the operation — anticipate what will change, not just react to what has.",
+              "key_facts": [
+                "Accurate perception and understanding of all factors affecting safety",
+                "Fatigue and stress are the primary eroding factors",
+                "Fixation on a single item = common cause of accidents",
+                "Stay ahead of the aircraft/operation — anticipate, don't just react"
+              ]
+            }
+          ],
+          "summary_table": [
+            { "item": "3P model", "value": "Perceive → Process → Perform" },
+            { "item": "PAVE", "value": "Pilot, Aircraft, enVironment, External pressures" },
+            { "item": "Most dangerous PAVE factor", "value": "External pressures" },
+            { "item": "IMSAFE", "value": "Illness, Medication, Stress, Alcohol, Fatigue, Emotion" },
+            { "item": "New medication wait", "value": "48 hours after first dose" },
+            { "item": "5 hazardous attitudes", "value": "Anti-authority, Impulsivity, Invulnerability, Macho, Resignation" }
+          ],
+          "common_mistakes": [
+            "Confusing CRM (applies to all phases) with flight-only decision-making",
+            "Forgetting the 5 hazardous attitude names or their antidotes",
+            "Not recognizing that external pressure is the MOST dangerous PAVE factor"
+          ],
+          "related_question_ids": ["V-009", "V-010", "V-011", "V-019", "V-023", "V-024", "V-025", "V-026", "V-034"]
+        },
+
+        {
+          "id": "V-L2",
+          "module": "V",
+          "module_name": "Operations",
+          "lesson_number": 2,
+          "title": "Physiological Factors — Fitness to Fly",
+          "acs_codes": ["UA.V.E.K1", "UA.V.E.K2", "UA.V.E.K3", "UA.V.E.K4", "UA.V.E.K5"],
+          "exam_importance": "high",
+          "intro": "Your physical and mental state directly affects your ability to safely operate a UAS. Part 107 has no medical certificate requirement — which means the pilot bears full responsibility for self-assessing fitness before every flight.",
+          "sections": [
+            {
+              "heading": "Alcohol — The Numbers",
+              "body": "The alcohol rules for Part 107 are more restrictive than typical state DUI laws. No person may act as remote PIC, person manipulating the controls, or visual observer if they: consumed alcohol within the preceding 8 hours, are under the influence of alcohol, or have a BAC of 0.04% or greater. Note that 0.04% is half the typical 0.08% DUI threshold. Even a hangover is an impaired state — alcohol can remain in the body for over 16 hours.",
+              "key_facts": [
+                "8-hour 'bottle to throttle' rule",
+                "BAC limit: 0.04% (half the standard DUI threshold)",
+                "Applies to: remote PIC, person manipulating controls, AND visual observer",
+                "Hangover = still impaired — alcohol remains in body 16+ hours",
+                "Even small amounts impair judgment, coordination, and vision"
+              ]
+            },
+            {
+              "heading": "Medications",
+              "body": "No CFR regulation specifically prohibits medications by name — but Part 107 and Part 91 prohibit acting as crew when taking anything that affects your faculties contrary to safety. The most commonly implicated drugs are antihistamines (e.g., Benadryl/diphenhydramine) — they cause drowsiness and have a prolonged half-life. For any new medication (OTC or prescribed), wait at least 48 hours after the first dose before flying to confirm you do not have adverse side effects.",
+              "key_facts": [
+                "No specific medications listed by name in the FARs",
+                "Prohibition: anything that affects faculties contrary to safety",
+                "Common problem drugs: antihistamines (Benadryl), decongestants",
+                "New medication rule: wait 48 hours after first dose before flying"
+              ]
+            },
+            {
+              "heading": "Fatigue",
+              "body": "Fatigue causes degraded attention and concentration, impaired coordination, and reduced ability to communicate and make decisions. It is insidious because pilots often don't recognize how impaired they are until serious errors occur. Acute fatigue (short-term, from sleep loss or exertion) can be resolved with rest. Chronic fatigue (long-term, from sustained high stress) requires medical attention. If suffering from acute fatigue, do not fly. No amount of training or experience overcomes it during a flight.",
+              "key_facts": [
+                "Causes: degraded attention, impaired coordination, poor decisions",
+                "Danger: pilots often don't recognize their own fatigue",
+                "Acute fatigue: fixed by rest and sleep",
+                "Chronic fatigue: requires physician treatment",
+                "Do not fly if fatigued — no skill compensates for it"
+              ]
+            },
+            {
+              "heading": "Stress",
+              "body": "A moderate amount of stress is normal and helpful — it prevents complacency. But performance peaks and then falls sharply as stress exceeds a person's coping capacity. Chronic stress (financial, personal, job) accumulates and impairs judgment even when the pilot thinks they are functioning normally. Stress is not listed among the medical conditions requiring grounding, so it's on the pilot to recognize and manage it.",
+              "key_facts": [
+                "Some stress improves alertness — too much degrades performance",
+                "Performance curve: increases → peaks → falls sharply with overload",
+                "Acute stress (short-term): fight-or-flight response — manageable",
+                "Chronic stress (long-term): requires active management or medical help",
+                "Stress is NOT a listed medical condition — pilot must self-regulate"
+              ]
+            },
+            {
+              "heading": "Hyperventilation",
+              "body": "Hyperventilation is excessive breathing that causes an abnormal loss of CO2 from the blood. It often occurs when a pilot becomes anxious or encounters an unexpected stressful situation. Symptoms include: visual impairment, lightheadedness, tingling sensations, muscle spasms, and possible unconsciousness. Treatment: breathe normally, breathe into a paper bag, or talk aloud to restore CO2 levels. Do NOT increase breathing rate — that worsens the condition.",
+              "key_facts": [
+                "Caused by excessive breathing — too much CO2 exhaled",
+                "Symptoms: visual impairment, dizziness, tingling, possible unconsciousness",
+                "Treatment: breathe normally, breathe into a paper bag, or talk aloud",
+                "Do NOT breathe faster — worsens the condition"
+              ]
+            },
+            {
+              "heading": "Dehydration and Night Vision",
+              "body": "Dehydration's first effect is fatigue, making top mental and physical performance difficult. Causes include heat, wind, humidity, and diuretic beverages (coffee, alcohol, energy drinks). Drink 2–4 quarts of water per day. For night operations: it takes approximately 30 minutes for eyes to fully adapt to darkness. Exposure to bright lights (phone screen, work light) resets this clock. Use red lights when possible to preserve night vision.",
+              "key_facts": [
+                "First sign of dehydration: fatigue",
+                "Other symptoms: headache, cramps, sleepiness, dizziness",
+                "Diuretics to avoid: coffee, alcohol, caffeinated drinks",
+                "Full dark adaptation: approximately 30 minutes",
+                "Bright light exposure resets dark adaptation"
+              ]
+            }
+          ],
+          "summary_table": [
+            { "item": "Bottle to throttle", "value": "8 hours" },
+            { "item": "BAC limit", "value": "0.04% — applies to all crew" },
+            { "item": "New medication wait", "value": "48 hours after first dose" },
+            { "item": "Fatigue remedy", "value": "Rest and sleep (acute); physician (chronic)" },
+            { "item": "Hyperventilation treatment", "value": "Slow breathing, paper bag, talk aloud" },
+            { "item": "Full dark adaptation", "value": "~30 minutes" }
+          ],
+          "common_mistakes": [
+            "Thinking alcohol/drug rules only apply to the person actually flying the drone — they apply to all crew",
+            "Thinking you can power through fatigue with caffeine or effort during flight",
+            "Treating hyperventilation by breathing faster — this worsens it"
+          ],
+          "related_question_ids": ["V-018", "V-019", "V-020", "V-021", "V-022", "V-038", "V-039"]
+        },
+
+        {
+          "id": "V-L3",
+          "module": "V",
+          "module_name": "Operations",
+          "lesson_number": 3,
+          "title": "Preflight, Emergency Procedures & Maintenance",
+          "acs_codes": ["UA.V.B.K1", "UA.V.B.K2", "UA.V.B.K4", "UA.V.C.K1", "UA.V.C.K2", "UA.V.C.K3", "UA.V.F.K1", "UA.V.F.K2"],
+          "exam_importance": "high",
+          "intro": "Safe operations start before takeoff and continue after landing. This lesson covers the required preflight actions, how to handle emergencies, and what to do about maintenance and batteries.",
+          "sections": [
+            {
+              "heading": "Preflight Familiarization Requirements (§107.49)",
+              "body": "Before each flight, the remote PIC must be familiar with: (1) airspace classification and ATC requirements for the planned operation, (2) local weather conditions, (3) NOTAMs relevant to the area, (4) known traffic and known hazards in the operating area, and (5) any other information necessary for safe operations. This is not optional — it is a regulatory requirement.",
+              "key_facts": [
+                "Required: airspace check, weather check, NOTAM check, traffic/hazard awareness",
+                "Required by §107.49 before every flight",
+                "No waiver available for this requirement"
+              ]
+            },
+            {
+              "heading": "Preflight Inspection",
+              "body": "The remote PIC must inspect the UAS before every flight to ensure it is in a safe operating condition. If any irregularities are found, they must be corrected BEFORE flight. A cracked propeller, damaged motor, low battery, or loose component must be fixed first — not logged and deferred. Some manufacturers provide a preflight checklist. If yours does not, you must develop one yourself.",
+              "key_facts": [
+                "Inspect before every flight — required by §107.49",
+                "Any irregularity found must be corrected BEFORE flight — not after",
+                "If no manufacturer checklist exists, develop your own",
+                "Remote PIC bears responsibility — not the manufacturer, not the FAA"
+              ],
+              "example": "You find a hairline crack in one propeller blade during preflight. You must replace the propeller before flying. Flying with a cracked prop risks in-flight failure, loss of control, and potential injury to bystanders."
+            },
+            {
+              "heading": "Crew Briefing",
+              "body": "When using a crew — visual observer, person manipulating controls, or other support staff — all crew members must be briefed on the planned operation and emergency procedures before the first takeoff. The briefing should cover: the mission profile, operating area, airspace, communication protocols, emergency procedures (lost link, battery fire, flyaway), and each person's role.",
+              "key_facts": [
+                "All crew must be briefed before flight",
+                "Briefing must include: mission plan AND emergency procedures",
+                "Applies to visual observers and any non-certificated persons on the controls"
+              ]
+            },
+            {
+              "heading": "Lost Link Procedures",
+              "body": "A lost link occurs when the command-and-control (C2) link between the control station and the aircraft is broken. The aircraft typically follows a pre-programmed contingency behavior (e.g., hover, return to home, or land in place). Before each flight, the remote PIC should verify the lost link behavior is configured appropriately for the environment — a 'return to home' over open fields may not be safe over a crowd. The lost link procedure should be part of the crew briefing.",
+              "key_facts": [
+                "Lost link = C2 link failure between control station and aircraft",
+                "Pre-program a contingency behavior before flight",
+                "Verify lost link behavior is appropriate for the specific environment",
+                "Include in crew briefing"
+              ]
+            },
+            {
+              "heading": "Lithium Battery Safety and Thermal Runaway",
+              "body": "Lithium polymer (LiPo) batteries power most small UAS. They are energy-dense but sensitive to damage and overcharging. Thermal runaway is a chain reaction where the battery self-heats and releases its stored energy uncontrollably — potentially causing fire or explosion. Warning signs: swelling/puffing, unusual heat during charging, or reduced capacity. Always follow manufacturer recommendations for charging, storage, and replacement. Never charge a damaged or swollen battery. Charge in a safe location where a fire would not spread.",
+              "key_facts": [
+                "Thermal runaway = self-heating chain reaction → fire/explosion",
+                "Warning signs: swelling, excessive heat during charging, reduced capacity",
+                "Always follow manufacturer recommendations",
+                "Never charge a damaged or swollen battery",
+                "Charge in a fire-safe location (LiPo bag or fireproof container)"
+              ]
+            },
+            {
+              "heading": "Maintenance",
+              "body": "While the FAA does not certify small UAS components, Part 107 places maintenance responsibility on the remote PIC. If a manufacturer provides a maintenance schedule, follow it. If no schedule is provided, the remote PIC must establish one. Understanding the typical failure modes for your aircraft helps you prevent crashes rather than investigate them after the fact. Document maintenance actions.",
+              "key_facts": [
+                "Remote PIC responsible for aircraft maintenance",
+                "If manufacturer provides schedule: follow it",
+                "If no schedule exists: establish your own",
+                "FAA delegated inspection to the remote PIC — FAA cannot track all UAS models"
+              ]
+            }
+          ],
+          "summary_table": [
+            { "item": "Preflight check required items", "value": "Airspace, weather, NOTAMs, traffic/hazards" },
+            { "item": "Preflight inspection finding", "value": "Must correct before flight — no deferral" },
+            { "item": "Crew briefing required", "value": "Yes — operations AND emergencies" },
+            { "item": "Lost link response", "value": "Pre-programmed, verified for environment" },
+            { "item": "Thermal runaway signs", "value": "Swelling, excessive heat, reduced capacity" },
+            { "item": "Maintenance responsibility", "value": "Remote PIC — establish schedule if none provided" }
+          ],
+          "common_mistakes": [
+            "Thinking a small defect can be flown on and fixed after — any unsafe condition must be corrected before flight",
+            "Forgetting the crew briefing must include emergency procedures, not just mission details",
+            "Charging LiPo batteries indoors near flammable materials"
+          ],
+          "related_question_ids": ["V-029", "V-030", "V-031", "V-033", "V-037", "V-040"]
+        }
+      ]
+    }
+  ]
+}

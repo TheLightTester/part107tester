@@ -1,0 +1,1272 @@
+{
+  "metadata": {
+    "title": "Part 107 Remote Pilot Knowledge Test - Question Bank",
+    "version": "1.0",
+    "total_questions": 68,
+    "source_documents": [
+      "14 CFR Part 107",
+      "FAA Remote Pilot Study Guide (FAA-G-8082-22)",
+      "Rupprecht Law Part 107 Study Guide v2.2",
+      "DPA Part 107 Cheat Sheet v5"
+    ],
+    "passing_score": 70,
+    "acs_areas": {
+      "I": { "name": "Regulations", "exam_weight_pct": "15-25", "question_count": 15 },
+      "II": { "name": "Airspace & Charts", "exam_weight_pct": "15-25", "question_count": 15 },
+      "III": { "name": "Weather", "exam_weight_pct": "11-16", "question_count": 13 },
+      "IV": { "name": "Loading & Performance", "exam_weight_pct": "7-11", "question_count": 8 },
+      "V": { "name": "Operations", "exam_weight_pct": "35-45", "question_count": 17 }
+    }
+  },
+  "questions": [
+
+    // ─────────────────────────────────────────────
+    // MODULE I — REGULATIONS (15 questions)
+    // ─────────────────────────────────────────────
+
+    {
+      "id": "I-001",
+      "acs_code": "UA.I.A.K1",
+      "module": "I",
+      "module_name": "Regulations",
+      "topic": "Eligibility",
+      "difficulty": "easy",
+      "question": "What is the minimum age to obtain a Remote Pilot Certificate with a Small UAS rating under Part 107?",
+      "options": {
+        "A": "14 years old",
+        "B": "16 years old",
+        "C": "18 years old"
+      },
+      "correct": "B",
+      "explanation": "Per 14 CFR §107.61, an applicant must be at least 16 years of age to be eligible for a Remote Pilot Certificate with a small UAS rating.",
+      "regulation": "14 CFR §107.61"
+    },
+
+    {
+      "id": "I-002",
+      "acs_code": "UA.I.A.K1",
+      "module": "I",
+      "module_name": "Regulations",
+      "topic": "Eligibility",
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a requirement to be eligible for a Remote Pilot Certificate under Part 107?",
+      "options": {
+        "A": "Be able to read, speak, write, and understand English",
+        "B": "Hold a valid driver's license",
+        "C": "Be in a proper physical and mental condition to safely operate a small UAS"
+      },
+      "correct": "B",
+      "explanation": "A driver's license is useful for identity verification at the testing center but is not itself a legal eligibility requirement under §107.61. Eligibility requirements include minimum age (16), English proficiency, and not knowing or having reason to know of a physical or mental condition that would interfere with safe operation.",
+      "regulation": "14 CFR §107.61"
+    },
+
+    {
+      "id": "I-003",
+      "acs_code": "UA.I.B.K1",
+      "module": "I",
+      "module_name": "Regulations",
+      "topic": "Registration",
+      "difficulty": "easy",
+      "question": "Under what condition is a small unmanned aircraft NOT required to be registered with the FAA under 14 CFR Part 48?",
+      "options": {
+        "A": "When the aircraft weighs less than 0.55 pounds (250 grams) at takeoff, including everything onboard or attached",
+        "B": "When the aircraft weighs more than 0.55 pounds but less than 55 pounds, not including fuel",
+        "C": "When the aircraft is operated only indoors"
+      },
+      "correct": "A",
+      "explanation": "Per 14 CFR Part 48, registration is required for all civilian small UAS weighing 0.55 pounds (250 grams) or more. Aircraft weighing less than 0.55 lbs are exempt. Option C (indoor only) is not an FAA exemption under Part 48.",
+      "regulation": "14 CFR §48.15"
+    },
+
+    {
+      "id": "I-004",
+      "acs_code": "UA.I.B.K1",
+      "module": "I",
+      "module_name": "Regulations",
+      "topic": "Registration",
+      "difficulty": "easy",
+      "question": "According to 14 CFR Part 48, all civilian small UAS weighing greater than 0.55 pounds must be registered regardless of:",
+      "options": {
+        "A": "Its intended use (recreational or commercial)",
+        "B": "Whether the owner is a U.S. citizen",
+        "C": "How often it is flown"
+      },
+      "correct": "A",
+      "explanation": "Per §48.15, all civilian small UAS weighing greater than 0.55 lbs must be registered regardless of intended use — recreational or commercial. This changed from prior rules that only required registration for commercial use.",
+      "regulation": "14 CFR §48.15"
+    },
+
+    {
+      "id": "I-005",
+      "acs_code": "UA.I.A.K4",
+      "module": "I",
+      "module_name": "Regulations",
+      "topic": "Accident Reporting",
+      "difficulty": "medium",
+      "question": "A small UAS causes an accident that results in a crew member losing consciousness. When must this be reported to the FAA?",
+      "options": {
+        "A": "No accidents involving crew need to be reported",
+        "B": "Only upon request from the FAA",
+        "C": "Within 10 calendar days of the accident"
+      },
+      "correct": "C",
+      "explanation": "Per §107.9, the remote pilot in command must report within 10 calendar days any operation that results in: (a) serious injury to any person or loss of consciousness, OR (b) damage to any property other than the small UA if the cost exceeds $500 or fair market value exceeds $500.",
+      "regulation": "14 CFR §107.9"
+    },
+
+    {
+      "id": "I-006",
+      "acs_code": "UA.I.A.K4",
+      "module": "I",
+      "module_name": "Regulations",
+      "topic": "Accident Reporting",
+      "difficulty": "medium",
+      "question": "Your small UA collides with a parked car and causes $350 in damage. There are no injuries. Under Part 107, what is your reporting obligation?",
+      "options": {
+        "A": "Report to the FAA within 10 calendar days",
+        "B": "No FAA report is required because the damage is under $500",
+        "C": "Report to local law enforcement only"
+      },
+      "correct": "B",
+      "explanation": "Per §107.9(b), property damage must be reported only if the repair cost exceeds $500 OR the fair market value of the property in the event of total loss exceeds $500. At $350, no FAA report is required. Note: there may still be other legal obligations to the property owner.",
+      "regulation": "14 CFR §107.9"
+    },
+
+    {
+      "id": "I-007",
+      "acs_code": "UA.I.C.K1",
+      "module": "I",
+      "module_name": "Regulations",
+      "topic": "Certificate Recency",
+      "difficulty": "medium",
+      "question": "How often must a remote pilot complete the recurrent aeronautical knowledge test to maintain currency under Part 107?",
+      "options": {
+        "A": "Every 12 calendar months",
+        "B": "Every 24 calendar months",
+        "C": "Every 36 calendar months"
+      },
+      "correct": "B",
+      "explanation": "Per §107.65, a remote pilot must complete a recurrent knowledge test every 24 calendar months to maintain aeronautical knowledge currency. The certificate itself does not expire, but the pilot's recency does.",
+      "regulation": "14 CFR §107.65"
+    },
+
+    {
+      "id": "I-008",
+      "acs_code": "UA.I.B.K9",
+      "module": "I",
+      "module_name": "Regulations",
+      "topic": "Daylight Operations",
+      "difficulty": "medium",
+      "question": "What is required to operate a small UAS during civil twilight (within 30 minutes of official sunrise or sunset)?",
+      "options": {
+        "A": "A waiver from the FAA",
+        "B": "Anti-collision lighting visible for at least 3 statute miles",
+        "C": "A visual observer must be present"
+      },
+      "correct": "B",
+      "explanation": "Per §107.29(b), during civil twilight a small UAS must have lighted anti-collision lighting visible for at least 3 statute miles with a flash rate sufficient to avoid a collision. Night operations (outside civil twilight) require a waiver. Civil twilight is 30 minutes before sunrise and 30 minutes after sunset (except Alaska).",
+      "regulation": "14 CFR §107.29"
+    },
+
+    {
+      "id": "I-009",
+      "acs_code": "UA.I.B.K14",
+      "module": "I",
+      "module_name": "Regulations",
+      "topic": "Right of Way",
+      "difficulty": "easy",
+      "question": "A remote pilot observes a hot air balloon entering the operating area. What action is required?",
+      "options": {
+        "A": "The remote pilot may continue if the balloon is above the UAS",
+        "B": "The small UA must yield the right-of-way to the balloon",
+        "C": "The remote pilot should contact ATC to request the balloon change course"
+      },
+      "correct": "B",
+      "explanation": "Per §107.37(a), each small unmanned aircraft must yield the right of way to ALL aircraft, airborne vehicles, and launch and reentry vehicles. This includes manned aircraft of all types. Yielding means the UA must give way and may not pass over, under, or ahead of the other aircraft unless well clear.",
+      "regulation": "14 CFR §107.37"
+    },
+
+    {
+      "id": "I-010",
+      "acs_code": "UA.I.B.K16",
+      "module": "I",
+      "module_name": "Regulations",
+      "topic": "Airspace Authorization",
+      "difficulty": "medium",
+      "question": "According to Part 107, how may a remote pilot operate a small UAS in Class C airspace?",
+      "options": {
+        "A": "The remote pilot must have prior authorization from the ATC facility having jurisdiction over that airspace",
+        "B": "The remote pilot must monitor the ATC frequency from launch to recovery",
+        "C": "The remote pilot must contact ATC after launching the UAS"
+      },
+      "correct": "A",
+      "explanation": "Per §107.41, no person may operate a small UAS in Class B, C, or D airspace or within the lateral boundaries of the surface area of Class E airspace designated for an airport without prior authorization from ATC. Authorization is obtained through LAANC or the FAA DroneZone.",
+      "regulation": "14 CFR §107.41"
+    },
+
+    {
+      "id": "I-011",
+      "acs_code": "UA.I.B.K7",
+      "module": "I",
+      "module_name": "Regulations",
+      "topic": "Alcohol and Drugs",
+      "difficulty": "easy",
+      "question": "Under Part 107, a remote pilot may not act as pilot in command if they have consumed alcohol within the preceding:",
+      "options": {
+        "A": "4 hours",
+        "B": "8 hours",
+        "C": "12 hours"
+      },
+      "correct": "B",
+      "explanation": "Per §107.27, which references §91.17, no person may act as a remote pilot within 8 hours of consuming any alcoholic beverage, regardless of whether they feel impaired. This is the 'bottle to throttle' rule. Additionally, the blood alcohol concentration must be below 0.04 percent.",
+      "regulation": "14 CFR §107.27, §91.17"
+    },
+
+    {
+      "id": "I-012",
+      "acs_code": "UA.I.B.K7",
+      "module": "I",
+      "module_name": "Regulations",
+      "topic": "Alcohol and Drugs",
+      "difficulty": "medium",
+      "question": "What blood alcohol concentration (BAC) level would disqualify a person from acting as remote pilot in command?",
+      "options": {
+        "A": "0.08 percent or greater",
+        "B": "0.04 percent or greater",
+        "C": "Any detectable amount"
+      },
+      "correct": "B",
+      "explanation": "Per §107.27 referencing §91.17, a person may not act as remote pilot with a blood alcohol concentration of 0.04 percent or greater. This is more restrictive than the standard DUI threshold of 0.08 percent used in most states.",
+      "regulation": "14 CFR §107.27, §91.17"
+    },
+
+    {
+      "id": "I-013",
+      "acs_code": "UA.I.B.K21",
+      "module": "I",
+      "module_name": "Regulations",
+      "topic": "In-Flight Emergency",
+      "difficulty": "medium",
+      "question": "During a flight your UAS experiences a critical malfunction. You climb above 400 feet AGL to maneuver to a safe landing area. What is your reporting obligation?",
+      "options": {
+        "A": "File a report with the FAA within 10 days regardless of outcome",
+        "B": "Report only if asked to do so by the FAA Administrator",
+        "C": "Report to NTSB within 48 hours"
+      },
+      "correct": "B",
+      "explanation": "Per §107.21, a remote pilot may deviate from Part 107 regulations to the extent necessary to respond to an in-flight emergency. If a deviation occurs, the pilot must send a written report to the FAA only if asked to do so by the Administrator. This is distinct from accident reporting under §107.9.",
+      "regulation": "14 CFR §107.21"
+    },
+
+    {
+      "id": "I-014",
+      "acs_code": "UA.I.A.K2",
+      "module": "I",
+      "module_name": "Regulations",
+      "topic": "Falsification",
+      "difficulty": "easy",
+      "question": "What is the consequence of falsifying information on an application for a Remote Pilot Certificate?",
+      "options": {
+        "A": "A fine of up to $500",
+        "B": "Denial or revocation of any certificate or rating held",
+        "C": "Mandatory 30-day suspension of any existing certificate"
+      },
+      "correct": "B",
+      "explanation": "Per §107.5, no person may make a fraudulent or intentionally false statement on an application for a certificate or rating. Violation may result in denial, suspension, or revocation of any airman certificate or rating held.",
+      "regulation": "14 CFR §107.5"
+    },
+
+    {
+      "id": "I-015",
+      "acs_code": "UA.I.B.K1",
+      "module": "I",
+      "module_name": "Regulations",
+      "topic": "Remote ID",
+      "difficulty": "medium",
+      "question": "14 CFR Part 89 addresses which requirement for small UAS operations?",
+      "options": {
+        "A": "Airspace authorization procedures",
+        "B": "Remote identification of unmanned aircraft",
+        "C": "Pilot certificate recurrency requirements"
+      },
+      "correct": "B",
+      "explanation": "14 CFR Part 89 establishes the Remote Identification (Remote ID) requirements for unmanned aircraft. Remote ID acts like a digital license plate, broadcasting identification and location information during flight to allow the FAA, national security agencies, and law enforcement to identify UAS.",
+      "regulation": "14 CFR Part 89"
+    },
+
+
+    // ─────────────────────────────────────────────
+    // MODULE II — AIRSPACE & CHARTS (15 questions)
+    // ─────────────────────────────────────────────
+
+    {
+      "id": "II-001",
+      "acs_code": "UA.II.A.K1",
+      "module": "II",
+      "module_name": "Airspace & Charts",
+      "topic": "Airspace Classes",
+      "difficulty": "easy",
+      "question": "Which class of airspace generally extends from the surface to approximately 10,000 feet MSL and surrounds the nation's busiest airports?",
+      "options": {
+        "A": "Class C",
+        "B": "Class B",
+        "C": "Class D"
+      },
+      "correct": "B",
+      "explanation": "Class B airspace generally surrounds the nation's busiest airports from the surface to approximately 10,000 feet MSL. It is depicted on sectional charts with solid blue lines and resembles an upside-down wedding cake. ATC authorization is required before operating in Class B.",
+      "regulation": "14 CFR Part 71; FAA Remote Pilot Study Guide Ch. 2"
+    },
+
+    {
+      "id": "II-002",
+      "acs_code": "UA.II.A.K1",
+      "module": "II",
+      "module_name": "Airspace & Charts",
+      "topic": "Airspace Classes",
+      "difficulty": "easy",
+      "question": "Class D airspace is generally depicted on sectional charts as:",
+      "options": {
+        "A": "A solid blue circle",
+        "B": "A solid magenta circle",
+        "C": "A dashed blue circle"
+      },
+      "correct": "C",
+      "explanation": "Class D airspace is depicted with dashed blue lines on sectional charts. It generally extends from the surface to 2,500 feet above airport elevation and surrounds airports with an operational control tower. ATC authorization is required to operate a small UAS in Class D.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 2"
+    },
+
+    {
+      "id": "II-003",
+      "acs_code": "UA.II.A.K1",
+      "module": "II",
+      "module_name": "Airspace & Charts",
+      "topic": "Airspace Classes",
+      "difficulty": "medium",
+      "question": "Class E airspace at the surface is depicted on sectional charts as:",
+      "options": {
+        "A": "Solid blue lines",
+        "B": "Dashed magenta lines",
+        "C": "A magenta halo or vignette at 700 feet AGL"
+      },
+      "correct": "B",
+      "explanation": "Class E airspace designated to the surface is depicted with dashed magenta lines. Class E starting at 700 feet AGL is shown as a magenta vignette/halo. Class E starting at 1,200 feet AGL is shown as a blue vignette. When Class E goes to the surface, ATC authorization is required for UAS operations.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 2"
+    },
+
+    {
+      "id": "II-004",
+      "acs_code": "UA.II.A.K1",
+      "module": "II",
+      "module_name": "Airspace & Charts",
+      "topic": "Airspace Classes",
+      "difficulty": "easy",
+      "question": "In which class of airspace may a remote pilot typically operate without ATC authorization (assuming no other restrictions)?",
+      "options": {
+        "A": "Class B",
+        "B": "Class D",
+        "C": "Class G"
+      },
+      "correct": "C",
+      "explanation": "Class G is uncontrolled airspace — airspace that has not been designated as Class A, B, C, D, or E. No ATC authorization is required to operate a small UAS in Class G airspace, provided all other Part 107 rules (altitude, VLOS, etc.) are followed.",
+      "regulation": "14 CFR §107.41; FAA Remote Pilot Study Guide Ch. 2"
+    },
+
+    {
+      "id": "II-005",
+      "acs_code": "UA.II.A.K2",
+      "module": "II",
+      "module_name": "Airspace & Charts",
+      "topic": "Special Use Airspace",
+      "difficulty": "medium",
+      "question": "On a sectional chart, an area labeled 'P-40' represents:",
+      "options": {
+        "A": "A prohibited area where flight is not permitted",
+        "B": "A restricted area where flight is subject to limitations",
+        "C": "A military operations area (MOA)"
+      },
+      "correct": "A",
+      "explanation": "Areas labeled with 'P' followed by a number (e.g., P-40) are prohibited areas. Flight within these areas is entirely prohibited for national security or other reasons. P-40 surrounds Camp David. Restricted areas use 'R', MOAs use 'MOA' labels.",
+      "regulation": "14 CFR Part 73; FAA Remote Pilot Study Guide Ch. 2"
+    },
+
+    {
+      "id": "II-006",
+      "acs_code": "UA.II.A.K2",
+      "module": "II",
+      "module_name": "Airspace & Charts",
+      "topic": "Special Use Airspace",
+      "difficulty": "medium",
+      "question": "What type of airspace is depicted on a sectional chart with the label 'R-4401'?",
+      "options": {
+        "A": "A prohibited area",
+        "B": "A restricted area",
+        "C": "A warning area"
+      },
+      "correct": "B",
+      "explanation": "Restricted areas are labeled with 'R' followed by a number (e.g., R-4401). These areas contain airspace where activities hazardous to non-participating aircraft exist, such as artillery firing or guided missiles. Flight is not wholly prohibited but is subject to restrictions. ATC authorization or coordination is required.",
+      "regulation": "14 CFR Part 73; FAA Remote Pilot Study Guide Ch. 2"
+    },
+
+    {
+      "id": "II-007",
+      "acs_code": "UA.II.A.K2",
+      "module": "II",
+      "module_name": "Airspace & Charts",
+      "topic": "Military Training Routes",
+      "difficulty": "hard",
+      "question": "A sectional chart shows the label 'VR1667'. What does this indicate, and why is it relevant to a UAS operator?",
+      "options": {
+        "A": "A VFR corridor through restricted airspace; no concern for UAS under 400 feet",
+        "B": "A Military Training Route with segments at or below 1,500 feet AGL; low-flying military aircraft may be present",
+        "C": "A VOR radial used for navigation; no impact on UAS operations"
+      },
+      "correct": "B",
+      "explanation": "VR routes are visual military training routes. Four-digit route numbers (e.g., VR1667) indicate that ALL segments are at or below 1,500 feet AGL, meaning military aircraft may fly at drone altitudes along these routes. Operators must be aware that low-flying, high-speed military aircraft may be in their operating area.",
+      "regulation": "AIM Ch. 3; FAA Remote Pilot Study Guide Ch. 2"
+    },
+
+    {
+      "id": "II-008",
+      "acs_code": "UA.II.A.K3",
+      "module": "II",
+      "module_name": "Airspace & Charts",
+      "topic": "TFRs and NOTAMs",
+      "difficulty": "medium",
+      "question": "What type of NOTAM is issued to designate a Temporary Flight Restriction (TFR)?",
+      "options": {
+        "A": "A Pointer NOTAM",
+        "B": "A Flight Data Center (FDC) NOTAM",
+        "C": "A D NOTAM (distant)"
+      },
+      "correct": "B",
+      "explanation": "A Flight Data Center (FDC) NOTAM is issued to designate a TFR. The NOTAM begins with 'FLIGHT RESTRICTIONS' followed by location, effective time period, the area defined in statute miles, and altitudes affected. TFRs can be found at tfr.faa.gov.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 2"
+    },
+
+    {
+      "id": "II-009",
+      "acs_code": "UA.II.A.K1",
+      "module": "II",
+      "module_name": "Airspace & Charts",
+      "topic": "Airspace Classes",
+      "difficulty": "medium",
+      "question": "Class C airspace is generally depicted on a sectional chart as:",
+      "options": {
+        "A": "Solid blue lines with two or more rings",
+        "B": "Solid magenta lines, typically with two rings",
+        "C": "Dashed magenta lines"
+      },
+      "correct": "B",
+      "explanation": "Class C airspace is depicted with solid magenta lines. It typically consists of a surface area with a 5 NM radius and an outer shelf with a 10 NM radius extending from 1,200 feet to 4,000 feet above airport elevation. Solid blue = Class B. Dashed magenta = Class E surface.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 2"
+    },
+
+    {
+      "id": "II-010",
+      "acs_code": "UA.II.A.K1",
+      "module": "II",
+      "module_name": "Airspace & Charts",
+      "topic": "Airspace Authorization",
+      "difficulty": "medium",
+      "question": "A remote pilot wants to fly within the lateral boundaries of Class E airspace designated to the surface at an airport. What is required?",
+      "options": {
+        "A": "No authorization needed — Class E is uncontrolled",
+        "B": "Prior ATC authorization is required",
+        "C": "Simply notify the nearest FSDO"
+      },
+      "correct": "B",
+      "explanation": "Per §107.41, Class B, C, D, and Class E airspace designated to the surface at an airport all require prior ATC authorization before UAS operations. Class E at the surface is depicted with dashed magenta lines and is controlled airspace, not uncontrolled.",
+      "regulation": "14 CFR §107.41"
+    },
+
+    {
+      "id": "II-011",
+      "acs_code": "UA.II.A.K2",
+      "module": "II",
+      "module_name": "Airspace & Charts",
+      "topic": "Alert Areas",
+      "difficulty": "medium",
+      "question": "An area on a sectional chart labeled 'A-211' indicates:",
+      "options": {
+        "A": "A prohibited area where all flight is forbidden",
+        "B": "An alert area containing high volumes of pilot training or unusual aerial activity",
+        "C": "A restricted area with active artillery operations"
+      },
+      "correct": "B",
+      "explanation": "Alert areas are depicted with 'A' followed by a number (e.g., A-211). They inform non-participating pilots of areas with high volumes of pilot training or unusual aerial activity. All activity within alert areas must be conducted per regulations, and all pilots — participating and transiting — share equal responsibility for collision avoidance.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 2"
+    },
+
+    {
+      "id": "II-012",
+      "acs_code": "UA.II.A.K2",
+      "module": "II",
+      "module_name": "Airspace & Charts",
+      "topic": "Controlled Firing Areas",
+      "difficulty": "hard",
+      "question": "Why are Controlled Firing Areas (CFAs) NOT depicted on aeronautical charts?",
+      "options": {
+        "A": "They are classified military airspace",
+        "B": "They are suspended whenever a spotter indicates a non-participating aircraft is approaching, so they do not require non-participating aircraft to change course",
+        "C": "They only apply to manned aircraft above 18,000 feet MSL"
+      },
+      "correct": "B",
+      "explanation": "CFAs contain hazardous activities but are suspended when a spotter aircraft, radar, or ground lookout indicates that a non-participating aircraft might be approaching. Because they don't cause non-participating aircraft to change their flight path, there is no need to chart them.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 2"
+    },
+
+    {
+      "id": "II-013",
+      "acs_code": "UA.II.A.K3",
+      "module": "II",
+      "module_name": "Airspace & Charts",
+      "topic": "Airport Operations",
+      "difficulty": "medium",
+      "question": "At a non-towered airport, what frequency is typically used for the Common Traffic Advisory Frequency (CTAF)?",
+      "options": {
+        "A": "121.5 MHz",
+        "B": "122.8 MHz (UNICOM, but always verify on chart)",
+        "C": "123.45 MHz"
+      },
+      "correct": "B",
+      "explanation": "Most non-towered airports use UNICOM frequency 122.8 MHz as the CTAF. However, this can vary — the correct frequency must always be verified on the sectional chart or in the Chart Supplements publication. For airports with no UNICOM or other listed frequency, the MULTICOM frequency of 122.9 MHz is used.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 7; AIM"
+    },
+
+    {
+      "id": "II-014",
+      "acs_code": "UA.II.A.K1",
+      "module": "II",
+      "module_name": "Airspace & Charts",
+      "topic": "Airspace Classes",
+      "difficulty": "easy",
+      "question": "Class A airspace begins at what altitude?",
+      "options": {
+        "A": "10,000 feet MSL",
+        "B": "14,500 feet MSL",
+        "C": "18,000 feet MSL"
+      },
+      "correct": "C",
+      "explanation": "Class A airspace extends from 18,000 feet MSL to Flight Level 600 (60,000 feet MSL). It is not depicted on sectional charts. All operations in Class A require an IFR clearance. UAS operations at or above 18,000 feet MSL are practically irrelevant for standard Part 107 operations but pilots must know the definition.",
+      "regulation": "14 CFR Part 71"
+    },
+
+    {
+      "id": "II-015",
+      "acs_code": "UA.II.A.K2",
+      "module": "II",
+      "module_name": "Airspace & Charts",
+      "topic": "Warning Areas",
+      "difficulty": "medium",
+      "question": "Warning areas are similar to restricted areas except they are located:",
+      "options": {
+        "A": "Over heavily populated urban centers",
+        "B": "Over international waters",
+        "C": "Only above 18,000 feet MSL"
+      },
+      "correct": "B",
+      "explanation": "Warning areas are airspace similar to restricted areas that extend from 3 NM outward from the U.S. coastline and over international waters. The U.S. cannot prohibit foreign aircraft from operating in international waters, so these areas are designated as 'warning' rather than 'restricted.'",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 2"
+    },
+
+
+    // ─────────────────────────────────────────────
+    // MODULE III — WEATHER (13 questions)
+    // ─────────────────────────────────────────────
+
+    {
+      "id": "III-001",
+      "acs_code": "UA.III.A.K2",
+      "module": "III",
+      "module_name": "Weather",
+      "topic": "METAR",
+      "difficulty": "medium",
+      "question": "In a METAR report, wind reported as '14021G26KT' means:",
+      "options": {
+        "A": "Wind from 140° magnetic at 21 knots, gusting to 26 knots",
+        "B": "Wind from 140° true at 21 knots, gusting to 26 knots",
+        "C": "Wind from 140° true at 26 knots, with gusts to 21 knots"
+      },
+      "correct": "B",
+      "explanation": "METAR wind direction references true north — 'if it is in print, it must be true.' The first three digits (140) are the direction the wind is blowing FROM in degrees true. The next two digits (21) are speed in knots. 'G26KT' means gusting to 26 knots.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 3a"
+    },
+
+    {
+      "id": "III-002",
+      "acs_code": "UA.III.A.K2",
+      "module": "III",
+      "module_name": "Weather",
+      "topic": "METAR",
+      "difficulty": "medium",
+      "question": "In a METAR, a sky condition reported as 'OVC007' means the ceiling is:",
+      "options": {
+        "A": "Overcast at 7,000 feet AGL",
+        "B": "Overcast at 700 feet AGL",
+        "C": "Overcast at 70,000 feet AGL"
+      },
+      "correct": "B",
+      "explanation": "Cloud heights in METARs are reported in hundreds of feet AGL. The three-digit number (007) is multiplied by 100: 007 × 100 = 700 feet AGL. OVC = overcast (8/8 sky coverage). A ceiling of 700 feet would be a significant concern for most UAS operations.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 3a"
+    },
+
+    {
+      "id": "III-003",
+      "acs_code": "UA.III.A.K3",
+      "module": "III",
+      "module_name": "Weather",
+      "topic": "TAF",
+      "difficulty": "medium",
+      "question": "A Terminal Aerodrome Forecast (TAF) differs from a METAR in that a TAF:",
+      "options": {
+        "A": "Reports current observed conditions at the airport",
+        "B": "Is a forecast for conditions within a 5 statute mile radius of an airport",
+        "C": "Is only issued for military airfields"
+      },
+      "correct": "B",
+      "explanation": "A TAF is a forecast — not a current observation. It is established for a 5 statute mile radius around an airport, is updated four times daily (0000Z, 0600Z, 1200Z, 1800Z), and is valid for 24 or 30 hours. A METAR is a current observation. TAFs use the same abbreviations as METARs.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 3a"
+    },
+
+    {
+      "id": "III-004",
+      "acs_code": "UA.III.A.K3",
+      "module": "III",
+      "module_name": "Weather",
+      "topic": "TAF",
+      "difficulty": "medium",
+      "question": "In a TAF, the notation 'FM1500' means:",
+      "options": {
+        "A": "There is a 15% chance of changing conditions",
+        "B": "Conditions change FROM 1500Z (a rapid, significant change usually within an hour)",
+        "C": "The forecast is valid for 15 hours"
+      },
+      "correct": "B",
+      "explanation": "'FM' stands for 'From' in a TAF report, indicating a rapid and significant change in conditions expected usually within an hour. The digits following FM are the time in UTC (Zulu). 'TEMPO' indicates temporary fluctuations expected to last less than 1 hour. 'BECMG' means conditions are becoming (gradual change).",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 3a"
+    },
+
+    {
+      "id": "III-005",
+      "acs_code": "UA.III.B.K1a",
+      "module": "III",
+      "module_name": "Weather",
+      "topic": "Density Altitude",
+      "difficulty": "medium",
+      "question": "What effect does high density altitude have on a small UAS?",
+      "options": {
+        "A": "Propeller efficiency increases, resulting in better performance",
+        "B": "Propeller efficiency decreases, resulting in reduced performance",
+        "C": "Density altitude only affects aircraft with combustion engines, not electric UAS"
+      },
+      "correct": "B",
+      "explanation": "High density altitude means thinner air. With fewer air molecules, propeller blades generate less lift even for electric UAS. The result is reduced performance — shorter battery life, reduced climb rates, less stability, and longer required takeoff distances. High altitude, high temperature, and high humidity all increase density altitude.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 3b"
+    },
+
+    {
+      "id": "III-006",
+      "acs_code": "UA.III.B.K1a",
+      "module": "III",
+      "module_name": "Weather",
+      "topic": "Density Altitude",
+      "difficulty": "easy",
+      "question": "Which combination of conditions results in the HIGHEST density altitude (worst performance)?",
+      "options": {
+        "A": "High elevation, low temperature, low humidity",
+        "B": "High elevation, high temperature, high humidity",
+        "C": "Low elevation, high temperature, low humidity"
+      },
+      "correct": "B",
+      "explanation": "Density altitude is highest (air is thinnest) when elevation is high, temperature is high, and humidity is high. The memory aid is 'Heavy, Hot, High Altitude, Humid' — all four decrease UAS performance. Standard atmosphere is 29.92 in Hg and 59°F (15°C) at sea level.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 3b; DPA Cheat Sheet"
+    },
+
+    {
+      "id": "III-007",
+      "acs_code": "UA.III.B.K1c",
+      "module": "III",
+      "module_name": "Weather",
+      "topic": "Atmospheric Stability",
+      "difficulty": "medium",
+      "question": "What are the characteristics of a STABLE air mass?",
+      "options": {
+        "A": "Cumuliform clouds, turbulence, and showery precipitation",
+        "B": "Stratiform clouds, smooth air, and poor visibility in haze or smoke",
+        "C": "Good visibility and intermittent precipitation"
+      },
+      "correct": "B",
+      "explanation": "Stable air characteristics: stratiform (layered) clouds, smooth air, continuous precipitation (not showery), and poor visibility in haze and smoke. Unstable air characteristics: cumuliform clouds, rough air (turbulence), showery precipitation, and good visibility. Memory: Cool + Dry = Stable; Hot + Humid = Unstable.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 3b"
+    },
+
+    {
+      "id": "III-008",
+      "acs_code": "UA.III.B.K1d",
+      "module": "III",
+      "module_name": "Weather",
+      "topic": "Air Masses and Fronts",
+      "difficulty": "medium",
+      "question": "What are the characteristics of a moist, UNSTABLE air mass?",
+      "options": {
+        "A": "Smooth air and poor visibility",
+        "B": "Turbulence and showery precipitation",
+        "C": "Stratiform clouds and continuous precipitation"
+      },
+      "correct": "B",
+      "explanation": "Unstable air mass characteristics: cumuliform clouds, turbulence (rough air), showery precipitation, and good visibility except in blowing obstructions. These conditions are associated with hot, humid air masses. The opposite — poor visibility, smooth air, and continuous precipitation — are stable air characteristics.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 3b"
+    },
+
+    {
+      "id": "III-009",
+      "acs_code": "UA.III.B.K1e",
+      "module": "III",
+      "module_name": "Weather",
+      "topic": "Thunderstorms",
+      "difficulty": "medium",
+      "question": "What are the three stages of a thunderstorm cell's life cycle, in order?",
+      "options": {
+        "A": "Mature, cumulus, dissipating",
+        "B": "Cumulus, mature, dissipating",
+        "C": "Formation, cumulonimbus, decay"
+      },
+      "correct": "B",
+      "explanation": "A thunderstorm cell progresses through three stages: (1) Cumulus — characterized by updrafts, (2) Mature — the most dangerous stage with both updrafts and downdrafts, heavy precipitation, lightning, and possible hail, (3) Dissipating — characterized by downdrafts as the storm loses energy. Transitions between stages are subtle, not abrupt.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 3b"
+    },
+
+    {
+      "id": "III-010",
+      "acs_code": "UA.III.B.K1e",
+      "module": "III",
+      "module_name": "Weather",
+      "topic": "Thunderstorms",
+      "difficulty": "hard",
+      "question": "If a small UAS were to enter a thunderstorm, what updraft/downdraft forces could it potentially experience?",
+      "options": {
+        "A": "Up to 500 feet per minute",
+        "B": "Up to 1,500 feet per minute",
+        "C": "More than 3,000 feet per minute"
+      },
+      "correct": "C",
+      "explanation": "Thunderstorms can produce updrafts and downdrafts that exceed 3,000 feet per minute (fpm). By contrast, microbursts can produce downdrafts up to 6,000 fpm. These forces would be catastrophic for any small UAS. A drone must never be operated near or into a thunderstorm.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 3b"
+    },
+
+    {
+      "id": "III-011",
+      "acs_code": "UA.III.B.K1f",
+      "module": "III",
+      "module_name": "Weather",
+      "topic": "Structural Icing",
+      "difficulty": "medium",
+      "question": "What two conditions must be present simultaneously for structural icing to occur on an aircraft?",
+      "options": {
+        "A": "Temperature below -10°C and winds above 25 knots",
+        "B": "Visible moisture (rain or cloud droplets) and temperature at the point of impact at or below 0°C",
+        "C": "Clouds above 12,000 feet and relative humidity above 80%"
+      },
+      "correct": "B",
+      "explanation": "Two conditions are required for structural icing: (1) the aircraft must be flying through visible water such as rain or cloud droplets, AND (2) the temperature at the point where the moisture strikes the aircraft must be 0°C or colder. Note: aerodynamic cooling can lower airfoil temperature to 0°C even when ambient temperature is slightly above freezing.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 3b"
+    },
+
+    {
+      "id": "III-012",
+      "acs_code": "UA.III.B.K1g",
+      "module": "III",
+      "module_name": "Weather",
+      "topic": "Wind Shear",
+      "difficulty": "medium",
+      "question": "Low-level wind shear is most commonly associated with which conditions?",
+      "options": {
+        "A": "Clear skies and light winds above 10,000 feet",
+        "B": "Passing frontal systems, thunderstorms, and temperature inversions",
+        "C": "High pressure systems and calm winds"
+      },
+      "correct": "B",
+      "explanation": "Low-level wind shear is a sudden, drastic change in wind speed and/or direction over a very short area. It is especially hazardous due to proximity to the ground. It is commonly associated with passing frontal systems, thunderstorms, temperature inversions, and strong upper-level winds greater than 25 knots.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 3b"
+    },
+
+    {
+      "id": "III-013",
+      "acs_code": "UA.III.B.K1h",
+      "module": "III",
+      "module_name": "Weather",
+      "topic": "Temperature Inversion",
+      "difficulty": "hard",
+      "question": "A temperature inversion typically produces which flying conditions?",
+      "options": {
+        "A": "Turbulence, cumuliform clouds, and good visibility",
+        "B": "Smooth air, possible fog, haze, or smoke, and poor visibility near the surface",
+        "C": "Strong updrafts and showery precipitation"
+      },
+      "correct": "B",
+      "explanation": "A temperature inversion occurs when air temperature increases with altitude (reversing the normal pattern). Inversion layers produce smooth, stable air close to the ground with the inversion acting as a lid. If relative humidity is high, fog, haze, or smoke may form, significantly reducing visibility. These conditions are deceptively calm but reduce see-and-avoid capability.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 3b"
+    },
+
+
+    // ─────────────────────────────────────────────
+    // MODULE IV — LOADING & PERFORMANCE (8 questions)
+    // ─────────────────────────────────────────────
+
+    {
+      "id": "IV-001",
+      "acs_code": "UA.IV.A.K1",
+      "module": "IV",
+      "module_name": "Loading & Performance",
+      "topic": "Weight and Balance",
+      "difficulty": "medium",
+      "question": "What is the effect of operating a small UAS with the center of gravity (CG) outside the allowable limits?",
+      "options": {
+        "A": "The UAS will consume more battery power but fly normally",
+        "B": "The UAS may become difficult or impossible to control and could crash",
+        "C": "CG only matters for fixed-wing aircraft, not multi-rotor UAS"
+      },
+      "correct": "B",
+      "explanation": "Center of gravity (CG) is critical to stability and controllability. If the CG is outside allowable limits, the aircraft may be uncontrollable or may not be able to maintain stable flight. This applies to all aircraft types including multi-rotor UAS. Always follow manufacturer guidelines for loading.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 4; FAA-H-8083-1"
+    },
+
+    {
+      "id": "IV-002",
+      "acs_code": "UA.IV.A.K2",
+      "module": "IV",
+      "module_name": "Loading & Performance",
+      "topic": "Load Factors",
+      "difficulty": "medium",
+      "question": "How does adding a payload to a small UAS affect its performance?",
+      "options": {
+        "A": "Payload has no effect on small UAS because rotors compensate automatically",
+        "B": "Increased weight requires more power, reduces battery life, and may reduce maneuverability",
+        "C": "Payload only affects performance above 400 feet AGL"
+      },
+      "correct": "B",
+      "explanation": "Adding payload increases the total weight of the UAS. This requires motors to work harder, which increases battery drain and reduces flight time. It may also reduce maximum climb rate, top speed, and maneuverability. Operators must ensure payload weight stays within manufacturer-specified limits.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 4"
+    },
+
+    {
+      "id": "IV-003",
+      "acs_code": "UA.IV.B.K1",
+      "module": "IV",
+      "module_name": "Loading & Performance",
+      "topic": "Performance Factors",
+      "difficulty": "medium",
+      "question": "Which four factors are known to decrease UAS performance?",
+      "options": {
+        "A": "Low weight, cold temperature, low altitude, dry air",
+        "B": "Heavy weight, high temperature, high altitude, high humidity",
+        "C": "High speed, wet weather, low pressure, small propellers"
+      },
+      "correct": "B",
+      "explanation": "The four factors that decrease small UAS performance are: Heavy (increased weight), Hot (high temperature), High altitude, and Humid air. High humidity decreases air density because humid air is actually lighter than dry air — dry air has more mass, which results in greater thrust from propellers.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 3b; DPA Cheat Sheet"
+    },
+
+    {
+      "id": "IV-004",
+      "acs_code": "UA.IV.B.K1",
+      "module": "IV",
+      "module_name": "Loading & Performance",
+      "topic": "Performance Factors",
+      "difficulty": "medium",
+      "question": "Standard atmosphere conditions used as a baseline for performance calculations are:",
+      "options": {
+        "A": "29.92 in Hg, 59°F (15°C) at sea level",
+        "B": "30.00 in Hg, 68°F (20°C) at sea level",
+        "C": "29.92 in Hg, 32°F (0°C) at sea level"
+      },
+      "correct": "A",
+      "explanation": "Standard atmosphere is defined as 29.92 inches of mercury (1013.25 hPa) and 59°F (15°C) at sea level with no humidity. Any deviation from these values affects air density and therefore aircraft performance. Higher temperature or lower pressure = higher density altitude = reduced performance.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 3b; DPA Cheat Sheet"
+    },
+
+    {
+      "id": "IV-005",
+      "acs_code": "UA.IV.B.K2",
+      "module": "IV",
+      "module_name": "Loading & Performance",
+      "topic": "Microbursts",
+      "difficulty": "hard",
+      "question": "Which statement correctly describes a microburst?",
+      "options": {
+        "A": "A large weather system covering 10-15 miles with gradual wind speed increases",
+        "B": "A concentrated downdraft approximately 1-2 miles in diameter, with downdrafts up to 6,000 fpm, lasting 5-15 minutes",
+        "C": "A surface-level phenomenon found only in desert environments"
+      },
+      "correct": "B",
+      "explanation": "A microburst is a concentrated area of rapidly descending air. Key facts: diameter of 1-2 miles, downdraft speeds up to 6,000 fpm, and duration of 5-15 minutes. Microbursts are associated with thunderstorms and can cause severe low-level wind shear. They are extremely hazardous to all aircraft including UAS.",
+      "regulation": "DPA Cheat Sheet; FAA Remote Pilot Study Guide Ch. 3b"
+    },
+
+    {
+      "id": "IV-006",
+      "acs_code": "UA.IV.A.K1",
+      "module": "IV",
+      "module_name": "Loading & Performance",
+      "topic": "Stability",
+      "difficulty": "medium",
+      "question": "What effect does a forward center of gravity (CG) typically have on a fixed-wing UAS?",
+      "options": {
+        "A": "Makes the aircraft more maneuverable and responsive",
+        "B": "Increases nose-down tendencies, may make it harder to maintain level flight",
+        "C": "Has no effect if electronic stabilization is enabled"
+      },
+      "correct": "B",
+      "explanation": "A forward CG increases nose-down pitch tendency and provides more inherent stability but reduces maneuverability and may make it harder to maintain level flight if it exceeds forward CG limits. An aft CG makes the aircraft less stable and potentially uncontrollable. Always stay within the manufacturer's specified CG envelope.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 4; FAA-H-8083-1"
+    },
+
+    {
+      "id": "IV-007",
+      "acs_code": "UA.IV.B.K1",
+      "module": "IV",
+      "module_name": "Loading & Performance",
+      "topic": "Humidity and Performance",
+      "difficulty": "medium",
+      "question": "Why does high humidity decrease small UAS performance?",
+      "options": {
+        "A": "Moisture causes electrical shorts in drone electronics",
+        "B": "Humid air is less dense than dry air because water vapor displaces heavier nitrogen and oxygen molecules, resulting in less mass for propellers to act on",
+        "C": "High humidity causes propeller blades to warp and lose efficiency"
+      },
+      "correct": "B",
+      "explanation": "Humid air is actually lighter (less dense) than dry air. Water vapor (H2O, molecular weight 18) displaces heavier nitrogen (N2, molecular weight 28) and oxygen (O2, molecular weight 32) molecules. Less dense air means propellers generate less thrust, reducing performance. Dry air has more mass, which results in greater thrust.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 3b; DPA Cheat Sheet"
+    },
+
+    {
+      "id": "IV-008",
+      "acs_code": "UA.IV.A.K1",
+      "module": "IV",
+      "module_name": "Loading & Performance",
+      "topic": "Weight Effects",
+      "difficulty": "easy",
+      "question": "According to Part 107, what is the maximum takeoff weight for a small UAS to be regulated under Part 107 (rather than requiring special certification)?",
+      "options": {
+        "A": "25 pounds",
+        "B": "55 pounds",
+        "C": "100 pounds"
+      },
+      "correct": "B",
+      "explanation": "Part 107 applies to small unmanned aircraft weighing less than 55 pounds on takeoff, including everything onboard or attached. Aircraft weighing 55 pounds or more require different regulatory treatment (Part 47 registration, possible Section 44807 exemption). The registration threshold for Part 48 is 0.55 lbs minimum.",
+      "regulation": "14 CFR §107.3"
+    },
+
+
+    // ─────────────────────────────────────────────
+    // MODULE V — OPERATIONS (17 questions)
+    // ─────────────────────────────────────────────
+
+    {
+      "id": "V-001",
+      "acs_code": "UA.V.A.K1",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "Operating Limitations",
+      "difficulty": "easy",
+      "question": "What is the maximum altitude a small UAS may operate under Part 107 without a waiver?",
+      "options": {
+        "A": "400 feet AGL",
+        "B": "500 feet AGL",
+        "C": "1,000 feet MSL"
+      },
+      "correct": "A",
+      "explanation": "Per §107.51(b), the maximum altitude is 400 feet above ground level (AGL). There is an exception: a small UAS may operate higher than 400 feet AGL if it is within a 400-foot radius of a structure and does not fly higher than 400 feet above the structure's immediate uppermost limit.",
+      "regulation": "14 CFR §107.51"
+    },
+
+    {
+      "id": "V-002",
+      "acs_code": "UA.V.A.K1",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "Operating Limitations",
+      "difficulty": "easy",
+      "question": "What is the maximum groundspeed a small UAS may operate at under Part 107?",
+      "options": {
+        "A": "87 knots (100 mph)",
+        "B": "100 knots (115 mph)",
+        "C": "55 knots (63 mph)"
+      },
+      "correct": "A",
+      "explanation": "Per §107.51(a), a small UAS may not exceed 87 knots (100 mph). The speed limit is commonly expressed as 100 mph for ease of remembering. Maximum altitude is 400 feet AGL.",
+      "regulation": "14 CFR §107.51"
+    },
+
+    {
+      "id": "V-003",
+      "acs_code": "UA.V.A.K1",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "Operating Limitations",
+      "difficulty": "medium",
+      "question": "What is the minimum flight visibility required for Part 107 operations?",
+      "options": {
+        "A": "1 statute mile",
+        "B": "3 statute miles",
+        "C": "5 statute miles"
+      },
+      "correct": "B",
+      "explanation": "Per §107.51(c), the minimum flight visibility (as observed from the control station) is 3 statute miles. Additionally, the operator must remain at least 500 feet below clouds and 2,000 feet horizontally from clouds.",
+      "regulation": "14 CFR §107.51"
+    },
+
+    {
+      "id": "V-004",
+      "acs_code": "UA.V.A.K1",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "Operating Limitations",
+      "difficulty": "medium",
+      "question": "What are the cloud clearance requirements for Part 107 operations?",
+      "options": {
+        "A": "500 feet below clouds and 1,000 feet horizontally from clouds",
+        "B": "500 feet below clouds and 2,000 feet horizontally from clouds",
+        "C": "1,000 feet below clouds and 2,000 feet horizontally from clouds"
+      },
+      "correct": "B",
+      "explanation": "Per §107.51(d), a small UAS must remain at least 500 feet below the clouds and at least 2,000 feet horizontally from clouds. This ensures UAS are visible to manned aircraft emerging from clouds. Minimum visibility is 3 statute miles.",
+      "regulation": "14 CFR §107.51"
+    },
+
+    {
+      "id": "V-005",
+      "acs_code": "UA.V.A.K3",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "Visual Line of Sight",
+      "difficulty": "medium",
+      "question": "Under Part 107, which of the following correctly describes Visual Line of Sight (VLOS) requirements?",
+      "options": {
+        "A": "The pilot may use First Person View (FPV) goggles to satisfy the VLOS requirement",
+        "B": "The remote pilot or visual observer must be able to see the UA at all times with unaided vision (corrective lenses allowed)",
+        "C": "VLOS is satisfied as long as the UA is within 1 mile of the pilot"
+      },
+      "correct": "B",
+      "explanation": "Per §107.31, VLOS requires that the remote pilot or visual observer must be able to see the unmanned aircraft throughout the entire flight with unaided vision (corrective lenses are permitted). FPV goggles alone do not satisfy VLOS. There is no specific distance limit — the requirement is actual visual contact.",
+      "regulation": "14 CFR §107.31"
+    },
+
+    {
+      "id": "V-006",
+      "acs_code": "UA.V.A.K4",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "Visual Observer",
+      "difficulty": "medium",
+      "question": "What is the role of a Visual Observer (VO) under Part 107?",
+      "options": {
+        "A": "A VO may operate the flight controls under the supervision of the remote PIC",
+        "B": "A VO assists the remote PIC in seeing and avoiding other air traffic, objects aloft, or on the ground",
+        "C": "A VO is required for all Part 107 operations"
+      },
+      "correct": "B",
+      "explanation": "Per §107.33, a visual observer (VO) assists the remote PIC and the person manipulating the flight controls to see and avoid other air traffic or objects aloft or on the ground. A VO is optional, not required. The VO, remote PIC, and person manipulating controls must all be able to communicate effectively.",
+      "regulation": "14 CFR §107.33"
+    },
+
+    {
+      "id": "V-007",
+      "acs_code": "UA.V.B.K3",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "Traffic Scanning",
+      "difficulty": "medium",
+      "question": "What is the recommended technique for a remote pilot to scan for air traffic?",
+      "options": {
+        "A": "Continuously scan the sky from right to left in one smooth motion",
+        "B": "Rely primarily on peripheral vision to detect movement",
+        "C": "Systematically focus on different segments of the sky for short intervals"
+      },
+      "correct": "C",
+      "explanation": "The FAA recommends systematically focusing on different segments of the sky for short intervals (sector scanning). The idea is to divide the sky into segments and focus on each area briefly. Continuous sweeping is less effective because the eye needs brief periods of focus to detect objects. At night, off-center viewing should be used.",
+      "regulation": "FAA Remote Pilot Study Guide; Rupprecht Study Guide"
+    },
+
+    {
+      "id": "V-008",
+      "acs_code": "UA.V.C.K2",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "Battery Safety",
+      "difficulty": "medium",
+      "question": "What is the best practice for preventing in-flight emergencies related to lithium-based batteries?",
+      "options": {
+        "A": "Store batteries in a freezer to slow chemical degradation between uses",
+        "B": "Follow the manufacturer's recommendations for safe battery handling, storage, and charging",
+        "C": "Allow batteries to fully discharge before each recharge cycle"
+      },
+      "correct": "B",
+      "explanation": "Following manufacturer recommendations for LiPo/lithium battery handling is the correct approach. Cold temperatures negatively affect battery performance and charging. Batteries showing signs of swelling, unusual heat during charging, or capacity degradation should be removed from service. Charge in a safe location where a fire would not spread.",
+      "regulation": "SAFO 09013; FAA Remote Pilot Study Guide; Rupprecht Study Guide"
+    },
+
+    {
+      "id": "V-009",
+      "acs_code": "UA.V.D.K1",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "ADM",
+      "difficulty": "medium",
+      "question": "The Perceive-Process-Perform (3P) model is a tool used for:",
+      "options": {
+        "A": "Pre-flight equipment inspection checklists",
+        "B": "Aeronautical Decision Making (ADM) during all phases of flight",
+        "C": "Determining minimum crew requirements for complex operations"
+      },
+      "correct": "B",
+      "explanation": "The 3P model is an ADM tool: Perceive the given set of circumstances, Process by evaluating their impact on flight safety, and Perform by implementing the best course of action. It provides a systematic approach to decision-making that can be applied during all phases of flight — preflight, in-flight, and post-flight.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 10; DPA Cheat Sheet"
+    },
+
+    {
+      "id": "V-010",
+      "acs_code": "UA.V.D.K2",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "CRM",
+      "difficulty": "medium",
+      "question": "When applying Crew Resource Management (CRM) to small UAS operations, CRM principles should be integrated into:",
+      "options": {
+        "A": "The flight portion only",
+        "B": "Communications between the pilot and ATC only",
+        "C": "All phases of the operation — preflight, in-flight, and post-flight"
+      },
+      "correct": "C",
+      "explanation": "CRM must be integrated into all phases of the operation. Pre-flight tasks (TFR checks, weather review, battery charging, crew briefing) and post-flight tasks (logging, battery storage, incident review) are just as important as in-flight CRM. CRM includes all persons involved: remote PIC, person manipulating controls, visual observers, and any support crew.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 6 & 10; Rupprecht Study Guide"
+    },
+
+    {
+      "id": "V-011",
+      "acs_code": "UA.V.D.K3",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "Hazardous Attitudes",
+      "difficulty": "medium",
+      "question": "A news organization's drone pilot has had multiple near-misses and two accidents but continues flying with the same practices. Which approach best addresses this safety problem?",
+      "options": {
+        "A": "Set a maximum acceptable number of crashes per year",
+        "B": "Accept that some accidents are unavoidable in this type of work",
+        "C": "Identify hazardous attitudes, develop Standard Operating Procedures (SOPs), and continuously improve them based on data"
+      },
+      "correct": "C",
+      "explanation": "The correct approach is to recognize hazardous attitudes, develop SOPs that emphasize safety, collect post-flight data, and improve SOPs over time by identifying risks, implementing mitigations, and measuring their effectiveness. SOPs are not static — what gets measured gets managed.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 10; Rupprecht Study Guide"
+    },
+
+    {
+      "id": "V-012",
+      "acs_code": "UA.V.E.K1",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "Emergency Procedures",
+      "difficulty": "medium",
+      "question": "During an in-flight emergency, a remote pilot deviates from Part 107 regulations. What must happen afterward?",
+      "options": {
+        "A": "File a report with the NTSB within 48 hours",
+        "B": "Send a written report to the FAA only if asked to do so by the Administrator",
+        "C": "File an accident report within 10 calendar days regardless"
+      },
+      "correct": "B",
+      "explanation": "Per §107.21, in the event of an in-flight emergency, the remote PIC may deviate from any rule of Part 107 to the extent necessary to meet the emergency. A written report is sent to the FAA only upon the Administrator's request. This is separate from the accident reporting requirement under §107.9.",
+      "regulation": "14 CFR §107.21"
+    },
+
+    {
+      "id": "V-013",
+      "acs_code": "UA.V.E.K8",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "Night Vision",
+      "difficulty": "easy",
+      "question": "When preparing for a night flight and using bright lights during assembly, approximately how long does it take for a person's eyes to fully adapt to darkness?",
+      "options": {
+        "A": "5 minutes",
+        "B": "15 minutes",
+        "C": "30 minutes"
+      },
+      "correct": "C",
+      "explanation": "It takes approximately 30 minutes for a person's eyes to fully adapt to darkness (dark adaptation). Exposure to bright lights during pre-flight assembly resets this process. Pilots conducting night civil twilight operations should minimize bright light exposure beforehand and use red lights when possible to preserve night vision.",
+      "regulation": "Rupprecht Study Guide; FAA Remote Pilot Study Guide"
+    },
+
+    {
+      "id": "V-014",
+      "acs_code": "UA.V.F.K1",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "Maintenance",
+      "difficulty": "medium",
+      "question": "When should a remote pilot establish a scheduled maintenance protocol for their small UAS?",
+      "options": {
+        "A": "Only after the UAS has been involved in an accident",
+        "B": "When the manufacturer does not provide a maintenance schedule",
+        "C": "The FAA does not require any maintenance schedule for small UAS"
+      },
+      "correct": "B",
+      "explanation": "Per AC 107-2, when a manufacturer does not provide a maintenance schedule, the operator should establish their own scheduled maintenance protocol. Understanding mean time between failures and common failure points helps prevent crashes. Proactive maintenance is always better than reactive maintenance after a failure.",
+      "regulation": "AC 107-2; Rupprecht Study Guide"
+    },
+
+    {
+      "id": "V-015",
+      "acs_code": "UA.V.F.K2",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "Preflight Inspection",
+      "difficulty": "easy",
+      "question": "According to Part 107, the responsibility to inspect the small UAS to ensure it is in a safe operating condition rests with the:",
+      "options": {
+        "A": "FAA Flight Standards District Office (FSDO)",
+        "B": "Remote Pilot in Command",
+        "C": "Drone manufacturer"
+      },
+      "correct": "B",
+      "explanation": "Per §107.49, the remote pilot in command is responsible for conducting a preflight inspection to ensure the small UAS is in a safe operating condition. If any irregularities are found, they must be corrected before flight. For UAS without a manufacturer checklist, the pilot must develop their own.",
+      "regulation": "14 CFR §107.49"
+    },
+
+    {
+      "id": "V-016",
+      "acs_code": "UA.V.A.K6",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "Operations Over People",
+      "difficulty": "hard",
+      "question": "Under Part 107 Subpart D, which category of operations over human beings imposes the MOST restrictions and requires a current FAA airworthiness certificate?",
+      "options": {
+        "A": "Category 1",
+        "B": "Category 2",
+        "C": "Category 4"
+      },
+      "correct": "C",
+      "explanation": "Category 4 operations over human beings require the UAS to have a current FAA airworthiness certificate under 14 CFR Part 21 and be operated in accordance with its operating limitations. Category 1 has the least restrictions (under 0.55 lbs with no exposed rotating parts that lacerate). Categories 2 and 3 have intermediate requirements with declared means of compliance.",
+      "regulation": "14 CFR §107.140"
+    },
+
+    {
+      "id": "V-017",
+      "acs_code": "UA.V.A.K7",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "Operations from Moving Vehicles",
+      "difficulty": "hard",
+      "question": "Under Part 107, a small UAS may be operated from a moving vehicle only if:",
+      "options": {
+        "A": "The vehicle is traveling under 25 mph",
+        "B": "The operation is over a sparsely populated area and the vehicle is not an aircraft",
+        "C": "Any time, provided the remote PIC is not the driver"
+      },
+      "correct": "B",
+      "explanation": "Per §107.25, a small UAS may be operated from a moving vehicle or aircraft only over sparsely populated areas. A remote pilot may not operate from a moving vehicle in a densely populated area. The prohibition ensures that the UAS does not pose a hazard to persons on the ground.",
+      "regulation": "14 CFR §107.25"
+    }
+
+  ]
+}

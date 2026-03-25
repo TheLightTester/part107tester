@@ -1,0 +1,1087 @@
+{
+  "metadata": {
+    "title": "Part 107 Question Bank — Expansion Set",
+    "version": "1.0",
+    "description": "57 additional questions to supplement the base bank. Combine with part107_question_bank.json for a total of 125 questions.",
+    "new_questions_added": 57,
+    "combined_total": 125,
+    "new_breakdown": {
+      "I_Regulations": 10,
+      "II_Airspace_Charts": 10,
+      "III_Weather": 10,
+      "IV_Loading_Performance": 5,
+      "V_Operations": 22
+    }
+  },
+  "questions": [
+
+    // ─────────────────────────────────────────────
+    // MODULE I — REGULATIONS (10 new questions, I-016 to I-025)
+    // ─────────────────────────────────────────────
+
+    {
+      "id": "I-016",
+      "acs_code": "UA.I.B.K2",
+      "module": "I",
+      "module_name": "Regulations",
+      "topic": "Remote Pilot in Command Responsibility",
+      "difficulty": "medium",
+      "question": "A person who does not hold a Remote Pilot Certificate wants to fly a drone under your supervision. Under Part 107, which statement is correct?",
+      "options": {
+        "A": "This is not permitted under any circumstances",
+        "B": "The certificated remote pilot in command must be present and may allow a non-certificated person to manipulate the flight controls under their direct supervision",
+        "C": "The non-certificated person must obtain a student pilot certificate first"
+      },
+      "correct": "B",
+      "explanation": "Per §107.12 and §107.19, a remote pilot in command who holds a certificate with a small UAS rating may allow another person to manipulate the flight controls of the sUAS under their direct supervision. The certificated remote PIC retains full responsibility for the safe operation of the UAS at all times.",
+      "regulation": "14 CFR §107.12, §107.19"
+    },
+
+    {
+      "id": "I-017",
+      "acs_code": "UA.I.B.K18",
+      "module": "I",
+      "module_name": "Regulations",
+      "topic": "Hazardous Operations",
+      "difficulty": "medium",
+      "question": "Under Part 107, which action is considered a hazardous operation?",
+      "options": {
+        "A": "Flying at 350 feet AGL in Class G airspace with 5 miles visibility",
+        "B": "Operating a small UAS in a careless or reckless manner so as to endanger the life or property of another",
+        "C": "Flying during civil twilight with anti-collision lighting"
+      },
+      "correct": "B",
+      "explanation": "Per §107.23, no person may operate a small UAS in a careless or reckless manner so as to endanger the life or property of another. This is the foundation of the hazardous operation rule. Options A and C describe legal operations when all other requirements are met.",
+      "regulation": "14 CFR §107.23"
+    },
+
+    {
+      "id": "I-018",
+      "acs_code": "UA.I.B.K19",
+      "module": "I",
+      "module_name": "Regulations",
+      "topic": "Carriage of Hazardous Material",
+      "difficulty": "medium",
+      "question": "May a small UAS carry hazardous material under Part 107?",
+      "options": {
+        "A": "Yes, if the total weight of the hazardous material is under 1 pound",
+        "B": "Yes, if a waiver has been obtained from the FAA",
+        "C": "No, a small UAS operated under Part 107 may not carry hazardous material"
+      },
+      "correct": "C",
+      "explanation": "Per §107.36, a remote pilot in command may not allow a small unmanned aircraft to carry hazardous material. This prohibition is absolute under Part 107 — there is no waiver process for this restriction listed in §107.205.",
+      "regulation": "14 CFR §107.36"
+    },
+
+    {
+      "id": "I-019",
+      "acs_code": "UA.I.E.K1",
+      "module": "I",
+      "module_name": "Regulations",
+      "topic": "Waivers",
+      "difficulty": "medium",
+      "question": "Which of the following Part 107 regulations CAN be waived by the FAA?",
+      "options": {
+        "A": "The prohibition on carrying hazardous material (§107.36)",
+        "B": "Daylight operations and Visual Line of Sight requirements (§107.29, §107.31)",
+        "C": "The requirement for a Remote Pilot Certificate (§107.12)"
+      },
+      "correct": "B",
+      "explanation": "Per §107.205, regulations that can be waived include: §107.25 (moving vehicle), §107.29 (daylight), §107.31 (VLOS), §107.33 (visual observer), §107.35 (multiple aircraft), §107.37(a) (right of way), §107.39 (over people), §107.41 (airspace — via LAANC/DroneZone), §107.51 (operating limits). The requirement for a Remote Pilot Certificate and the prohibition on hazardous material cannot be waived.",
+      "regulation": "14 CFR §107.200, §107.205"
+    },
+
+    {
+      "id": "I-020",
+      "acs_code": "UA.I.B.K20",
+      "module": "I",
+      "module_name": "Regulations",
+      "topic": "Medical Conditions",
+      "difficulty": "medium",
+      "question": "A remote pilot has a medical condition that causes occasional dizziness. Under Part 107, what must the pilot do?",
+      "options": {
+        "A": "Obtain an FAA medical certificate to verify fitness",
+        "B": "Determine whether the condition or medication could interfere with safe UAS operation, and not fly if it would",
+        "C": "Report the condition to the FAA within 30 days"
+      },
+      "correct": "B",
+      "explanation": "Per §107.17, no person may act as remote pilot in command if they know or have reason to know of any physical or mental condition that would interfere with the safe operation of the sUAS. Part 107 does not require an FAA medical certificate — but the pilot bears the responsibility to self-assess and ground themselves if impaired.",
+      "regulation": "14 CFR §107.17"
+    },
+
+    {
+      "id": "I-021",
+      "acs_code": "UA.I.B.K3",
+      "module": "I",
+      "module_name": "Regulations",
+      "topic": "Condition for Safe Operation",
+      "difficulty": "easy",
+      "question": "Under Part 107, who is responsible for ensuring the small UAS is in a safe condition to fly prior to each flight?",
+      "options": {
+        "A": "The drone manufacturer",
+        "B": "The FAA",
+        "C": "The remote pilot in command"
+      },
+      "correct": "C",
+      "explanation": "Per §107.15, the remote pilot in command is responsible for ensuring that the small UAS is in a condition for safe operation prior to flight. If the UAS is not airworthy or in unsafe condition, the remote PIC must not operate it until it has been repaired or made safe.",
+      "regulation": "14 CFR §107.15"
+    },
+
+    {
+      "id": "I-022",
+      "acs_code": "UA.I.B.K22",
+      "module": "I",
+      "module_name": "Regulations",
+      "topic": "Operation Near Other Aircraft",
+      "difficulty": "hard",
+      "question": "Under §107.37, what does 'yielding the right of way' specifically mean for a small UAS?",
+      "options": {
+        "A": "The UAS must descend to the ground immediately when any aircraft is spotted",
+        "B": "The UAS must give way to the other aircraft and may not pass over, under, or ahead of it unless well clear",
+        "C": "The UAS pilot must contact ATC to request the other aircraft change course"
+      },
+      "correct": "B",
+      "explanation": "Per §107.37(a), yielding right of way means the small unmanned aircraft must give way to the aircraft or vehicle and may not pass over, under, or ahead of it unless well clear. The UAS does not have to land — it must maneuver to remain well clear. Every small UAS must yield to ALL aircraft, including other drones.",
+      "regulation": "14 CFR §107.37"
+    },
+
+    {
+      "id": "I-023",
+      "acs_code": "UA.I.B.K5",
+      "module": "I",
+      "module_name": "Regulations",
+      "topic": "Inspection by FAA",
+      "difficulty": "medium",
+      "question": "An FAA inspector approaches you during a flight operation and requests to inspect your Remote Pilot Certificate and UAS. What must you do?",
+      "options": {
+        "A": "You may decline the inspection until you have consulted an attorney",
+        "B": "Present your certificate and make the UAS available for inspection upon request",
+        "C": "Only comply if the inspector provides written notice 24 hours in advance"
+      },
+      "correct": "B",
+      "explanation": "Per §107.7, a remote pilot must, upon request, present their Remote Pilot Certificate and make the small UAS available for inspection or testing by the FAA or NTSB. Refusal to comply is itself a regulatory violation and can result in certificate action.",
+      "regulation": "14 CFR §107.7"
+    },
+
+    {
+      "id": "I-024",
+      "acs_code": "UA.I.B.K35",
+      "module": "I",
+      "module_name": "Regulations",
+      "topic": "Operation of Multiple UAS",
+      "difficulty": "hard",
+      "question": "Under Part 107, when may a single remote pilot simultaneously operate more than one small UAS?",
+      "options": {
+        "A": "Never — one remote PIC per aircraft at all times",
+        "B": "Only with a waiver from the FAA under §107.35",
+        "C": "Only if additional visual observers are present for each extra aircraft"
+      },
+      "correct": "B",
+      "explanation": "Per §107.35, a person may not operate or act as remote pilot in command of more than one unmanned aircraft at the same time unless authorized by a waiver. This is one of the operations listed in §107.205 as waivable. Without a waiver, it is one remote PIC per UAS operation.",
+      "regulation": "14 CFR §107.35, §107.205"
+    },
+
+    {
+      "id": "I-025",
+      "acs_code": "UA.I.A.K5",
+      "module": "I",
+      "module_name": "Regulations",
+      "topic": "NTSB Reporting — Part 830",
+      "difficulty": "hard",
+      "question": "When would a UAS accident require notification to the NTSB under 49 CFR Part 830?",
+      "options": {
+        "A": "All Part 107 accidents regardless of damage or injury must be reported to NTSB",
+        "B": "When someone is injured, when the UAS weighs more than 300 lbs and exhibits substantial damage, or when certain specific events under Part 830.5 occur such as a flyaway or fire",
+        "C": "NTSB only investigates manned aircraft accidents; UAS accidents are FAA-only"
+      },
+      "correct": "B",
+      "explanation": "Under 49 CFR Part 830, NTSB notification is required in specific circumstances: if someone is hurt, if the UAS weighs over 300 lbs and sustains substantial damage, or if events listed in Part 830.5 occur (such as in-flight fire, mid-air collision, or flyaway). Recreational and hobbyist UAS operators do not need to report to NTSB. The FAA accident report under §107.9 is separate from NTSB reporting.",
+      "regulation": "49 CFR Part 830; Rupprecht Study Guide"
+    },
+
+
+    // ─────────────────────────────────────────────
+    // MODULE II — AIRSPACE & CHARTS (10 new questions, II-016 to II-025)
+    // ─────────────────────────────────────────────
+
+    {
+      "id": "II-016",
+      "acs_code": "UA.II.A.K3",
+      "module": "II",
+      "module_name": "Airspace & Charts",
+      "topic": "Sectional Charts",
+      "difficulty": "medium",
+      "question": "On a sectional chart, an obstacle shown with a top number of 1,549 and a bottom number of (312) indicates:",
+      "options": {
+        "A": "The obstacle is 1,549 feet AGL and 312 feet MSL",
+        "B": "The obstacle top is 1,549 feet MSL and 312 feet AGL",
+        "C": "The obstacle is 312 feet tall and located at grid position 1,549"
+      },
+      "correct": "B",
+      "explanation": "On sectional charts, obstacles (towers, antennas, etc.) are shown with two numbers. The top number is the height in MSL (Mean Sea Level). The bottom number in parentheses is the AGL (Above Ground Level) height. The higher number is always MSL. A UAS flying at 400 feet AGL must be aware of the AGL height to avoid the obstacle.",
+      "regulation": "FAA Aeronautical Chart User's Guide; DPA Cheat Sheet"
+    },
+
+    {
+      "id": "II-017",
+      "acs_code": "UA.II.A.K3",
+      "module": "II",
+      "module_name": "Airspace & Charts",
+      "topic": "Sectional Charts",
+      "difficulty": "medium",
+      "question": "On a sectional chart, a small magenta flag symbol indicates:",
+      "options": {
+        "A": "A restricted area boundary",
+        "B": "A VFR reporting point used by manned aircraft to report position to ATC — indicating higher manned traffic volume",
+        "C": "A mandatory altitude change point"
+      },
+      "correct": "B",
+      "explanation": "A small magenta flag on a sectional chart symbolizes a VFR reporting point. Manned aircraft pilots use these waypoints to report their position to ATC. For UAS operators, a magenta flag is a signal that a higher volume of manned air traffic should be expected in that area.",
+      "regulation": "DPA Cheat Sheet; FAA Aeronautical Chart User's Guide"
+    },
+
+    {
+      "id": "II-018",
+      "acs_code": "UA.II.A.K3",
+      "module": "II",
+      "module_name": "Airspace & Charts",
+      "topic": "Sectional Charts",
+      "difficulty": "easy",
+      "question": "Victor airways on a sectional chart are depicted as light blue lines and cover what altitude range?",
+      "options": {
+        "A": "Surface to 1,200 feet AGL",
+        "B": "1,200 feet AGL up to but not including 18,000 feet MSL",
+        "C": "18,000 feet MSL and above"
+      },
+      "correct": "B",
+      "explanation": "Victor airways (VOR airways) are depicted as light blue lines on sectional charts. They cover from 1,200 feet AGL up to but not including 18,000 feet MSL (the lower limit of Class A airspace). They are used by IFR and VFR aircraft for en route navigation and are usually within Class E airspace.",
+      "regulation": "DPA Cheat Sheet; FAA Remote Pilot Study Guide Ch. 2"
+    },
+
+    {
+      "id": "II-019",
+      "acs_code": "UA.II.A.K1",
+      "module": "II",
+      "module_name": "Airspace & Charts",
+      "topic": "Magnetic Variation",
+      "difficulty": "hard",
+      "question": "What are isogonic lines on an aeronautical chart?",
+      "options": {
+        "A": "Lines connecting points of equal barometric pressure",
+        "B": "Lines connecting points of equal magnetic variation from true north",
+        "C": "Lines depicting the boundaries of special use airspace"
+      },
+      "correct": "B",
+      "explanation": "Isogonic lines are broken magenta lines on aeronautical charts that connect points of equal magnetic variation. Magnetic variation is the angle between true north (geographic) and magnetic north (where a compass points). The line where there is no variation between true north and magnetic north is called the agonic line.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 11"
+    },
+
+    {
+      "id": "II-020",
+      "acs_code": "UA.II.A.K3",
+      "module": "II",
+      "module_name": "Airspace & Charts",
+      "topic": "Sectional Charts — Airports",
+      "difficulty": "medium",
+      "question": "On a sectional chart, how is a private airport depicted?",
+      "options": {
+        "A": "A blue circle with a control tower symbol",
+        "B": "The letter 'R' within a circle (magenta or blue)",
+        "C": "A dashed magenta square"
+      },
+      "correct": "B",
+      "explanation": "Private airports (restricted use) are depicted on sectional charts with the letter 'R' inside a circle. They are not open to the general public. Remote pilots should be aware of private airports in their operating area as manned aircraft may be operating to/from them.",
+      "regulation": "DPA Cheat Sheet; FAA Aeronautical Chart User's Guide"
+    },
+
+    {
+      "id": "II-021",
+      "acs_code": "UA.II.A.K2",
+      "module": "II",
+      "module_name": "Airspace & Charts",
+      "topic": "ATIS",
+      "difficulty": "medium",
+      "question": "What is the Automated Terminal Information Service (ATIS)?",
+      "options": {
+        "A": "A live ATC broadcast requiring pilot response before entering the airspace",
+        "B": "A continuous looped recording of local weather and non-control airport information, updated approximately once per hour",
+        "C": "An FAA system that automatically authorizes LAANC requests"
+      },
+      "correct": "B",
+      "explanation": "ATIS is a recorded loop broadcast of current weather conditions, runways in use, NOTAMs, and other non-control information for an airport. It is updated approximately once per hour (more often when conditions change rapidly). Each update is assigned a phonetic code letter (Alpha, Bravo, Charlie, etc.) that advances with each update.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 11"
+    },
+
+    {
+      "id": "II-022",
+      "acs_code": "UA.II.A.K1",
+      "module": "II",
+      "module_name": "Airspace & Charts",
+      "topic": "Latitude and Longitude",
+      "difficulty": "easy",
+      "question": "Lines of latitude run in which direction on the Earth and measure position in which direction?",
+      "options": {
+        "A": "East-west lines measuring north-south position from the equator",
+        "B": "North-south lines measuring east-west position from the Prime Meridian",
+        "C": "Diagonal lines measuring distance from the nearest pole"
+      },
+      "correct": "A",
+      "explanation": "Lines of latitude (parallels) run east-west and measure a position's north-south location relative to the equator, expressed in degrees north or south (0° at equator to 90° at poles). Lines of longitude (meridians) run north-south and measure east-west position from the Prime Meridian (0° through Greenwich, England) to 180°.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 11"
+    },
+
+    {
+      "id": "II-023",
+      "acs_code": "UA.II.A.K3",
+      "module": "II",
+      "module_name": "Airspace & Charts",
+      "topic": "Runway Numbering",
+      "difficulty": "medium",
+      "question": "An airport runway labeled '27' is oriented toward approximately what magnetic heading?",
+      "options": {
+        "A": "27 degrees magnetic",
+        "B": "270 degrees magnetic",
+        "C": "207 degrees magnetic"
+      },
+      "correct": "B",
+      "explanation": "Runway numbers represent the magnetic heading of the runway to the nearest 10 degrees, with the last zero dropped. Runway 27 = 270° magnetic (due west). The opposite end of the same runway would be Runway 09 = 090° magnetic (due east). Runway headings use magnetic, not true, north.",
+      "regulation": "DPA Cheat Sheet; FAA Remote Pilot Study Guide Ch. 11"
+    },
+
+    {
+      "id": "II-024",
+      "acs_code": "UA.II.A.K3",
+      "module": "II",
+      "module_name": "Airspace & Charts",
+      "topic": "Antenna Towers",
+      "difficulty": "medium",
+      "question": "Why should a remote pilot exercise extreme caution when operating below 2,000 feet AGL?",
+      "options": {
+        "A": "All Class E airspace begins at 2,000 feet AGL and below requires a waiver",
+        "B": "Numerous skeletal structures such as radio and TV antenna towers exceed 1,000 feet AGL and may have guy wires extending outward",
+        "C": "Winds are always stronger and more unpredictable below 2,000 feet AGL"
+      },
+      "correct": "B",
+      "explanation": "Per the FAA Remote Pilot Study Guide Ch. 11, extreme caution should be exercised below 2,000 feet AGL due to numerous skeletal structures (radio, TV antenna towers) that can exceed 1,000 feet AGL. These structures may also have supporting guy wires that extend outward and are difficult to see. UAS operators at 400 feet AGL are especially vulnerable.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 11"
+    },
+
+    {
+      "id": "II-025",
+      "acs_code": "UA.II.A.K1",
+      "module": "II",
+      "module_name": "Airspace & Charts",
+      "topic": "MOA",
+      "difficulty": "medium",
+      "question": "What is the purpose of a Military Operations Area (MOA)?",
+      "options": {
+        "A": "To prohibit all nonmilitary flight permanently",
+        "B": "To separate certain nonhazardous military training activities from IFR traffic, while VFR pilots may fly through at their own risk",
+        "C": "To designate supersonic flight corridors exclusively for military use"
+      },
+      "correct": "B",
+      "explanation": "MOAs separate certain military training activities from IFR traffic. VFR pilots (including UAS operators) may fly through MOAs but should exercise extreme caution. High-speed military aircraft may be operating in these areas. UAS operators should check whether a MOA is active before flying through it and be aware of the associated hazards.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 2"
+    },
+
+
+    // ─────────────────────────────────────────────
+    // MODULE III — WEATHER (10 new questions, III-014 to III-023)
+    // ─────────────────────────────────────────────
+
+    {
+      "id": "III-014",
+      "acs_code": "UA.III.A.K1",
+      "module": "III",
+      "module_name": "Weather",
+      "topic": "Weather Briefing Sources",
+      "difficulty": "easy",
+      "question": "Which of the following is the correct source for obtaining a standard preflight weather briefing?",
+      "options": {
+        "A": "1800wxbrief.com or by calling 1-800-WX-BRIEF",
+        "B": "Calling the local FSDO office",
+        "C": "Only through the FAA DroneZone portal"
+      },
+      "correct": "A",
+      "explanation": "1800wxbrief.com (or calling 1-800-WX-BRIEF) is the FAA-designated source for standard preflight weather briefings, including METARs, TAFs, PIREPs, SIGMETs, AIRMETs, winds aloft, and NOTAMs. A standard briefing includes all available pertinent information. Remote pilots should use this resource as part of every preflight planning process.",
+      "regulation": "Rupprecht Study Guide; DPA Cheat Sheet"
+    },
+
+    {
+      "id": "III-015",
+      "acs_code": "UA.III.A.K4",
+      "module": "III",
+      "module_name": "Weather",
+      "topic": "SIGMETs and AIRMETs",
+      "difficulty": "hard",
+      "question": "A Convective SIGMET (WST) is issued when which conditions are present?",
+      "options": {
+        "A": "Visibility below 3 statute miles at any airport",
+        "B": "Severe thunderstorms with surface winds greater than 50 knots, hail at the surface ≥ 3/4 inch, or tornadoes",
+        "C": "Any thunderstorm within 50 NM of the briefing station"
+      },
+      "correct": "B",
+      "explanation": "Convective SIGMETs (WST) are issued for severe thunderstorms with surface winds greater than 50 knots, hail at the surface greater than or equal to 3/4 inch in diameter, or tornadoes. They are also issued for embedded thunderstorms, lines of thunderstorms, or thunderstorms with heavy precipitation affecting 40% or more of a 3,000 square mile area. Remote pilots should treat any active Convective SIGMET as a hard no-fly indicator.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 3a"
+    },
+
+    {
+      "id": "III-016",
+      "acs_code": "UA.III.A.K2",
+      "module": "III",
+      "module_name": "Weather",
+      "topic": "METAR Decoding",
+      "difficulty": "medium",
+      "question": "In a METAR, the notation '+TSRA' in the weather field means:",
+      "options": {
+        "A": "Light thunderstorm with rain",
+        "B": "Heavy thunderstorm with rain",
+        "C": "Thunderstorm in the vicinity with moderate rain"
+      },
+      "correct": "B",
+      "explanation": "In METAR weather notation, '+' indicates heavy intensity, 'TS' is the descriptor for thunderstorm, and 'RA' is the precipitation code for rain. Therefore '+TSRA' = heavy thunderstorm with rain. '-' indicates light, no sign indicates moderate, 'VC' indicates in the vicinity (5-10 miles from the airport). This would indicate a no-fly condition for UAS.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 3a"
+    },
+
+    {
+      "id": "III-017",
+      "acs_code": "UA.III.A.K2",
+      "module": "III",
+      "module_name": "Weather",
+      "topic": "METAR Sky Condition",
+      "difficulty": "medium",
+      "question": "In a METAR sky condition report, what does 'BKN' mean and what fraction of sky does it cover?",
+      "options": {
+        "A": "Broken — covers 5/8 to 7/8 of the sky; constitutes a ceiling",
+        "B": "Black sky condition — severe weather imminent",
+        "C": "Broken — covers 1/8 to 2/8 of the sky; not a ceiling"
+      },
+      "correct": "A",
+      "explanation": "BKN = Broken sky condition, covering 5/8 to 7/8 of the sky. Broken constitutes a ceiling (the lowest layer of clouds aloft that covers more than half the sky). Cloud coverage fractions in METARs: SKC = clear, FEW = 1/8–2/8, SCT (Scattered) = 3/8–4/8, BKN (Broken) = 5/8–7/8, OVC (Overcast) = 8/8.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 3a; DPA Cheat Sheet"
+    },
+
+    {
+      "id": "III-018",
+      "acs_code": "UA.III.B.K1b",
+      "module": "III",
+      "module_name": "Weather",
+      "topic": "Fog Formation",
+      "difficulty": "medium",
+      "question": "What conditions are most likely to produce fog?",
+      "options": {
+        "A": "High winds, low humidity, and clear skies",
+        "B": "Air temperature close to dew point with high relative humidity, often on clear calm nights",
+        "C": "Strong cold fronts with heavy precipitation"
+      },
+      "correct": "B",
+      "explanation": "Fog forms when air temperature reaches the dew point, causing water vapor to condense into tiny water droplets. It is most likely to occur when relative humidity is high and the temperature-dew point spread is small (within a few degrees). Calm, clear nights promote radiational cooling that brings surface air to its dew point. Fog significantly reduces visibility and is a common hazard for UAS operations.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 3b; DPA Cheat Sheet"
+    },
+
+    {
+      "id": "III-019",
+      "acs_code": "UA.III.B.K1b",
+      "module": "III",
+      "module_name": "Weather",
+      "topic": "Clouds and Stability",
+      "difficulty": "medium",
+      "question": "Cumulonimbus (CB) clouds are most hazardous to aircraft because they indicate:",
+      "options": {
+        "A": "High-altitude stable air with smooth conditions",
+        "B": "Extreme turbulence, icing, lightning, hail, and violent up/downdrafts",
+        "C": "Low visibility due to widespread fog and drizzle"
+      },
+      "correct": "B",
+      "explanation": "Cumulonimbus clouds are the most dangerous cloud type for pilots. They are associated with thunderstorms and contain extreme turbulence (updrafts and downdrafts exceeding 3,000 fpm), structural icing, lightning, large hail, and possible tornadoes. A small UAS should never be operated near cumulonimbus clouds. CB clouds in a METAR sky condition report are always noted (e.g., OVC008CB).",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 3b"
+    },
+
+    {
+      "id": "III-020",
+      "acs_code": "UA.III.B.K1c",
+      "module": "III",
+      "module_name": "Weather",
+      "topic": "Mountain Flying Weather",
+      "difficulty": "hard",
+      "question": "When planning a UAS operation in mountainous terrain, wind speeds above what level at mountain-top elevation suggest the possibility of turbulence?",
+      "options": {
+        "A": "10 knots",
+        "B": "25 knots",
+        "C": "50 knots"
+      },
+      "correct": "B",
+      "explanation": "Per the FAA study guide, wind at mountain-top level in excess of 25 knots suggests some turbulence. Wind in excess of 40 knots across a mountain barrier dictates caution. The leeward (downwind) side of mountains is especially hazardous due to downdrafts and turbulent rotors. Standing lenticular clouds are a visual indicator of strong mountain wave activity.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 3b"
+    },
+
+    {
+      "id": "III-021",
+      "acs_code": "UA.III.B.K1d",
+      "module": "III",
+      "module_name": "Weather",
+      "topic": "Fronts",
+      "difficulty": "medium",
+      "question": "What is a weather front?",
+      "options": {
+        "A": "The leading edge of a strong wind gust at the surface",
+        "B": "The boundary zone between two air masses with different temperature and humidity characteristics",
+        "C": "A region of constant atmospheric pressure at altitude"
+      },
+      "correct": "B",
+      "explanation": "A front is the boundary layer between two different air masses. Across a frontal zone, temperature, humidity, and wind direction often change rapidly over short distances. Frontal passages are commonly associated with clouds, precipitation, turbulence, wind shear, and visibility changes — all significant hazards for UAS operations.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 3b"
+    },
+
+    {
+      "id": "III-022",
+      "acs_code": "UA.III.B.K1a",
+      "module": "III",
+      "module_name": "Weather",
+      "topic": "Pressure Altitude",
+      "difficulty": "hard",
+      "question": "What is the standard altimeter setting used to indicate standard atmospheric pressure at sea level?",
+      "options": {
+        "A": "30.00 inches of mercury (in Hg)",
+        "B": "29.92 inches of mercury (in Hg)",
+        "C": "28.92 inches of mercury (in Hg)"
+      },
+      "correct": "B",
+      "explanation": "Standard atmospheric pressure at sea level is 29.92 inches of mercury (in Hg), which equals 1013.25 millibars (hPa). This is the reference value used to define pressure altitude. Rising pressure generally indicates approaching fair weather; falling or rapidly falling pressure usually indicates approaching bad weather or severe storms.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 3b"
+    },
+
+    {
+      "id": "III-023",
+      "acs_code": "UA.III.A.K2",
+      "module": "III",
+      "module_name": "Weather",
+      "topic": "METAR Modifiers",
+      "difficulty": "medium",
+      "question": "In a METAR report, what does the modifier 'AUTO' indicate?",
+      "options": {
+        "A": "The report has been automatically corrected for errors",
+        "B": "The METAR was generated from an automated station without a human observer",
+        "C": "The airport has automatic landing systems available"
+      },
+      "correct": "B",
+      "explanation": "The 'AUTO' modifier in a METAR indicates the report came from an automated (unmanned) weather observation station. Automated stations also note 'AO1' (no precipitation discriminator) or 'AO2' (with precipitation discriminator) in the remarks. 'COR' indicates a corrected report. Remote pilots should note that automated reports may miss certain weather phenomena a human observer would catch.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 3a"
+    },
+
+
+    // ─────────────────────────────────────────────
+    // MODULE IV — LOADING & PERFORMANCE (5 new questions, IV-009 to IV-013)
+    // ─────────────────────────────────────────────
+
+    {
+      "id": "IV-009",
+      "acs_code": "UA.IV.A.K3",
+      "module": "IV",
+      "module_name": "Loading & Performance",
+      "topic": "Load Factor",
+      "difficulty": "hard",
+      "question": "What is load factor in the context of UAS operations?",
+      "options": {
+        "A": "The total weight of the UAS including payload divided by its maximum rated weight",
+        "B": "The amount of force applied to an aircraft that deflects it from straight and level flight, expressed as a multiple of gravity (G)",
+        "C": "The ratio of battery charge remaining to total battery capacity"
+      },
+      "correct": "B",
+      "explanation": "Load factor is the amount of force applied to an aircraft that deflects it from straight and level flight, expressed as a multiple of gravity (G forces). In level, unaccelerated flight, load factor equals 1G. During turns, maneuvers, or turbulence, load factor increases. Exceeding structural limits can cause component failure. UAS with payloads must account for increased load factors during maneuvers.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 4; DPA Cheat Sheet"
+    },
+
+    {
+      "id": "IV-010",
+      "acs_code": "UA.IV.A.K1",
+      "module": "IV",
+      "module_name": "Loading & Performance",
+      "topic": "Weight and Balance",
+      "difficulty": "medium",
+      "question": "Why is weight and balance important for a small UAS operation?",
+      "options": {
+        "A": "It is only important for fixed-wing aircraft above 25 lbs",
+        "B": "Improper weight distribution affects the center of gravity, which directly impacts aircraft stability and controllability",
+        "C": "Weight and balance calculations are only required when operating commercially"
+      },
+      "correct": "B",
+      "explanation": "Proper weight and balance is critical for all aircraft, including small UAS. The center of gravity (CG) position determines aircraft stability and controllability. An out-of-limits CG can make the aircraft uncontrollable, reduce maneuverability, and increase the risk of a crash. Remote pilots must ensure payloads are mounted and distributed within manufacturer specifications.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 4; FAA-H-8083-1"
+    },
+
+    {
+      "id": "IV-011",
+      "acs_code": "UA.IV.B.K3",
+      "module": "IV",
+      "module_name": "Loading & Performance",
+      "topic": "Wind Effects on Performance",
+      "difficulty": "medium",
+      "question": "How do obstructions on the ground such as buildings and terrain features affect wind for UAS operations?",
+      "options": {
+        "A": "They smooth out the wind and create more stable conditions close to the ground",
+        "B": "They create turbulence, wind gusts, and rapid changes in wind direction and speed",
+        "C": "They have no significant effect on wind below 400 feet AGL"
+      },
+      "correct": "B",
+      "explanation": "Obstructions on the ground (buildings, hangars, natural terrain like mountains) disrupt the flow of wind and create turbulence, eddies, gusts, and rapid changes in wind direction and speed. This can significantly affect UAS performance and stability, especially during low-altitude operations near structures. The intensity of turbulence depends on the size of the obstacle and wind velocity.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 3b"
+    },
+
+    {
+      "id": "IV-012",
+      "acs_code": "UA.IV.B.K1",
+      "module": "IV",
+      "module_name": "Loading & Performance",
+      "topic": "Temperature Effects",
+      "difficulty": "medium",
+      "question": "How does air temperature affect UAS performance?",
+      "options": {
+        "A": "Colder temperatures always improve performance because air is denser",
+        "B": "Higher temperatures reduce air density, which reduces propeller efficiency and overall UAS performance",
+        "C": "Temperature has no effect on electric-motor UAS, only on combustion engines"
+      },
+      "correct": "B",
+      "explanation": "Higher temperatures reduce air density (fewer air molecules per unit volume), which reduces lift generated by propellers and decreases overall performance. Cold air is denser and generally improves performance. However, very cold temperatures can negatively affect LiPo battery performance and capacity, offsetting the aerodynamic benefit. Standard temperature reference is 59°F (15°C) at sea level.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 3b, Ch. 8"
+    },
+
+    {
+      "id": "IV-013",
+      "acs_code": "UA.IV.B.K2",
+      "module": "IV",
+      "module_name": "Loading & Performance",
+      "topic": "Effect of Humidity on Performance",
+      "difficulty": "medium",
+      "question": "On a hot, humid summer day at a high-elevation airport, a UAS pilot should expect:",
+      "options": {
+        "A": "Normal or improved performance because warm air provides better lift",
+        "B": "Significantly degraded performance due to high density altitude from combined effects of heat, humidity, and elevation",
+        "C": "No change in performance — UAS performance is not affected by environmental conditions"
+      },
+      "correct": "B",
+      "explanation": "Hot temperature + high humidity + high elevation all increase density altitude (reduce air density). Each factor alone degrades performance, and combined they create the worst-case scenario: the highest density altitude. The pilot should expect reduced battery life, slower climb rates, reduced payload capacity, and reduced overall responsiveness.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 3b, Ch. 8"
+    },
+
+
+    // ─────────────────────────────────────────────
+    // MODULE V — OPERATIONS (22 new questions, V-018 to V-039)
+    // ─────────────────────────────────────────────
+
+    {
+      "id": "V-018",
+      "acs_code": "UA.V.E.K2",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "Alcohol Effects",
+      "difficulty": "medium",
+      "question": "Which statement is true regarding alcohol's effects on pilot performance?",
+      "options": {
+        "A": "A small amount of alcohol improves visual acuity",
+        "B": "Judgment and decision-making abilities can be adversely affected by even small amounts of alcohol",
+        "C": "Consuming water eliminates alcohol from the body faster and cures a hangover"
+      },
+      "correct": "B",
+      "explanation": "Even small amounts of alcohol impair judgment, decrease sense of responsibility, affect coordination, constrict visual field, diminish memory, reduce reasoning ability, and lower attention span. As little as one ounce of alcohol can decrease the speed and strength of muscular reflexes. Impairments in vision and hearing can occur from as little as one drink. While experiencing a hangover, impairment is still present.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 9"
+    },
+
+    {
+      "id": "V-019",
+      "acs_code": "UA.V.E.K3",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "IMSAFE Checklist",
+      "difficulty": "easy",
+      "question": "The IMSAFE checklist is used for what purpose?",
+      "options": {
+        "A": "Checking airspace, weather, NOTAMs, aircraft condition, and crew",
+        "B": "A personal preflight physiological self-assessment for Illness, Medication, Stress, Alcohol, Fatigue, and Emotion",
+        "C": "Inspecting the drone for mechanical issues before flight"
+      },
+      "correct": "B",
+      "explanation": "IMSAFE is a personal physiological preflight checklist: Illness (Am I sick?), Medication (Am I taking anything that affects judgment?), Stress (Am I under excessive psychological pressure?), Alcohol (Have I consumed alcohol within 8 hours?), Fatigue (Am I adequately rested?), Emotion (Am I emotionally upset?). Remote pilots must complete this self-assessment before every flight.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 9, Ch. 10"
+    },
+
+    {
+      "id": "V-020",
+      "acs_code": "UA.V.E.K4",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "Fatigue",
+      "difficulty": "medium",
+      "question": "Which statement about fatigue in UAS operations is correct?",
+      "options": {
+        "A": "Experienced remote pilots can easily recognize when they are fatigued",
+        "B": "Fatigue causes degradation of attention, concentration, coordination, and decision-making ability, and should preclude flight",
+        "C": "Acute fatigue can be overcome through increased concentration and effort"
+      },
+      "correct": "B",
+      "explanation": "Fatigue causes degradation of attention and concentration, impaired coordination, and decreased ability to communicate and make effective decisions. The insidious danger of fatigue is that pilots may not recognize how impaired they are. No amount of training or experience can overcome the detrimental effects of fatigue during a flight. The only cure for fatigue is adequate rest.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 9"
+    },
+
+    {
+      "id": "V-021",
+      "acs_code": "UA.V.E.K1",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "Hyperventilation",
+      "difficulty": "medium",
+      "question": "What is the correct treatment for hyperventilation?",
+      "options": {
+        "A": "Breathe pure oxygen from an oxygen mask",
+        "B": "Consciously slow breathing to a normal rate, or breathe into a paper bag or talk aloud to restore proper CO2 levels",
+        "C": "Increase the breathing rate to compensate for oxygen loss"
+      },
+      "correct": "B",
+      "explanation": "Hyperventilation is the excessive rate and depth of respiration leading to abnormal loss of carbon dioxide from the blood. Treatment involves restoring proper CO2 levels by breathing normally (slowing the rate), breathing into a paper bag, or talking aloud. Increasing the breathing rate worsens the condition. Symptoms include visual impairment, lightheadedness, tingling, and possible unconsciousness.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 9"
+    },
+
+    {
+      "id": "V-022",
+      "acs_code": "UA.V.E.K5",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "Stress",
+      "difficulty": "medium",
+      "question": "How does stress affect pilot performance?",
+      "options": {
+        "A": "Stress always improves performance by keeping the pilot alert",
+        "B": "Performance increases with onset of stress, peaks, then falls off rapidly when stress exceeds the pilot's ability to cope",
+        "C": "Stress has no effect on cognitive decision-making; only physical tasks are impaired"
+      },
+      "correct": "B",
+      "explanation": "Performance generally increases with the onset of stress (a positive effect — it prevents complacency), reaches a peak, and then begins to fall off rapidly as stress levels exceed a person's ability to cope. Effects of stress are cumulative. Chronic stress, if unmanaged, can create an intolerable burden and impair flight safety significantly.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 9, Ch. 10"
+    },
+
+    {
+      "id": "V-023",
+      "acs_code": "UA.V.D.K4",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "PAVE Checklist",
+      "difficulty": "medium",
+      "question": "The PAVE checklist divides flight risk into four categories. What does the 'E' in PAVE stand for?",
+      "options": {
+        "A": "Equipment — checking UAS systems",
+        "B": "External pressures — influences outside the flight that create pressure to complete it at the expense of safety",
+        "C": "Elevation — consideration of terrain and altitude"
+      },
+      "correct": "B",
+      "explanation": "PAVE stands for: Pilot-in-command, Aircraft, enVironment, and External pressures. The 'E' is External pressures — influences outside the flight (desire to demonstrate skill, impress someone, meet a deadline, goal-completion orientation, or pride) that create pressure to complete a flight often at the expense of safety. External pressure management is the single most important key to risk management.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 10"
+    },
+
+    {
+      "id": "V-024",
+      "acs_code": "UA.V.D.K5",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "Hazardous Attitudes",
+      "difficulty": "medium",
+      "question": "A remote pilot thinks 'regulations are for other people — I know what I'm doing.' This reflects which hazardous attitude?",
+      "options": {
+        "A": "Impulsivity",
+        "B": "Anti-authority",
+        "C": "Invulnerability"
+      },
+      "correct": "B",
+      "explanation": "The five hazardous attitudes are: Anti-authority ('Don't tell me'), Impulsivity ('Do it quickly'), Invulnerability ('It won't happen to me'), Macho ('I can do it'), and Resignation ('What's the use?'). Dismissing rules as not applying to you is Anti-authority. Each attitude has an antidote: Anti-authority's antidote is 'Follow the rules — they are usually right.'",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 10"
+    },
+
+    {
+      "id": "V-025",
+      "acs_code": "UA.V.D.K5",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "Hazardous Attitudes",
+      "difficulty": "medium",
+      "question": "A remote pilot feels pressure to complete a real estate photo shoot even though wind speeds are above their personal minimums. This best illustrates which operational pitfall?",
+      "options": {
+        "A": "Duck-under syndrome",
+        "B": "Get-there-itis",
+        "C": "Scud running"
+      },
+      "correct": "B",
+      "explanation": "Get-there-itis is an operational pitfall that impairs judgment through fixation on the original goal or destination, combined with disregard for alternative courses of action. The pilot is prioritizing completing the job over safety. Other pitfalls include peer pressure, mindset, duck-under syndrome, scud running, and getting behind the aircraft.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 10"
+    },
+
+    {
+      "id": "V-026",
+      "acs_code": "UA.V.D.K3",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "Situational Awareness",
+      "difficulty": "medium",
+      "question": "What is situational awareness in the context of UAS operations?",
+      "options": {
+        "A": "Knowing the exact GPS coordinates of the UAS at all times",
+        "B": "The accurate perception and understanding of all factors and conditions that affect flight safety before, during, and after a flight",
+        "C": "Monitoring weather forecasts 24 hours before any planned operation"
+      },
+      "correct": "B",
+      "explanation": "Situational awareness is the accurate perception and understanding of all factors and conditions within the five fundamental risk elements (flight, pilot, aircraft, environment, and type of operation) that affect safety before, during, and after the flight. Fatigue, stress, and work overload can cause fixation on one item and reduce overall situational awareness.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 10"
+    },
+
+    {
+      "id": "V-027",
+      "acs_code": "UA.V.A.K5",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "Operations Near Airports",
+      "difficulty": "medium",
+      "question": "A remote pilot wants to fly a UAS in Class G airspace near a non-towered airport. What precautions should be taken even though no ATC authorization is required?",
+      "options": {
+        "A": "None — Class G requires no action of any kind",
+        "B": "Monitor the airport's CTAF frequency, remain well clear of traffic patterns, and scan continuously for manned aircraft",
+        "C": "File a flight plan with the nearest FSDO"
+      },
+      "correct": "B",
+      "explanation": "While no ATC authorization is required for Class G airspace, remote pilots should still monitor the airport's CTAF (Common Traffic Advisory Frequency), remain clear of traffic patterns, watch for aircraft and ensure VLOS is maintained. Manned aircraft may be operating to or from the airport. Radio communications by manned aircraft at non-towered airports are good practice but not mandatory — so pilots must look, not just listen.",
+      "regulation": "14 CFR §107.43; FAA Remote Pilot Study Guide Ch. 7, Ch. 11"
+    },
+
+    {
+      "id": "V-028",
+      "acs_code": "UA.V.A.K2",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "Traffic Pattern",
+      "difficulty": "hard",
+      "question": "A manned aircraft announces on CTAF that it is 'midfield left downwind for Runway 27.' Where is the aircraft in relation to the airport?",
+      "options": {
+        "A": "The aircraft is south of the runway, flying east",
+        "B": "The aircraft is north of the runway, flying east",
+        "C": "The aircraft is north of the runway, flying west"
+      },
+      "correct": "B",
+      "explanation": "Runway 27 is oriented toward 270° magnetic (due west). Standard traffic patterns in the U.S. are left-hand. Left downwind means the aircraft is flying the opposite direction from landing (so flying east, toward 090°). On left downwind for a westward runway, the aircraft is north of the runway. This helps remote pilots anticipate where manned aircraft will be during airport operations.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 7, Ch. 11; DPA Cheat Sheet"
+    },
+
+    {
+      "id": "V-029",
+      "acs_code": "UA.V.C.K1",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "Lost Link Procedures",
+      "difficulty": "medium",
+      "question": "What is a 'lost link' situation in UAS operations and how should it be addressed?",
+      "options": {
+        "A": "When the UAS loses GPS signal; the pilot should immediately attempt to land",
+        "B": "Loss of the command and control link between the control station and the UA; the remote PIC should have a pre-planned contingency (lost link procedure) for the aircraft to follow automatically",
+        "C": "When the visual observer loses sight of the UAS; the operation must be terminated immediately"
+      },
+      "correct": "B",
+      "explanation": "A lost link occurs when the command and control (C2) link between the control station and the UAS is broken. Remote pilots should pre-plan a lost link procedure — a pre-programmed flight path or return-to-home behavior that the aircraft follows automatically. This procedure should be designed to minimize risk to people and property. The preflight briefing should include lost link contingency procedures.",
+      "regulation": "DPA Cheat Sheet; AC 107-2"
+    },
+
+    {
+      "id": "V-030",
+      "acs_code": "UA.V.B.K1",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "Preflight Planning",
+      "difficulty": "medium",
+      "question": "Which of the following items is the remote pilot in command required to be familiar with before each flight under §107.49?",
+      "options": {
+        "A": "Only the weather conditions at the time of flight",
+        "B": "Airspace classification, local weather conditions, NOTAMs, known traffic and hazards, and any other information necessary for safe operation",
+        "C": "Only applicable NOTAMs and TFRs"
+      },
+      "correct": "B",
+      "explanation": "Per §107.49, before each flight the remote PIC must familiarize themselves with: airspace classification and any ATC requirements, local weather conditions, local NOTAMs, known traffic and known hazards in the operating area, and any other information necessary for safe operation. This is the Part 107 equivalent of a preflight briefing requirement.",
+      "regulation": "14 CFR §107.49"
+    },
+
+    {
+      "id": "V-031",
+      "acs_code": "UA.V.B.K2",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "Crew Briefing",
+      "difficulty": "medium",
+      "question": "Before a flight using a visual observer, what briefing must the remote pilot in command provide?",
+      "options": {
+        "A": "No formal briefing is required for a visual observer",
+        "B": "The remote PIC must brief all crew members including visual observers on the planned operation and emergency procedures",
+        "C": "Only the pilot manipulating the controls needs to be briefed"
+      },
+      "correct": "B",
+      "explanation": "Per §107.49 and Chapter 5 of the FAA Remote Pilot Study Guide, when crew members are used, all crew members must be briefed on the flight and the planned emergency procedures. This includes visual observers and any non-certificated person allowed to manipulate the flight controls. Crew coordination begins before the first takeoff.",
+      "regulation": "14 CFR §107.49; FAA Remote Pilot Study Guide Ch. 5"
+    },
+
+    {
+      "id": "V-032",
+      "acs_code": "UA.V.A.K8",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "Operations Over Moving Vehicles",
+      "difficulty": "hard",
+      "question": "Under Part 107 Subpart D, a small UAS may fly over moving vehicles (not just people) in certain circumstances. When is this permitted without a waiver?",
+      "options": {
+        "A": "Never — moving vehicles require a separate waiver",
+        "B": "In a controlled or restricted-access site where access by non-participants is prohibited",
+        "C": "At any time, provided the UAS is flying higher than the vehicles"
+      },
+      "correct": "B",
+      "explanation": "Per §107.145, operations over moving vehicles are permitted without a waiver if the operation occurs within or over a controlled or restricted-access site where access by pedestrians or moving vehicles is prohibited or restricted. This covers scenarios like a closed film set, a construction site, or similar controlled environment. Outside such sites, operations over moving vehicles require compliance with the over-people categories or a waiver.",
+      "regulation": "14 CFR §107.145"
+    },
+
+    {
+      "id": "V-033",
+      "acs_code": "UA.V.C.K3",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "Lithium Battery Safety",
+      "difficulty": "medium",
+      "question": "What is 'thermal runaway' in the context of LiPo batteries used in UAS?",
+      "options": {
+        "A": "A decrease in battery performance in hot weather",
+        "B": "A chain reaction leading to self-heating and the uncontrolled release of a lithium battery's stored energy, which can result in fire",
+        "C": "A firmware failure that prevents the battery from charging"
+      },
+      "correct": "B",
+      "explanation": "Thermal runaway is a chain reaction within a lithium battery that leads to self-heating and the potentially violent release of stored energy. It can be triggered by physical damage, overcharging, short circuits, or manufacturing defects. Signs include swelling (puffing), excessive heat during charging, and unusual odors. Pilots should follow manufacturer guidelines and never charge damaged batteries.",
+      "regulation": "DPA Cheat Sheet; SAFO 09013"
+    },
+
+    {
+      "id": "V-034",
+      "acs_code": "UA.V.D.K1",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "Single-Pilot Resource Management",
+      "difficulty": "medium",
+      "question": "Single-Pilot Resource Management (SRM) includes which of the following concepts?",
+      "options": {
+        "A": "Only weather interpretation and airspace awareness",
+        "B": "ADM, risk management, task management, automation management, CFIT awareness, and situational awareness",
+        "C": "Only aeronautical decision-making and preflight checklists"
+      },
+      "correct": "B",
+      "explanation": "Single-Pilot Resource Management (SRM) is defined as the art and science of managing all resources available to a single pilot prior to and during flight to ensure a successful outcome. It includes: Aeronautical Decision Making (ADM), Risk Management (RM), Task Management (TM), Automation Management (AM), Controlled Flight into Terrain (CFIT) awareness, and Situational Awareness (SA).",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 10"
+    },
+
+    {
+      "id": "V-035",
+      "acs_code": "UA.V.A.K9",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "Prohibited Operations — TFRs",
+      "difficulty": "medium",
+      "question": "A pilot receives notice of an active TFR over a wildfire suppression operation in the area where they planned to fly. What should the pilot do?",
+      "options": {
+        "A": "Fly at or below 400 feet AGL to stay under the TFR",
+        "B": "Do not fly in the TFR — it is a violation regardless of altitude, and violating a TFR near a wildfire can endanger suppression aircraft and personnel",
+        "C": "Notify local fire officials and proceed if given verbal permission"
+      },
+      "correct": "B",
+      "explanation": "Active TFRs must not be violated regardless of altitude. TFRs around wildfire suppression operations (§91.137) are especially serious because UAS in the area have forced suppression aircraft to ground operations, directly endangering firefighters and property. There is no 'fly below the TFR' loophole — TFRs typically extend from the surface up. Violating a TFR can result in significant fines and criminal penalties.",
+      "regulation": "14 CFR §91.137; 14 CFR §107.45, §107.47"
+    },
+
+    {
+      "id": "V-036",
+      "acs_code": "UA.V.A.K10",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "400-Foot Structure Exception",
+      "difficulty": "hard",
+      "question": "A remote pilot is hired to inspect a 600-foot communications tower. Under Part 107, what altitude may the UAS fly without a waiver when within a 400-foot radius of the structure?",
+      "options": {
+        "A": "400 feet AGL from the ground",
+        "B": "1,000 feet MSL",
+        "C": "Up to 400 feet above the tower's highest point, meaning up to 1,000 feet AGL in this example"
+      },
+      "correct": "C",
+      "explanation": "Per §107.51(b), a small UAS may operate above 400 feet AGL if the aircraft is within a 400-foot radius of a structure and does not fly higher than 400 feet above the structure's immediate uppermost limit. A 600-foot tower + 400 feet = the UAS may fly up to 1,000 feet AGL while within 400 feet horizontally of the tower. This exception exists specifically to enable tower inspection operations.",
+      "regulation": "14 CFR §107.51(b)"
+    },
+
+    {
+      "id": "V-037",
+      "acs_code": "UA.V.F.K3",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "NASA ASRS",
+      "difficulty": "hard",
+      "question": "What is the NASA Aviation Safety Reporting System (ASRS) and what benefit does it provide to pilots who file a report?",
+      "options": {
+        "A": "A mandatory accident reporting system that replaces the FAA accident report requirement",
+        "B": "A voluntary, confidential safety reporting system where filing a report may provide some protection from FAA enforcement action for inadvertent violations",
+        "C": "A system for reporting mechanical defects to the drone manufacturer"
+      },
+      "correct": "B",
+      "explanation": "The NASA ASRS is a voluntary, confidential safety reporting program for aviation. Pilots can file reports about safety issues, near misses, or inadvertent regulatory deviations. Filing an ASRS report in good faith and in a timely manner (before any FAA enforcement action) can be used as evidence of a constructive safety attitude and may provide some protection from civil penalties for inadvertent violations. It is separate from, not a replacement for, the FAA accident report under §107.9.",
+      "regulation": "Rupprecht Study Guide; NASA ASRS"
+    },
+
+    {
+      "id": "V-038",
+      "acs_code": "UA.V.E.K7",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "Dehydration",
+      "difficulty": "easy",
+      "question": "What are common signs of dehydration that could affect a remote pilot's performance?",
+      "options": {
+        "A": "Increased energy, heightened alertness, and improved coordination",
+        "B": "Headache, fatigue, cramps, sleepiness, and dizziness",
+        "C": "Rapid heart rate and increased sweating only"
+      },
+      "correct": "B",
+      "explanation": "Common signs of dehydration include headache, fatigue, cramps, sleepiness, and dizziness. The first noticeable effect is fatigue, which makes top physical and mental performance difficult or impossible. Causes of dehydration include hot temperatures, wind, humidity, and diuretic beverages (coffee, alcohol, caffeinated drinks). Remote pilots should drink 2-4 quarts of water per 24 hours and not rely on thirst as an early warning.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 9"
+    },
+
+    {
+      "id": "V-039",
+      "acs_code": "UA.V.A.K11",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "Drugs — Medication",
+      "difficulty": "medium",
+      "question": "A remote pilot starts a new over-the-counter allergy medication. How long should they wait before flying to determine if they have adverse side effects?",
+      "options": {
+        "A": "No waiting period is required for OTC medications",
+        "B": "At least 48 hours after the first dose to determine if any adverse side effects affect flight safety",
+        "C": "24 hours after the last dose"
+      },
+      "correct": "B",
+      "explanation": "For any new medication — OTC or prescribed — pilots should wait at least 48 hours after the first dose before operating a UAS to determine they do not have adverse side effects. Many common OTC medications (antihistamines like Benadryl/diphenhydramine) cause drowsiness and have prolonged half-lives. The question is not just about the drug's effects; it's about how YOUR body responds to it.",
+      "regulation": "FAA Remote Pilot Study Guide Ch. 9"
+    },
+
+    {
+      "id": "V-040",
+      "acs_code": "UA.V.B.K4",
+      "module": "V",
+      "module_name": "Operations",
+      "topic": "Preflight Inspection Items",
+      "difficulty": "medium",
+      "question": "A remote pilot discovers during preflight inspection that a propeller has a small crack. What must the remote pilot do?",
+      "options": {
+        "A": "Proceed with the flight but limit the flight to low altitudes",
+        "B": "Correct the irregularity before operating the small UAS",
+        "C": "Log the defect and repair it after the flight"
+      },
+      "correct": "B",
+      "explanation": "Per §107.49, if any irregularities are found during a preflight inspection, they must be corrected before the small UA is operated. A cracked propeller is a structural defect that could result in in-flight failure, loss of control, and potential injury to people or property. Remote pilots must not fly with known defects — the same standard applies regardless of the severity of the planned mission.",
+      "regulation": "14 CFR §107.49"
+    }
+
+  ]
+}

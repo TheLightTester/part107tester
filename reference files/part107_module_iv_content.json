@@ -1,0 +1,341 @@
+{
+  "metadata": {
+    "title": "Part 107 Course — Module IV Lesson Content",
+    "module": "IV",
+    "module_name": "Loading & Performance",
+    "exam_weight": "7-11%",
+    "version": "1.0",
+    "depth": "medium",
+    "lesson_count": 3,
+    "sources": [
+      "14 CFR Part 107",
+      "FAA Remote Pilot Small UAS Study Guide — Chapter 4 (Small Unmanned Aircraft Loading)",
+      "FAA Remote Pilot Small UAS Study Guide — Chapter 8 (Determining the Performance of Small Unmanned Aircraft)",
+      "FAA Remote Pilot Small UAS Study Guide — Chapter 3b (Effects of Weather on Small Unmanned Aircraft Performance)",
+      "Rupprecht Law Part 107 Study Guide v2.2",
+      "DPA Part 107 Cheat Sheet v5",
+      "FAA-H-8083-1 Weight & Balance Handbook"
+    ],
+    "integration_notes": "Append this module object into the 'modules' array of part107_lesson_content.json to complete the full 5-module content dataset."
+  },
+
+  "module": {
+    "id": "IV",
+    "name": "Loading & Performance",
+    "exam_weight": "7-11%",
+    "description": "Covers how weight, balance, and atmospheric conditions affect what a small UAS can and cannot do. While this is the smallest exam section by weight, the concepts tested are precise and numerical — knowing the right numbers and relationships is what separates correct answers from wrong ones.",
+
+    "lessons": [
+
+      {
+        "id": "IV-L1",
+        "module": "IV",
+        "module_name": "Loading & Performance",
+        "lesson_number": 1,
+        "title": "Weight, Balance & Center of Gravity",
+        "acs_codes": ["UA.IV.A.K1b"],
+        "exam_importance": "high",
+        "intro": "Before every flight, the remote PIC must verify the aircraft is correctly loaded. This means understanding where the center of gravity is, what happens when it shifts outside acceptable limits, and why following the manufacturer's loading instructions is not optional.",
+        "sections": [
+          {
+            "heading": "Why Weight and Balance Matter",
+            "body": "Compliance with weight and balance limits is critical to flight safety. Two separate problems can arise: (1) operating above maximum weight compromises structural integrity and reduces performance across the board, and (2) operating with the center of gravity (CG) outside approved limits causes control difficulty, potentially making the aircraft uncontrollable. These are distinct problems with distinct causes — both must be checked before every flight.",
+            "key_facts": [
+              "Overweight aircraft: structural integrity compromised, performance degraded",
+              "CG out of limits: controllability compromised, aircraft may be uncontrollable",
+              "Both conditions must be checked before flight — they are separate issues",
+              "Always follow manufacturer-specified weight and balance limits"
+            ]
+          },
+          {
+            "heading": "Center of Gravity (CG) — What It Is and Why It Moves",
+            "body": "The center of gravity is the single point at which all of the aircraft's weight can be considered to be concentrated. If you could balance the aircraft perfectly on the head of a pin, that pin would be at the CG. Critically, the CG is not a fixed point — it shifts as weight is added, removed, or redistributed. For UAS operations, attaching a payload, having different battery levels, or mounting a camera to one side all shift the CG. If the CG moves outside the manufacturer's allowable limits, the aircraft will not fly normally and may be uncontrollable.",
+            "key_facts": [
+              "CG = point at which all weight is concentrated",
+              "CG is NOT fixed — it moves as weight changes",
+              "CG shift can be caused by: payload, battery state, camera/gimbal placement, jettisonable loads",
+              "CG outside limits = controllability problems",
+              "CG limits are set by the manufacturer and must be respected"
+            ],
+            "example": "A drone designed for mapping is loaded with a thermal camera mounted slightly off-center to the left. This shifts the CG left of center. The flight controller compensates by running the right motors harder — reducing battery life and increasing the risk of motor failure on an already-stressed side. If the CG shift is severe enough, the flight controller cannot compensate and the aircraft becomes uncontrollable.",
+            "memory_aid": "CG = balance point. Move the weight, move the balance point. Push it too far = loss of control."
+          },
+          {
+            "heading": "Forward vs. Aft CG — What Each Means",
+            "body": "For fixed-wing UAS, the CG position relative to the center of pressure (CP) drives pitch behavior. When CG is forward of CP, the aircraft tends to pitch nose-down naturally — this provides inherent stability but requires more effort to climb. When CG is aft of CP (too far back), the aircraft is less stable and can become uncontrollable. Designers intentionally place the aft CG limit forward of the CP to maintain safe flight equilibrium. For multi-rotor UAS, the relationship is similar: an aft-heavy aircraft will pitch back and be harder to control, particularly in forward flight.",
+            "key_facts": [
+              "Forward CG: nose-heavy tendency — more stable, but requires more pitch-up input to climb",
+              "Aft CG: tail-heavy tendency — less stable, potentially uncontrollable",
+              "Designers set aft CG limit forward of center of pressure to maintain equilibrium",
+              "CG outside aft limit is more dangerous than forward CG outside limit"
+            ],
+            "memory_aid": "Forward CG = stable but sluggish. Aft CG = twitchy and dangerous."
+          },
+          {
+            "heading": "The FAA's 4-Step Pre-Flight Loading Check",
+            "body": "The FAA specifies four steps that should be completed before every flight to address weight and balance. These align directly with what the exam tests.",
+            "key_facts": [
+              "Step 1 — CORRECTLY LOADED: Verify the aircraft is correctly loaded by determining its weight and balance condition",
+              "Step 2 — REVIEW THE MANUAL: Review the performance information in the manufacturer's manual and follow any restrictions listed",
+              "Step 3 — KNOW THE EFFECTS: Understand the effects of any balance or weight changes made — performance can change drastically",
+              "Step 4 — BATTERY/FUEL BURN: Account for the fact that battery drain (or fuel burn) during flight affects both weight and CG — a heavily loaded drone burns power faster"
+            ],
+            "example": "Your drone's maximum payload is 1.5 lbs. You attach a 1.2 lb camera. Per Step 1, you are within weight limits. Per Step 2, you review that the manual specifies the camera must be mounted on the center rail. Per Step 3, you note the forward CG shift from the camera will increase pitch sensitivity. Per Step 4, you plan a shorter flight time because the heavier load will drain the battery faster."
+          },
+          {
+            "heading": "Where to Find CG Limits for Your Aircraft",
+            "body": "The exam tests knowledge of where to look for loading instructions. The correct answer is always the Pilot's Operating Handbook (POH) or UAS Flight Manual specific to your aircraft. The AIM provides general aviation information but not aircraft-specific loading data. The FAA Weight and Balance Handbook is a useful study reference but does not contain data for your specific drone model.",
+            "key_facts": [
+              "CG limits: found in the manufacturer's Pilot's Operating Handbook (POH) or UAS Flight Manual",
+              "AIM: general aviation info only — not aircraft-specific",
+              "FAA Weight and Balance Handbook: good study reference, not aircraft-specific",
+              "If no manual exists, consult published data from other users of the same model as a starting point"
+            ]
+          }
+        ],
+        "summary_table": [
+          { "item": "CG definition", "value": "Point at which all aircraft weight is concentrated" },
+          { "item": "CG fixed?", "value": "No — moves as weight changes" },
+          { "item": "Overweight consequence", "value": "Structural compromise + performance degradation" },
+          { "item": "CG out of limits consequence", "value": "Control difficulty / uncontrollable aircraft" },
+          { "item": "Forward CG effect", "value": "Nose-heavy, stable, requires more climb input" },
+          { "item": "Aft CG effect", "value": "Tail-heavy, unstable, potentially uncontrollable" },
+          { "item": "CG limits source", "value": "Manufacturer's POH or UAS Flight Manual" },
+          { "item": "FAA pre-flight steps", "value": "1) Correctly loaded 2) Review manual 3) Know effects 4) Account for battery/fuel burn" }
+        ],
+        "common_mistakes": [
+          "Thinking CG is a fixed point — it moves every time weight is added, removed, or repositioned",
+          "Assuming the FAA Weight and Balance Handbook provides data for your specific drone — it does not",
+          "Treating weight and CG as the same problem — they are separate issues with separate consequences",
+          "Forgetting that battery drain during flight shifts the CG slightly as cells discharge unevenly"
+        ],
+        "related_question_ids": ["IV-001", "IV-002", "IV-006", "IV-010"]
+      },
+
+      {
+        "id": "IV-L2",
+        "module": "IV",
+        "module_name": "Loading & Performance",
+        "lesson_number": 2,
+        "title": "Load Factors, Stability & Stall",
+        "acs_codes": ["UA.IV.A.K1a", "UA.IV.A.K1b", "UA.IV.A.K3"],
+        "exam_importance": "high",
+        "intro": "Load factor is the force applied to an aircraft that deflects it from straight and level flight. Understanding load factors is critical because they increase stall speed, stress the airframe, and can be triggered by maneuvers that feel routine. The exam tests load factor calculations and the conditions that increase it.",
+        "sections": [
+          {
+            "heading": "What Is Load Factor?",
+            "body": "Load factor is the ratio of the total lift being produced by the aircraft to its actual weight. It is measured in Gs — units of gravitational force. In straight and level, unaccelerated flight, lift equals weight and load factor equals 1G. Any time the aircraft is deflected from straight and level flight — turns, turbulence, maneuvers, abrupt pull-ups — the load factor increases above 1G. A load factor of 3 means the aircraft's structure is experiencing a force equal to three times its weight.",
+            "key_facts": [
+              "Load factor = lift ÷ weight, measured in Gs",
+              "Straight and level, unaccelerated flight = 1G",
+              "Any maneuver other than straight and level increases load factor",
+              "A load factor of 3G means 3× the aircraft's weight is acting on the structure",
+              "Turbulence also increases load factor — not just intentional maneuvers"
+            ],
+            "memory_aid": "1G = straight and level. Every turn, bump, or pull-up adds more Gs."
+          },
+          {
+            "heading": "Load Factor in Turns — The Bank Angle Relationship",
+            "body": "In a coordinated level turn, load factor increases as bank angle increases. The relationship accelerates dramatically at higher bank angles — the load factor curve rises gently to about 45° of bank, then increases sharply. Key values to know for the exam: at 60° of bank, load factor is 2G. At 80° of bank, load factor is 5.76G. A 90° banked level turn is mathematically impossible. Load factor from bank angles can also be read from the load factor chart provided in the FAA test supplement booklet.",
+            "key_facts": [
+              "Load factor increases as bank angle increases",
+              "30° bank: load factor ≈ 1.154G",
+              "60° bank: load factor = 2G",
+              "80° bank: load factor = 5.76G",
+              "90° bank in level flight: mathematically impossible",
+              "Load factor rises sharply after ~45–50° of bank"
+            ],
+            "example": "Your drone weighs 33 lbs. During a 30° banked level turn, load factor is approximately 1.154G. The structure must support: 33 lbs × 1.154 = 38.1 lbs. That same drone in a 60° banked turn must support: 33 lbs × 2 = 66 lbs.",
+            "memory_aid": "60° bank = 2G. The steeper the bank, the more the structure has to carry."
+          },
+          {
+            "heading": "Load Factor and Stall Speed",
+            "body": "This is one of the most important and most tested relationships in this module. Increased load factor increases stall speed. An aircraft can be stalled at any airspeed if sufficient load factor is applied — there is no safe 'fast enough' airspeed that eliminates the stall risk. The stall speed increases in proportion to the square root of the load factor. At 2G, stall speed increases by a factor of √2 (approximately 1.41). At 4G, stall speed doubles.",
+            "key_facts": [
+              "Higher load factor = higher stall speed",
+              "Aircraft can be stalled at any airspeed given enough load factor",
+              "Stall speed increases proportional to the square root of load factor",
+              "2G load factor: stall speed increases by √2 (≈ 1.41×)",
+              "4G load factor: stall speed doubles",
+              "Steep turns and abrupt maneuvers near the ground are especially dangerous for this reason"
+            ],
+            "memory_aid": "More Gs = faster stall speed. Double the load factor = stall speed × √2."
+          },
+          {
+            "heading": "Stability — Maneuverability vs. Controllability",
+            "body": "Stability is the inherent quality of an aircraft to return to its original flight path after a disturbance. It is a design characteristic — you cannot change it during flight, but you can understand it. Stability affects two key qualities: (1) Maneuverability — how easily the aircraft can be maneuvered and how much structural stress it can absorb from maneuvers. Governed by weight, inertia, size/location of flight controls, structural strength, and powerplant. (2) Controllability — how precisely the aircraft responds to pilot inputs. An aircraft can be very stable (resistant to deflection) but still controllable, or it can be unstable and difficult to predict. These are distinct concepts.",
+            "key_facts": [
+              "Stability = tendency to return to original flight path after disturbance",
+              "Maneuverability = ability to change flight path and withstand maneuver stresses",
+              "Controllability = responsiveness to pilot control inputs",
+              "Stability and controllability are separate qualities — a very stable aircraft can still be controllable"
+            ]
+          },
+          {
+            "heading": "What Causes a Stall",
+            "body": "A stall occurs when smooth airflow over the wing (or rotor/propeller) is disrupted due to the wing exceeding its critical angle of attack (AOA). It is not caused by: going too fast, exceeding maximum weight, or any factor other than exceeding the critical AOA. For fixed-wing UAS, this is a pitch angle issue. For multi-rotor UAS, the concept of stall applies to the propeller blades — if they exceed their critical angle of attack (by pushing them too hard in thin air or overloading), thrust generation drops suddenly.",
+            "key_facts": [
+              "Stall = smooth airflow disrupted over the wing/rotor due to exceeding critical angle of attack (AOA)",
+              "NOT caused by: going too fast, being overweight",
+              "CAN be caused by: steep turns, abrupt pull-ups, turbulence, high load factors — at any airspeed",
+              "Critical AOA can be exceeded at any speed — there is no safe speed"
+            ],
+            "memory_aid": "Stall = angle of attack problem. AOA too high = stall. Simple."
+          }
+        ],
+        "summary_table": [
+          { "item": "Load factor in level flight", "value": "1G" },
+          { "item": "Load factor at 30° bank", "value": "≈ 1.154G" },
+          { "item": "Load factor at 60° bank", "value": "2G" },
+          { "item": "Load factor at 80° bank", "value": "5.76G" },
+          { "item": "Stall speed change at 2G", "value": "× √2 (≈ 1.41×)" },
+          { "item": "Stall speed change at 4G", "value": "× 2 (doubles)" },
+          { "item": "Cause of stall", "value": "Exceeding critical angle of attack" },
+          { "item": "Stall possible at any speed?", "value": "Yes — if AOA is exceeded" },
+          { "item": "Maneuverability vs. controllability", "value": "Separate concepts — maneuverability = can you do it; controllability = does it respond precisely" }
+        ],
+        "common_mistakes": [
+          "Thinking stalls only happen at low speeds — stalls can occur at any airspeed if AOA is exceeded",
+          "Confusing stall cause (exceeding critical AOA) with stall cause (exceeding maximum weight) — weight does not directly cause stall",
+          "Not connecting bank angle to load factor — steep turns in turbulence can combine load factors to dangerous levels",
+          "Confusing maneuverability and controllability — they are different aircraft qualities"
+        ],
+        "related_question_ids": ["IV-001", "IV-002", "IV-009"]
+      },
+
+      {
+        "id": "IV-L3",
+        "module": "IV",
+        "module_name": "Loading & Performance",
+        "lesson_number": 3,
+        "title": "Density Altitude & Performance Degradation",
+        "acs_codes": ["UA.IV.B.K1", "UA.IV.B.K2", "UA.IV.B.K3"],
+        "exam_importance": "critical",
+        "intro": "Density altitude is the single most tested performance concept across both Module III (Weather) and Module IV (Loading & Performance). It directly determines how your drone will perform. Understanding the four factors that drive it — and the nine FAA-listed situations that may require a weight reduction — is essential exam knowledge.",
+        "sections": [
+          {
+            "heading": "What Is Density Altitude?",
+            "body": "Density altitude is the altitude in the standard atmosphere that corresponds to a given air density. Put practically: it is a measure of how thin the air is. High density altitude means thin air — fewer air molecules per cubic foot. This directly reduces the lift generated by propellers and wings, reduces thrust, and degrades all aspects of UAS performance. Density altitude is fundamentally an aircraft performance indicator — not just an altitude number.",
+            "key_facts": [
+              "Density altitude = altitude corresponding to current air density in the standard atmosphere",
+              "High density altitude = thin air = degraded performance",
+              "Low density altitude = dense air = better performance",
+              "It is a performance indicator, not just a number on an altimeter",
+              "Standard sea level: 29.92 in Hg (1013.2 mb), 59°F (15°C)"
+            ],
+            "memory_aid": "High density altitude = your drone is working harder for the same result."
+          },
+          {
+            "heading": "The Four Factors That Create High Density Altitude",
+            "body": "Four atmospheric variables combine to determine air density at any given location and time. Any one of them can degrade performance; they compound when they appear together. The memory aid is the four H's: High elevation, High temperature, High humidity, and Heavy aircraft weight (which doesn't change the density but puts more demand on the degraded lift available).",
+            "key_facts": [
+              "High elevation: less atmospheric pressure above = thinner air",
+              "High temperature: warmer air expands = lower density",
+              "High humidity: water vapor (H₂O, molecular weight 18) displaces heavier N₂ (28) and O₂ (32) = less dense air. Humid air is LESS dense than dry air.",
+              "High weight: doesn't thin the air but demands more lift from air that's already thin",
+              "Pressure: density is directly proportional to pressure (double pressure = double density)"
+            ],
+            "example": "A late-afternoon flight in Phoenix, Arizona in August: elevation ~1,100 ft, temperature ~105°F, humidity ~40%. Density altitude could be calculated at 4,000–5,000 ft even though you're at 1,100 ft MSL. Your drone's performance will be similar to flying at a 4,000–5,000 ft airport on a standard day — reduced climb, shorter flight time, reduced payload capacity.",
+            "memory_aid": "The 4 H's kill performance: High altitude, Hot, Humid, Heavy load."
+          },
+          {
+            "heading": "Effects of Pressure on Air Density",
+            "body": "Air pressure and density have a direct proportional relationship. As pressure increases, density increases — more molecules are packed into the same space. As pressure decreases (with altitude gain), density decreases. This is why climbing to higher altitudes always reduces aircraft performance, all else being equal. The drop in pressure with altitude usually dominates the combined temperature-pressure effect.",
+            "key_facts": [
+              "Pressure and density: directly proportional",
+              "Higher pressure = denser air = better performance",
+              "Lower pressure = thinner air = degraded performance",
+              "Pressure drops with altitude — dominant factor in performance decline at altitude",
+              "Standard sea level pressure: 29.92 in Hg (1013.2 mb)"
+            ]
+          },
+          {
+            "heading": "Effects of Temperature on Air Density",
+            "body": "Temperature and density have an inverse relationship — as temperature increases, air expands and density decreases. Hot air has fewer molecules per cubic foot than cold air at the same pressure. This is why summer afternoon operations in hot climates consistently produce worse UAS performance than cool morning operations at the same location. The density of air varies inversely with temperature (at constant pressure).",
+            "key_facts": [
+              "Temperature and density: inversely proportional",
+              "Higher temperature = less dense air = degraded performance",
+              "Lower temperature = denser air = improved performance",
+              "Cold morning vs. hot afternoon at the same field = meaningful performance difference"
+            ]
+          },
+          {
+            "heading": "Effects of Humidity on Air Density — The Counterintuitive One",
+            "body": "Most students assume humid air is heavier than dry air — it feels heavier to breathe. In fact, the opposite is true for atmospheric density. Water vapor (H₂O) has a molecular weight of 18, while nitrogen (N₂) has a molecular weight of 28 and oxygen (O₂) has a molecular weight of 32. When water vapor displaces these heavier molecules, the air becomes less dense. Moist air = less dense air = higher density altitude = worse performance. Dry air has more mass per cubic foot, which means propellers have more molecules to push against, generating more thrust.",
+            "key_facts": [
+              "Humid (moist) air = LESS dense than dry air",
+              "Water vapor molecular weight (18) < nitrogen (28) or oxygen (32)",
+              "More water vapor = lighter air = less thrust from propellers",
+              "Dry air = denser = more thrust = better performance",
+              "This is the most commonly misunderstood performance factor"
+            ],
+            "memory_aid": "Wet air is weak air. Dry air is dense air. Humid = worse performance."
+          },
+          {
+            "heading": "The Nine Situations Requiring a Weight Reduction",
+            "body": "The FAA identifies nine situations where performance may be so degraded that the pilot must consider reducing aircraft weight before attempting flight. These are tested directly. Knowing all nine ensures no gaps on exam day.",
+            "key_facts": [
+              "1. High density altitude conditions",
+              "2. High elevations",
+              "3. High air temperatures",
+              "4. High humidity",
+              "5. Runway or launch area length (limited space to accelerate or abort)",
+              "6. Surface conditions (rough or soft launch areas increase drag/resistance)",
+              "7. Slope (uphill launch adds difficulty; steep slope limits abort options)",
+              "8. Surface wind (strong headwinds help; strong crosswinds or tailwinds may require weight reduction)",
+              "9. Presence of obstacles (trees, wires, structures that constrain climb-out)"
+            ],
+            "memory_aid": "High, Hot, Humid, Elevation, Short runway, Bad surface, Slope, Wind, Obstacles. When any of these bite, consider reducing weight."
+          },
+          {
+            "heading": "The Full Performance Degradation List — Effects of Overloading",
+            "body": "Understanding how excess weight impacts every dimension of performance helps prioritize pre-flight decisions. The exam may present a specific performance deficit and ask which loading factor caused it.",
+            "key_facts": [
+              "Higher takeoff speed required",
+              "Longer takeoff run required",
+              "Reduced rate and angle of climb",
+              "Lower maximum altitude (service ceiling)",
+              "Shorter range",
+              "Reduced cruising speed",
+              "Reduced maneuverability",
+              "Higher stall speed",
+              "Higher approach and landing speed",
+              "Longer landing roll"
+            ],
+            "memory_aid": "Everything gets worse when the aircraft is overloaded. Nothing improves."
+          },
+          {
+            "heading": "Using Manufacturer Performance Data",
+            "body": "Manufacturers may provide performance charts that show how the aircraft performs under various conditions. These charts are the primary source of performance data for a specific aircraft. If performance data is not available from the manufacturer, the FAA recommends seeking out published data from other operators of the same model as a starting point. Performance data in manufacturer publications is not standardized across the industry — each manufacturer formats it differently.",
+            "key_facts": [
+              "Manufacturer performance charts: primary source for specific aircraft performance data",
+              "Charts may cover: takeoff distance, climb rate, range, endurance, speed under various conditions",
+              "Performance data is not standardized across manufacturers",
+              "If no manufacturer data exists, use published data from other operators of the same model as a baseline"
+            ]
+          }
+        ],
+        "summary_table": [
+          { "item": "Standard sea level pressure", "value": "29.92 in Hg (1013.2 mb)" },
+          { "item": "Standard sea level temp", "value": "59°F (15°C)" },
+          { "item": "High density altitude means", "value": "Thin air = degraded performance" },
+          { "item": "The 4 H's", "value": "High altitude, Hot, Humid, Heavy — all degrade performance" },
+          { "item": "Pressure vs. density", "value": "Directly proportional — more pressure = denser air" },
+          { "item": "Temperature vs. density", "value": "Inversely proportional — hotter = less dense" },
+          { "item": "Humid vs. dry air density", "value": "Humid air is LESS dense — worse performance" },
+          { "item": "Water vapor molecular weight", "value": "18 (lighter than N₂ at 28 or O₂ at 32)" },
+          { "item": "Performance data source", "value": "Manufacturer's POH or UAS flight manual" },
+          { "item": "FAA weight-reduction situations", "value": "9 total — high DA, elevation, temp, humidity, runway, surface, slope, wind, obstacles" }
+        ],
+        "common_mistakes": [
+          "Thinking humid air is heavier and therefore creates better lift — humid air is actually LESS dense",
+          "Confusing density altitude with actual altitude — density altitude can be much higher than your true altitude on hot, humid days",
+          "Missing that the nine FAA situations are exam-testable — know all nine",
+          "Assuming manufacturer performance charts are standardized — each manufacturer formats them differently",
+          "Forgetting that pressure and density are directly proportional while temperature and density are inversely proportional"
+        ],
+        "related_question_ids": ["IV-003", "IV-004", "IV-005", "IV-007", "IV-008", "IV-011", "IV-012", "IV-013"]
+      }
+    ]
+  }
+}
