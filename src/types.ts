@@ -4,8 +4,9 @@ export type ModuleId = 'I' | 'II' | 'III' | 'IV' | 'V'
 export type AnswerKey = 'A' | 'B' | 'C'
 export type Difficulty = 'easy' | 'medium' | 'hard'
 export type Importance = 'critical' | 'high' | 'medium'
-export type QuizMode = 'module' | 'lesson' | 'exam'
+export type QuizMode = 'module' | 'lesson' | 'exam' | 'smartreview'
 export type Screen = 'home' | 'lesson' | 'quiz' | 'results'
+export type LicenseStatus = 'free' | 'pro'
 
 // ── Data shapes ───────────────────────────────────────────────────────────────
 

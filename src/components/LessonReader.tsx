@@ -45,7 +45,7 @@ export default function LessonReader({ lesson, progress, moduleColor, onBack, on
       <div style={{ marginBottom: 24 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 10 }}>
           <div style={{
-            fontSize: 10, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase',
+            fontSize: 12, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase',
             color, border: `1px solid ${color}40`, borderRadius: 3, padding: '2px 7px',
           }}>Module {lesson.module}</div>
           {lesson.importance && <span style={styles.impBadge(lesson.importance)}>{lesson.importance}</span>}
@@ -77,7 +77,7 @@ export default function LessonReader({ lesson, progress, moduleColor, onBack, on
           )}
           {sec.memoryAid && (
             <div style={styles.memAid}>
-              <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', marginRight: 8 }}>Memory Aid</span>
+              <span style={{ fontSize: 12, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', marginRight: 8 }}>Memory Aid</span>
               {sec.memoryAid}
             </div>
           )}
@@ -87,7 +87,7 @@ export default function LessonReader({ lesson, progress, moduleColor, onBack, on
       {/* SUMMARY TABLE */}
       {lesson.summaryTable && lesson.summaryTable.length > 0 && (
         <div style={{ marginBottom: 24 }}>
-          <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#4a5568', marginBottom: 12 }}>Quick Reference</div>
+          <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#6b7280', marginBottom: 12 }}>Quick Reference</div>
           <table style={styles.summaryTable}>
             <thead>
               <tr>

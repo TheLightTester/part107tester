@@ -3,6 +3,99 @@ import Icon from './ui/Icon'
 import { LESSONS } from '../data/lessons'
 import type { Question, AnswerKey, QuizMode, Lesson } from '../types'
 
+function formatDate(d: Date): string {
+  return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
+}
+
+function downloadCertificate(score: number, date: string) {
+  const W = 800
+  const H = 480
+  const canvas = document.createElement('canvas')
+  canvas.width = W
+  canvas.height = H
+  const ctx = canvas.getContext('2d')
+  if (!ctx) return
+
+  // Background
+  ctx.fillStyle = '#0d1117'
+  ctx.fillRect(0, 0, W, H)
+
+  // Gold border
+  ctx.strokeStyle = '#E8A838'
+  ctx.lineWidth = 6
+  ctx.strokeRect(16, 16, W - 32, H - 32)
+
+  // Inner accent line
+  ctx.strokeStyle = '#E8A83840'
+  ctx.lineWidth = 1
+  ctx.strokeRect(28, 28, W - 56, H - 56)
+
+  // App name
+  ctx.fillStyle = '#E8A838'
+  ctx.font = 'bold 18px "Trebuchet MS", sans-serif'
+  ctx.textAlign = 'center'
+  ctx.fillText('PART 107 PREP', W / 2, 88)
+
+  // Tagline
+  ctx.fillStyle = '#94a3b8'
+  ctx.font = '14px "Trebuchet MS", sans-serif'
+  ctx.fillText('FAA Part 107 Knowledge Test Ready', W / 2, 116)
+
+  // Divider
+  ctx.strokeStyle = '#1e2532'
+  ctx.lineWidth = 1
+  ctx.beginPath()
+  ctx.moveTo(80, 136)
+  ctx.lineTo(W - 80, 136)
+  ctx.stroke()
+
+  // Score
+  ctx.fillStyle = '#5DB87A'
+  ctx.font = 'bold 96px "Trebuchet MS", sans-serif'
+  ctx.textAlign = 'center'
+  ctx.fillText(`${score}%`, W / 2, 256)
+
+  // Score label
+  ctx.fillStyle = '#64748b'
+  ctx.font = '13px "Trebuchet MS", sans-serif'
+  ctx.fillText('PRACTICE EXAM SCORE', W / 2, 286)
+
+  // Divider
+  ctx.strokeStyle = '#1e2532'
+  ctx.lineWidth = 1
+  ctx.beginPath()
+  ctx.moveTo(80, 310)
+  ctx.lineTo(W - 80, 310)
+  ctx.stroke()
+
+  // Certificate text
+  ctx.fillStyle = '#e2e8f0'
+  ctx.font = '15px "Trebuchet MS", sans-serif'
+  ctx.fillText('This certifies readiness for the FAA Part 107 Remote Pilot Knowledge Test', W / 2, 352)
+
+  // Date
+  ctx.fillStyle = '#64748b'
+  ctx.font = '13px "Trebuchet MS", sans-serif'
+  ctx.fillText(date, W / 2, 384)
+
+  // Footer
+  ctx.fillStyle = '#E8A83870'
+  ctx.font = 'bold 11px "Trebuchet MS", sans-serif'
+  ctx.fillText('part107prep.app', W / 2, 430)
+
+  canvas.toBlob(blob => {
+    if (!blob) return
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+    a.download = `part107-certificate-${score}pct.png`
+    document.body.appendChild(a)
+    a.click()
+    document.body.removeChild(a)
+    URL.revokeObjectURL(url)
+  }, 'image/png')
+}
+
 interface ResultsProps {
   questions: Question[]
   answers: Partial<Record<string, AnswerKey>>
@@ -205,6 +298,36 @@ export default function Results({ questions, answers, quizMode, onRetry, onHome,
           </div>
         </div>
       </div>
+
+      {/* EXAM CERTIFICATE */}
+      {quizMode === 'exam' && passed && (
+        <div style={styles.certificateCard}>
+          <div style={{
+            fontSize: 11, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase',
+            color: '#E8A838', marginBottom: 10,
+          }}>
+            You're Exam-Ready!
+          </div>
+          <div style={{ fontSize: 22, fontWeight: 800, color: '#e2e8f0', marginBottom: 4 }}>
+            Part 107 Prep
+          </div>
+          <div style={{ fontSize: 13, color: '#94a3b8', marginBottom: 20 }}>
+            FAA Part 107 Knowledge Test Ready
+          </div>
+          <div style={{ fontSize: 48, fontWeight: 900, color: '#5DB87A', letterSpacing: '-0.03em', marginBottom: 4 }}>
+            {pct}%
+          </div>
+          <div style={{ fontSize: 13, color: '#64748b', marginBottom: 24 }}>
+            {formatDate(new Date())}
+          </div>
+          <button
+            style={styles.btnPrimary('#E8A838')}
+            onClick={() => downloadCertificate(pct, formatDate(new Date()))}
+          >
+            <Icon name="arrow" size={14}/> Download Certificate
+          </button>
+        </div>
+      )}
 
       {/* WEAK AREA REPORT */}
       {topics.length >= 2 && quizMode !== 'lesson' && (

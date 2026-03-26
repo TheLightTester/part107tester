@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { styles } from '../styles'
 import Icon from './ui/Icon'
 import DiffBadge from './ui/DiffBadge'
+import { useWindowWidth } from '../hooks/useWindowWidth'
 import type { Question, AnswerKey, ModuleId, QuizMode, QuizState } from '../types'
 
 interface QuizEngineProps {
@@ -13,6 +14,7 @@ interface QuizEngineProps {
   onNext: () => void
   onSubmit: () => void
   onExit: () => void
+  onRecordAnswer?: (questionId: string, correct: boolean) => void
 }
 
 function formatTime(seconds: number): string {
@@ -24,7 +26,8 @@ function formatTime(seconds: number): string {
 
 type OptionState = 'default' | 'selected' | 'correct' | 'wrong' | 'reveal'
 
-export default function QuizEngine({ questions, quizState, quizMode, moduleColor, onAnswer, onNext, onSubmit, onExit }: QuizEngineProps) {
+export default function QuizEngine({ questions, quizState, quizMode, moduleColor, onAnswer, onNext, onSubmit, onExit, onRecordAnswer }: QuizEngineProps) {
+  const isMobile = useWindowWidth() <= 600
   const [timeLeft, setTimeLeft] = useState(7200)
 
   useEffect(() => {
@@ -78,7 +81,7 @@ export default function QuizEngine({ questions, quizState, quizMode, moduleColor
           <div style={styles.quizProgressFill(pct, color)}/>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <span style={{ fontSize: 12, color: '#4a5568', whiteSpace: 'nowrap' }}>
+          <span style={{ fontSize: 12, color: '#6b7280', whiteSpace: 'nowrap' }}>
             {quizState.qIdx + 1} / {questions.length}
           </span>
           {quizMode === 'exam' && (
@@ -105,7 +108,12 @@ export default function QuizEngine({ questions, quizState, quizMode, moduleColor
         {(Object.entries(q.options) as [AnswerKey, string][]).map(([key, text]) => {
           const state = getOptionState(key)
           return (
-            <div key={key} style={styles.quizOption(state)} onClick={() => !selected && onAnswer(q.id, key)}>
+            <div key={key} style={styles.quizOption(state, isMobile)} onClick={() => {
+              if (!selected) {
+                onAnswer(q.id, key)
+                onRecordAnswer?.(q.id, key === q.correct)
+              }
+            }}>
               <div style={{
                 ...styles.optionLetter,
                 background: state === 'correct' ? '#5DB87A20' : state === 'wrong' ? '#E86B4A20' : state === 'reveal' ? '#5DB87A10' : state === 'selected' ? '#4A9EE820' : '#1e2532',

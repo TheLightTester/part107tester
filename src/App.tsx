@@ -3,6 +3,8 @@ import { MODULES } from './data/modules'
 import { QUESTIONS } from './data/questions'
 import { LESSONS } from './data/lessons'
 import { useProgress } from './hooks/useProgress'
+import { useLicense } from './hooks/useLicense'
+import { useQuestionHistory } from './hooks/useQuestionHistory'
 import { styles } from './styles'
 import Icon from './components/ui/Icon'
 import ProgressRing from './components/ui/ProgressRing'
@@ -20,6 +22,10 @@ export default function App() {
   const [quizMode, setQuizMode] = useState<QuizMode>('module')
   const [quizQuestions, setQuizQuestions] = useState(QUESTIONS.slice(0, 0)) // typed as Question[]
   const { progress, markLessonRead, saveScore } = useProgress()
+  const { status: licenseStatus, unlock: unlockPro, revoke: _revokePro } = useLicense()
+  const isPro = licenseStatus === 'pro'
+  const { history: questionHistory, recordAnswer, getDueQuestions } = useQuestionHistory()
+  const [allCaughtUp, setAllCaughtUp] = useState(false)
   const scrollRef = useRef<HTMLDivElement>(null)
   // Prevent the hash-update effect from overwriting the URL before the
   // restore effect has parsed and applied the initial hash on mount.
@@ -64,6 +70,7 @@ export default function App() {
       hash = `lesson/${activeLesson.id}`
     } else if (screen === 'quiz') {
       if (quizMode === 'exam') hash = 'exam'
+      else if (quizMode === 'smartreview') hash = 'quiz/smartreview'
       else if (quizMode === 'lesson' && activeLesson) hash = `quiz/lesson/${activeLesson.id}`
       else if (quizMode === 'module' && activeModule) hash = `quiz/module/${activeModule}`
     } else if (screen === 'results') {
@@ -122,6 +129,20 @@ export default function App() {
     setScreen('quiz')
   }
 
+  const startSmartReview = () => {
+    const due = getDueQuestions(QUESTIONS)
+    if (due.length === 0) {
+      setAllCaughtUp(true)
+      return
+    }
+    setAllCaughtUp(false)
+    setQuizQuestions(due)
+    setQuizState({ qIdx: 0, answers: {} })
+    setQuizMode('smartreview')
+    setActiveModule(null)
+    setScreen('quiz')
+  }
+
   const handleAnswer = (questionId: string, choice: AnswerKey) => {
     setQuizState(s => ({ ...s, answers: { ...s.answers, [questionId]: choice } }))
   }
@@ -168,9 +189,14 @@ export default function App() {
           modules={MODULES}
           lessons={LESSONS}
           questionCount={QUESTIONS.length}
+          isPro={isPro}
+          onUnlockPro={unlockPro}
           onStartLesson={startLesson}
           onStartQuiz={startQuiz}
           onStartFinalExam={startFinalExam}
+          onStartSmartReview={startSmartReview}
+          dueQuestionCount={getDueQuestions(QUESTIONS).length}
+          allCaughtUp={allCaughtUp}
         />
       )}
 
@@ -195,6 +221,7 @@ export default function App() {
           onNext={handleNext}
           onSubmit={submitQuiz}
           onExit={goHome}
+          onRecordAnswer={recordAnswer}
         />
       )}
 

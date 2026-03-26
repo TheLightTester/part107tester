@@ -32,9 +32,14 @@ function renderHome(overrides: Partial<Progress> = {}, props: Record<string, unk
       modules={modules}
       lessons={lessons}
       questionCount={63}
+      isPro={false}
+      onUnlockPro={vi.fn()}
       onStartLesson={vi.fn()}
       onStartQuiz={vi.fn()}
       onStartFinalExam={vi.fn()}
+      onStartSmartReview={vi.fn()}
+      dueQuestionCount={0}
+      allCaughtUp={false}
       {...props}
     />
   )
@@ -78,8 +83,9 @@ describe('Home — basic rendering', () => {
   })
 
   it('clicking Start Final Exam calls onStartFinalExam', () => {
+    localStorage.setItem('part107_email_shown', 'true')
     const onStartFinalExam = vi.fn()
-    renderHome({}, { onStartFinalExam })
+    renderHome({}, { isPro: true, onStartFinalExam })
     fireEvent.click(screen.getByText('Start Final Exam'))
     expect(onStartFinalExam).toHaveBeenCalled()
   })
